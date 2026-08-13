@@ -560,6 +560,28 @@
         let maxPriceFilter = 50000;
         let searchTimeout;
 
+        /* ========== BROWSER BACK GUARD ========== */
+        // This catalogue is a single-page app. Keep one local history entry so a
+        // press on the browser's Back button does not immediately leave the site.
+        (function keepUserInCatalogueOnFirstBack() {
+            var guardState = { iconiquesCatalogue: true };
+            var exitArmed = false;
+            history.replaceState(guardState, '', window.location.href);
+            history.pushState(guardState, '', window.location.href);
+
+            function handleBack() {
+                if (exitArmed) {
+                    window.removeEventListener('popstate', handleBack);
+                    history.back();
+                    return;
+                }
+                exitArmed = true;
+                history.pushState(guardState, '', window.location.href);
+                showToast('info', 'Catalogue ouvert', 'Appuyez a nouveau sur Retour pour quitter.');
+            }
+            window.addEventListener('popstate', handleBack);
+        })();
+
         /* ========== THEME ========== */
         function applyTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);

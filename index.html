@@ -337,7 +337,8 @@
         .footer-bottom { text-align: center; padding: 24px; color: var(--text-light); font-size: 0.8rem; border-top: 1px solid var(--border-light); }
         .footer-bottom strong { color: var(--emerald-700); font-weight: 600; }
         .social-links { display: flex; gap: 12px; margin-top: 12px; }
-        .social-links a { width: 36px; height: 36px; border-radius: 50%; background: var(--emerald-50); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: all var(--transition-base); }
+        .social-links a { width: 36px; height: 36px; border-radius: 50%; background: var(--emerald-50); display: flex; align-items: center; justify-content: center; transition: all var(--transition-base); }
+        .social-links svg { width: 18px; height: 18px; fill: currentColor; }
         .social-links a:hover { background: var(--emerald-700); color: var(--white); transform: translateY(-2px); }
 
         /* Empty / Error */
@@ -398,7 +399,6 @@
             <h1>ICONIQUES&nbsp;S</h1>
         </div>
         <div class="header-actions">
-            <button class="btn btn-icon" id="themeToggle" title="Changer de theme">&#127769;</button>
             <a class="btn btn-gold" id="customUploadBtn" href="#">&#128228; Soumettre</a>
             <button class="btn btn-outline" id="pdfBtn">&#128196; PDF</button>
             <button class="btn btn-emerald" id="cartToggle">
@@ -514,9 +514,15 @@
                 <h4>ICONIQUES S</h4>
                 <p>Numerisation professionnelle de motifs de broderie avec Wilcom Embroidery Studio. Base a Ouagadougou, Burkina Faso.</p>
                 <div class="social-links">
-                    <a href="#" title="Facebook">&#128220;</a>
-                    <a href="#" title="Instagram">&#128247;</a>
-                    <a href="#" title="WhatsApp">&#128172;</a>
+                    <a href="https://www.facebook.com/share/p/18gvsvjyQ1/" target="_blank" rel="noopener noreferrer" title="Suivez-nous sur Facebook" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.3v3h2.8v8h3.4z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/saddabe13?igsh=MW9weDV1N214NzN6bg==" target="_blank" rel="noopener noreferrer" title="Suivez-nous sur Instagram" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5ZM17.7 6.2a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1Z"/></svg>
+                    </a>
+                    <a href="https://wa.me/22677956781?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20motifs." target="_blank" rel="noopener noreferrer" title="Contactez-nous sur WhatsApp" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.2 1.6 6L0 24l6.4-1.7a11.9 11.9 0 0 0 5.7 1.5h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.3-6.1-3.5-8.5ZM12.1 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.3-.4a9.8 9.8 0 1 1 8.5 4.7Zm5.4-7.3c-.3-.2-1.7-.8-2-.9s-.5-.2-.7.2-.8.9-1 1.1-.4.2-.7.1a8 8 0 0 1-2.4-1.5 8.8 8.8 0 0 1-1.6-2c-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6s0-.5-.1-.7l-.9-2.1c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.7.1-1 .5s-1.3 1.2-1.3 2.9 1.3 3.3 1.5 3.6 2.6 4 6.3 5.6c.9.4 1.6.7 2.2.9.9.3 1.8.2 2.4.1.7-.1 1.7-.7 1.9-1.4s.2-1.3.1-1.4-.2-.2-.5-.4Z"/></svg>
+                    </a>
                 </div>
             </div>
             <div class="footer-section">
@@ -551,7 +557,7 @@
         let cart = JSON.parse(localStorage.getItem('iconiques_cart')) || [];
         let favorites = JSON.parse(localStorage.getItem('iconiques_favorites')) || [];
         let currentView = localStorage.getItem('iconiques_view') || 'grid';
-        let currentTheme = localStorage.getItem('iconiques_theme') || 'light';
+        let currentTheme;
         const ITEMS_PER_PAGE = 20;
         let currentPage = 1;
         let currentCategory = 'all';
@@ -616,16 +622,13 @@
         /* ========== THEME ========== */
         function applyTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
-            const btn = document.getElementById('themeToggle');
-            btn.textContent = theme === 'dark' ? '\u2600' : '\uD83C\uDF19';
-            btn.title = theme === 'dark' ? 'Passer en mode clair' : 'Passer en mode sombre';
         }
+        var systemThemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        currentTheme = systemThemeQuery.matches ? 'dark' : 'light';
         applyTheme(currentTheme);
-        document.getElementById('themeToggle').addEventListener('click', function() {
-            currentTheme = currentTheme === 'light' ? 'dark' : 'light';
-            localStorage.setItem('iconiques_theme', currentTheme);
+        systemThemeQuery.addEventListener('change', function(event) {
+            currentTheme = event.matches ? 'dark' : 'light';
             applyTheme(currentTheme);
-            showToast('info', 'Theme change', currentTheme === 'dark' ? 'Mode sombre active' : 'Mode clair active');
         });
 
         /* ========== VIEW TOGGLE ========== */

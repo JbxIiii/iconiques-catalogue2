@@ -560,27 +560,58 @@
         let maxPriceFilter = 50000;
         let searchTimeout;
 
-        /* ========== BROWSER BACK GUARD ========== */
-        // This catalogue is a single-page app. Keep one local history entry so a
-        // press on the browser's Back button does not immediately leave the site.
-        (function keepUserInCatalogueOnFirstBack() {
-            var guardState = { iconiquesCatalogue: true };
-            var exitArmed = false;
-            history.replaceState(guardState, '', window.location.href);
-            history.pushState(guardState, '', window.location.href);
+        /* ========== APP HISTORY ========== */
+        // The catalogue lives in one HTML page, so keep its views in browser
+        // history. The Back button can then restore the previous catalogue view.
+        var isRestoringHistory = false;
+        var activeModal = null;
 
-            function handleBack() {
-                if (exitArmed) {
-                    window.removeEventListener('popstate', handleBack);
-                    history.back();
-                    return;
-                }
-                exitArmed = true;
-                history.pushState(guardState, '', window.location.href);
-                showToast('info', 'Catalogue ouvert', 'Appuyez a nouveau sur Retour pour quitter.');
-            }
-            window.addEventListener('popstate', handleBack);
-        })();
+        function getAppState() {
+            return {
+                iconiquesCatalogue: true,
+                page: currentPage,
+                category: currentCategory,
+                search: currentSearchQuery,
+                sort: currentSort,
+                maxPrice: maxPriceFilter,
+                modal: activeModal
+            };
+        }
+        function saveAppState() {
+            if (!isRestoringHistory) history.pushState(getAppState(), '', window.location.href);
+        }
+        function hideOpenPanels() {
+            document.getElementById('quickViewModal').classList.remove('open');
+            document.getElementById('zoomModal').classList.remove('open');
+            document.getElementById('cartPanel').classList.remove('open');
+            document.getElementById('cartOverlay').classList.remove('open');
+            document.body.style.overflow = '';
+            activeModal = null;
+        }
+        function restoreAppState(state) {
+            if (!state || !state.iconiquesCatalogue) return;
+            isRestoringHistory = true;
+            currentPage = state.page || 1;
+            currentCategory = state.category || 'all';
+            currentSearchQuery = state.search || '';
+            currentSort = state.sort || 'default';
+            maxPriceFilter = state.maxPrice || 50000;
+            document.getElementById('searchInput').value = currentSearchQuery;
+            document.getElementById('sortSelect').value = currentSort;
+            document.getElementById('priceRange').value = maxPriceFilter;
+            document.getElementById('priceDisplay').textContent = maxPriceFilter.toLocaleString('fr-FR') + ' F';
+            document.querySelectorAll('.cat-btn').forEach(function(btn) {
+                btn.classList.toggle('active', btn.dataset.cat === currentCategory);
+            });
+            hideOpenPanels();
+            renderCatalogue();
+            if (state.modal && state.modal.type === 'quick') openQuickView(state.modal.ref);
+            else if (state.modal && state.modal.type === 'zoom') openZoom(state.modal.img);
+            else if (state.modal && state.modal.type === 'cart') openCart();
+            isRestoringHistory = false;
+        }
+        history.replaceState(getAppState(), '', window.location.href);
+        window.addEventListener('popstate', function(event) { restoreAppState(event.state); });
 
         /* ========== THEME ========== */
         function applyTheme(theme) {
@@ -759,10 +790,13 @@
                 '</div>';
             document.getElementById('quickViewModal').classList.add('open');
             document.body.style.overflow = 'hidden';
+            activeModal = { type: 'quick', ref: ref };
+            saveAppState();
         }
-        function closeQuickView() {
+        function closeQuickView(fromHistory) {
             document.getElementById('quickViewModal').classList.remove('open');
             document.body.style.overflow = '';
+            if (!fromHistory && history.state && history.state.modal && history.state.modal.type === 'quick') history.back();
         }
         document.getElementById('quickViewClose').addEventListener('click', closeQuickView);
         document.getElementById('quickViewModal').addEventListener('click', function(e) {
@@ -775,17 +809,23 @@
             document.getElementById('zoomImage').src = imgUrl;
             document.getElementById('zoomModal').classList.add('open');
             document.body.style.overflow = 'hidden';
+            activeModal = { type: 'zoom', img: imgUrl };
+            saveAppState();
         }
-        function closeZoom() {
+        function closeZoom(fromHistory) {
             document.getElementById('zoomModal').classList.remove('open');
             document.body.style.overflow = '';
+            if (!fromHistory && history.state && history.state.modal && history.state.modal.type === 'zoom') history.back();
         }
         document.getElementById('zoomClose').addEventListener('click', closeZoom);
         document.getElementById('zoomModal').addEventListener('click', function(e) {
             if (e.target === document.getElementById('zoomModal')) closeZoom();
         });
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') { closeZoom(); closeQuickView(); closeCart(); }
+            if (e.key !== 'Escape') return;
+            if (document.getElementById('zoomModal').classList.contains('open')) closeZoom();
+            else if (document.getElementById('quickViewModal').classList.contains('open')) closeQuickView();
+            else if (document.getElementById('cartPanel').classList.contains('open')) closeCart();
         });
 
         /* ========== CATALOGUE RENDER ========== */
@@ -877,7 +917,7 @@
             prevBtn.textContent = '\u2190 Precedent';
             prevBtn.disabled = (currentPage === 1);
             prevBtn.addEventListener('click', function() {
-                if (currentPage > 1) { currentPage--; renderCatalogue(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+                if (currentPage > 1) { currentPage--; renderCatalogue(); saveAppState(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
             });
             paginationEl.appendChild(prevBtn);
 
@@ -890,7 +930,7 @@
                 pageBtn.className = 'page-btn' + (p === currentPage ? ' active' : '');
                 pageBtn.textContent = p;
                 pageBtn.addEventListener('click', (function(page) {
-                    return function() { currentPage = page; renderCatalogue(); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+                    return function() { currentPage = page; renderCatalogue(); saveAppState(); window.scrollTo({ top: 0, behavior: 'smooth' }); };
                 })(p));
                 paginationEl.appendChild(pageBtn);
             }
@@ -900,7 +940,7 @@
             nextBtn.textContent = 'Suivant \u2192';
             nextBtn.disabled = (currentPage === totalPages);
             nextBtn.addEventListener('click', function() {
-                if (currentPage < totalPages) { currentPage++; renderCatalogue(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+                if (currentPage < totalPages) { currentPage++; renderCatalogue(); saveAppState(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
             });
             paginationEl.appendChild(nextBtn);
         }
@@ -912,6 +952,7 @@
                 currentSearchQuery = e.target.value;
                 currentPage = 1;
                 renderCatalogue();
+                saveAppState();
             }, 300);
         });
 
@@ -919,6 +960,7 @@
             currentSort = e.target.value;
             currentPage = 1;
             renderCatalogue();
+            saveAppState();
         });
 
         document.getElementById('priceRange').addEventListener('input', function(e) {
@@ -926,6 +968,7 @@
             document.getElementById('priceDisplay').textContent = maxPriceFilter.toLocaleString('fr-FR') + ' F';
             currentPage = 1;
             renderCatalogue();
+            saveAppState();
         });
 
         document.addEventListener('click', function(e) {
@@ -960,8 +1003,15 @@
 
         var panel = document.getElementById('cartPanel');
         var overlay = document.getElementById('cartOverlay');
-        function openCart() { panel.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
-        function closeCart() { panel.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = ''; }
+        function openCart() {
+            panel.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow = 'hidden';
+            activeModal = { type: 'cart' };
+            saveAppState();
+        }
+        function closeCart(fromHistory) {
+            panel.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = '';
+            if (!fromHistory && history.state && history.state.modal && history.state.modal.type === 'cart') history.back();
+        }
         document.getElementById('cartToggle').addEventListener('click', openCart);
         document.getElementById('closeCart').addEventListener('click', closeCart);
         overlay.addEventListener('click', closeCart);
@@ -986,6 +1036,7 @@
                 currentCategory = btn.dataset.cat;
                 currentPage = 1;
                 renderCatalogue();
+                saveAppState();
             });
         });
 

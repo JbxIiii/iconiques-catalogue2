@@ -425,11 +425,6 @@
                     <option value="newest">Nouveautes d'abord</option>
                 </select>
             </div>
-            <div class="price-range-wrapper">
-                <label>Prix max</label>
-                <input type="range" class="range-slider" id="priceRange" min="0" max="50000" step="1000" value="50000">
-                <span class="price-display" id="priceDisplay">50 000 F</span>
-            </div>
             <div class="view-toggle">
                 <button class="view-btn active" data-view="grid" title="Vue grille">&#9642;&#9642;&#9642;</button>
                 <button class="view-btn" data-view="list" title="Vue liste">&#9776;</button>
@@ -563,7 +558,6 @@
         let currentCategory = 'all';
         let currentSearchQuery = '';
         let currentSort = 'default';
-        let maxPriceFilter = 50000;
         let searchTimeout;
 
         /* ========== APP HISTORY ========== */
@@ -579,7 +573,6 @@
                 category: currentCategory,
                 search: currentSearchQuery,
                 sort: currentSort,
-                maxPrice: maxPriceFilter,
                 modal: activeModal
             };
         }
@@ -601,11 +594,8 @@
             currentCategory = state.category || 'all';
             currentSearchQuery = state.search || '';
             currentSort = state.sort || 'default';
-            maxPriceFilter = state.maxPrice || 50000;
             document.getElementById('searchInput').value = currentSearchQuery;
             document.getElementById('sortSelect').value = currentSort;
-            document.getElementById('priceRange').value = maxPriceFilter;
-            document.getElementById('priceDisplay').textContent = maxPriceFilter.toLocaleString('fr-FR') + ' F';
             document.querySelectorAll('.cat-btn').forEach(function(btn) {
                 btn.classList.toggle('active', btn.dataset.cat === currentCategory);
             });
@@ -845,7 +835,6 @@
                     return m.ref.toLowerCase().includes(query) || m.title.toLowerCase().includes(query);
                 });
             }
-            filtered = filtered.filter(function(m) { return m.prixNum <= maxPriceFilter; });
             if (currentSort === 'price-asc') filtered.sort(function(a, b) { return a.prixNum - b.prixNum; });
             else if (currentSort === 'price-desc') filtered.sort(function(a, b) { return b.prixNum - a.prixNum; });
             else if (currentSort === 'name-az') filtered.sort(function(a, b) { return a.title.localeCompare(b.title); });
@@ -961,14 +950,6 @@
 
         document.getElementById('sortSelect').addEventListener('change', function(e) {
             currentSort = e.target.value;
-            currentPage = 1;
-            renderCatalogue();
-            saveAppState();
-        });
-
-        document.getElementById('priceRange').addEventListener('input', function(e) {
-            maxPriceFilter = parseInt(e.target.value);
-            document.getElementById('priceDisplay').textContent = maxPriceFilter.toLocaleString('fr-FR') + ' F';
             currentPage = 1;
             renderCatalogue();
             saveAppState();

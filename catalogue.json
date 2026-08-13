@@ -12,36 +12,36 @@
   },
   {
     "ref": "ICS-00002",
-    "title": "Aigle Royal",
+    "title": "ICONIC K1 ",
     "cat": "tuniques",
     "dims": "120 × 150 mm",
     "couleurs": "2",
-    "prixNum": 3500,
+    "prixNum": 2500,
     "img": "images/ics-00002.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00003",
-    "title": "turjir",
+    "title": "ICONIC LOI ",
     "cat": "tuniques",
     "dims": "120 × 150 mm",
     "couleurs": "2",
     "prixNum": 2500,
     "img": "images/ics-00003.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00004",
-    "title": "turjhhf",
+    "title": "ICONIC A2",
     "cat": "tuniques",
     "dims": "120 × 150 mm",
     "couleurs": "2",
     "prixNum": 2500,
     "img": "images/ics-00004.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00005",
@@ -49,7 +49,7 @@
     "cat": "tuniques",
     "dims": "120 x 150 mm",
     "couleurs": "2",
-    "prixNum": 2500,
+    "prixNum": 3000,
     "img": "images/AFRI OUAT 1.PNG",
     "draft": false,
     "nouveau": true
@@ -57,197 +57,197 @@
   {
     "ref": "ICS-00006",
     "title": "AFRICAIN ART MAP",
-    "cat": "tuniques",
+    "cat": "motifs-divers",
     "dims": "120 x 150 mm",
-    "couleurs": "2",
-    "prixNum": 2500,
+    "couleurs": "4",
+    "prixNum": 3000,
     "img": "images/AFRICAIN ART MAP.PNG",
     "draft": false,
     "nouveau": true
   },
   {
     "ref": "ICS-00007",
-    "title": "Design10",
+    "title": "ICONIC A3",
     "cat": "tuniques",
     "dims": "120 x 150 mm",
-    "couleurs": "2",
+    "couleurs": "1",
     "prixNum": 2500,
     "img": "images/Design10.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00008",
-    "title": "EMPREINTE DFR",
-    "cat": "tuniques",
+    "title": "ICONIC DFR",
+    "cat": "trois-pieces",
     "dims": "120 x 150 mm",
-    "couleurs": "2",
-    "prixNum": 2500,
+    "couleurs": "1",
+    "prixNum": 3000,
     "img": "images/EMPREINTE DFR.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00009",
-    "title": "EMPT BKJ",
+    "title": "ICONIC BKJ",
     "cat": "tuniques",
     "dims": "120 x 150 mm",
     "couleurs": "2",
     "prixNum": 2500,
     "img": "images/EMPT BKJ.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00010",
-    "title": "EMPT BNHJU",
+    "title": "ICONIC BNHJU",
     "cat": "tuniques",
     "dims": "120 x 150 mm",
     "couleurs": "2",
     "prixNum": 2500,
     "img": "images/EMPT BNHJU.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00011",
-    "title": "EMPT DKR T FRAPPE",
+    "title": "ICONIC DKR T FRAPPE",
     "cat": "tuniques",
     "dims": "120 x 150 mm",
-    "couleurs": "2",
+    "couleurs": "1",
     "prixNum": 2500,
     "img": "images/EMPT DKR T FRAPPE.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00012",
-    "title": "EMPT ISS FRAPPE",
+    "title": "ICONIC ISS FRAPPE",
     "cat": "tuniques",
     "dims": "120 x 150 mm",
-    "couleurs": "2",
+    "couleurs": "1",
     "prixNum": 2500,
     "img": "images/EMPT ISS FRAPPE.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00013",
-    "title": "EMPT K1",
+    "title": "ICONIC K1",
     "cat": "tuniques",
     "dims": "120 x 150 mm",
     "couleurs": "2",
     "prixNum": 2500,
     "img": "images/EMPT K1.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00014",
-    "title": "EMPT SAMOIU GFV",
-    "cat": "tuniques",
+    "title": "ICONIC  GFV",
+    "cat": "trois-pieces",
     "dims": "120 x 150 mm",
     "couleurs": "2",
-    "prixNum": 2500,
+    "prixNum": 3000,
     "img": "images/EMPT SAMOIU GFV.PNG",
     "draft": false,
     "nouveau": true
   },
   {
     "ref": "ICS-00015",
-    "title": "EMPT SIBI K1",
+    "title": " ICONIC SIBI K1",
     "cat": "tuniques",
     "dims": "120 x 150 mm",
     "couleurs": "2",
     "prixNum": 2500,
     "img": "images/EMPT SIBI K1.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00016",
-    "title": "EMPT SIBI L1",
+    "title": "ICONIQUE SIBI L1",
     "cat": "tuniques",
     "dims": "120 x 150 mm",
-    "couleurs": "2",
+    "couleurs": "1",
     "prixNum": 2500,
     "img": "images/EMPT SIBI L1.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00017",
     "title": "ICONI K3",
-    "cat": "tuniques",
+    "cat": "trois-pieces",
     "dims": "120 x 150 mm",
     "couleurs": "2",
-    "prixNum": 2500,
+    "prixNum": 3000,
     "img": "images/ICONI K3.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00018",
     "title": "ICONIC B1 1",
-    "cat": "tuniques",
+    "cat": "trois-pieces",
     "dims": "120 x 150 mm",
-    "couleurs": "2",
-    "prixNum": 2500,
+    "couleurs": "1",
+    "prixNum": 3000,
     "img": "images/ICONIC B1 1.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00019",
     "title": "ICONIC CHNT FRAPPE",
     "cat": "tuniques",
     "dims": "120 x 150 mm",
-    "couleurs": "2",
+    "couleurs": "1",
     "prixNum": 2500,
     "img": "images/ICONIC CHNT FRAPPE.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00020",
     "title": "ICONIC EC A1",
     "cat": "tuniques",
     "dims": "120 x 150 mm",
-    "couleurs": "2",
+    "couleurs": "1",
     "prixNum": 2500,
     "img": "images/ICONIC EC A1.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00021",
     "title": "ICONIC FRR",
-    "cat": "tuniques",
+    "cat": "trois-pieces",
     "dims": "120 x 150 mm",
     "couleurs": "2",
-    "prixNum": 2500,
+    "prixNum": 3000,
     "img": "images/ICONIC FRR.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00022",
     "title": "ICONIC HGD",
     "cat": "tuniques",
     "dims": "120 x 150 mm",
-    "couleurs": "2",
+    "couleurs": "1",
     "prixNum": 2500,
     "img": "images/ICONIC HGD.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00023",
     "title": "ICONIC K4K",
-    "cat": "tuniques",
+    "cat": "trois-pieces",
     "dims": "120 x 150 mm",
-    "couleurs": "2",
-    "prixNum": 2500,
+    "couleurs": "3",
+    "prixNum": 3000,
     "img": "images/ICONIC K4K.PNG",
     "draft": false,
     "nouveau": true
@@ -255,9 +255,9 @@
   {
     "ref": "ICS-00024",
     "title": "ICONIC KIK 1",
-    "cat": "tuniques",
+    "cat": "trois-pieces",
     "dims": "120 x 150 mm",
-    "couleurs": "2",
+    "couleurs": "1",
     "prixNum": 2500,
     "img": "images/ICONIC KIK 1.PNG",
     "draft": false,
@@ -272,15 +272,15 @@
     "prixNum": 2500,
     "img": "images/ICONIC KJUR FRAPPE.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00026",
     "title": "ICONIC KK44",
-    "cat": "tuniques",
+    "cat": "trois-pieces",
     "dims": "120 x 150 mm",
     "couleurs": "2",
-    "prixNum": 2500,
+    "prixNum": 3000,
     "img": "images/ICONIC KK44.PNG",
     "draft": false,
     "nouveau": true
@@ -290,8 +290,8 @@
     "title": "ICONIC KLIK PLO",
     "cat": "tuniques",
     "dims": "120 x 150 mm",
-    "couleurs": "2",
-    "prixNum": 2500,
+    "couleurs": "3",
+    "prixNum": 3000,
     "img": "images/ICONIC KLIK PLO.PNG",
     "draft": false,
     "nouveau": true
@@ -299,10 +299,10 @@
   {
     "ref": "ICS-00028",
     "title": "ICONIC KLIKJ KKDK",
-    "cat": "tuniques",
+    "cat": "trois-pieces",
     "dims": "120 x 150 mm",
-    "couleurs": "2",
-    "prixNum": 2500,
+    "couleurs": "3",
+    "prixNum": 3000,
     "img": "images/ICONIC KLIKJ KKDK.PNG",
     "draft": false,
     "nouveau": true
@@ -312,11 +312,11 @@
     "title": "ICONIC KLKI FRAPPE",
     "cat": "tuniques",
     "dims": "120 x 150 mm",
-    "couleurs": "2",
+    "couleurs": "1",
     "prixNum": 2500,
     "img": "images/ICONIC KLKI FRAPPE.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00030",
@@ -332,9 +332,9 @@
   {
     "ref": "ICS-00031",
     "title": "ICONIC LODP",
-    "cat": "tuniques",
+    "cat": "trois-pieces",
     "dims": "120 x 150 mm",
-    "couleurs": "2",
+    "couleurs": "1",
     "prixNum": 2500,
     "img": "images/ICONIC LODP.PNG",
     "draft": false,
@@ -345,8 +345,8 @@
     "title": "ICONIC LOI KS 1",
     "cat": "tuniques",
     "dims": "120 x 150 mm",
-    "couleurs": "2",
-    "prixNum": 2500,
+    "couleurs": "3",
+    "prixNum": 3000,
     "img": "images/ICONIC LOI KS 1.PNG",
     "draft": false,
     "nouveau": true
@@ -356,11 +356,11 @@
     "title": "ICONIC MLOD",
     "cat": "tuniques",
     "dims": "120 x 150 mm",
-    "couleurs": "2",
+    "couleurs": "1",
     "prixNum": 2500,
     "img": "images/ICONIC MLOD.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00034",
@@ -368,17 +368,17 @@
     "cat": "tuniques",
     "dims": "120 x 150 mm",
     "couleurs": "2",
-    "prixNum": 2500,
+    "prixNum": 3000,
     "img": "images/ICONIC MLPOCCD 1.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00035",
     "title": "ICONIC NHJH",
-    "cat": "tuniques",
+    "cat": "trois-pieces",
     "dims": "120 x 150 mm",
-    "couleurs": "2",
+    "couleurs": "1",
     "prixNum": 2500,
     "img": "images/ICONIC NHJH.PNG",
     "draft": false,
@@ -389,11 +389,11 @@
     "title": "ICONIC NJH",
     "cat": "tuniques",
     "dims": "120 x 150 mm",
-    "couleurs": "2",
+    "couleurs": "1",
     "prixNum": 2500,
     "img": "images/ICONIC NJH.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00037",
@@ -409,24 +409,24 @@
   {
     "ref": "ICS-00038",
     "title": "ICONIC VGA",
-    "cat": "tuniques",
+    "cat": "trois-pieces",
     "dims": "120 x 150 mm",
     "couleurs": "2",
     "prixNum": 2500,
     "img": "images/ICONIC VGA.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00039",
     "title": "ICONIC W1 POCHE",
     "cat": "tuniques",
     "dims": "120 x 150 mm",
-    "couleurs": "2",
+    "couleurs": "1",
     "prixNum": 2500,
     "img": "images/ICONIC W1 POCHE.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00040",
@@ -437,39 +437,29 @@
     "prixNum": 2500,
     "img": "images/ICONIC X1.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00041",
     "title": "ICONIC XX1",
-    "cat": "tuniques",
+    "cat": "trois-pieces",
     "dims": "120 x 150 mm",
-    "couleurs": "2",
-    "prixNum": 2500,
+    "couleurs": "3",
+    "prixNum": 3000,
     "img": "images/ICONIC XX1.PNG",
     "draft": false,
-    "nouveau": true
+    "nouveau": false
   },
   {
     "ref": "ICS-00042",
     "title": "ICONICK KUID POCHE",
     "cat": "tuniques",
     "dims": "120 x 150 mm",
-    "couleurs": "2",
-    "prixNum": 2500,
+    "couleurs": "",
+    "prixNum": 1000,
     "img": "images/ICONICK KUID POCHE.PNG",
     "draft": false,
-    "nouveau": true
-  },
-  {
-    "ref": "ICS-00043",
-    "title": "MLK AIGLE",
-    "cat": "tuniques",
-    "dims": "120 x 150 mm",
-    "couleurs": "2",
-    "prixNum": 2500,
-    "img": "images/MLK AIGLE.PNG",
-    "draft": false,
-    "nouveau": true
+    "nouveau": false
   }
+
 ]

@@ -547,7 +547,7 @@
   },{
     "ref": "ICS-00051",
     "title": "ICONIC DIVERS A1",
-    "cat": "tuniques",
+    "cat": "motifs-divers",
     "couleurs": "1",
     "prixNum": 2500,
     "img": "images/ICONIC DIVERS A1.PNG",
@@ -565,7 +565,7 @@
   },{
     "ref": "ICS-00053",
     "title": "ICONIC DIVERS A3",
-    "cat": "tuniques",
+    "cat": "motifs-divers",
     "couleurs": "3",
     "prixNum": 3000,
     "img": "images/ICONIC DIVERS A3.PNG",
@@ -583,7 +583,7 @@
   },{
     "ref": "ICS-00055",
     "title": "ICONIC DIVERS A5",
-    "cat": "tuniques",
+    "cat": "motifs-divers",
     "couleurs": "2",
     "prixNum": 2500,
     "img": "images/ICONIC DIVERS A5.PNG",

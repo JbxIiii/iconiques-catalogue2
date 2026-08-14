@@ -460,6 +460,162 @@
     "img": "images/ICONICK KUID POCHE.PNG",
     "draft": false,
     "nouveau": false
+  },
+  {
+    "ref": "ICS-00043",
+    "title": "AGBADA A1",
+    "cat": "agbada",
+    "dims": "120 x 150 mm",
+    "couleurs": "2",
+    "prixNum": 5000,
+    "img": "images/AGBADA A1.PNG",
+    "draft": false,
+    "nouveau": true
+  },{
+    "ref": "ICS-00043",
+    "title": "AGBADA A2",
+    "cat": "agbada",
+    "dims": "120 x 150 mm",
+    "couleurs": "2",
+    "prixNum": 5000,
+    "img": "images/AGBADA A2.PNG",
+    "draft": false,
+    "nouveau": true
+  },{
+    "ref": "ICS-00044",
+    "title": "AGBADA A3",
+    "cat": "agbada",
+    "couleurs": "4",
+    "prixNum": 5000,
+    "img": "images/AGBADA A3.PNG",
+    "draft": false,
+    "nouveau": true
+  },{
+    "ref": "ICS-00045",
+    "title": "AGBADA A4",
+    "cat": "agbada",
+    "couleurs": "3",
+    "prixNum": 5000,
+    "img": "images/AGBADA A4.PNG",
+    "draft": false,
+    "nouveau": true
+  },{
+    "ref": "ICS-00046",
+    "title": "AGBADA A5",
+    "cat": "agbada",
+    "couleurs": "4",
+    "prixNum": 5000,
+    "img": "images/AGBADA A5.PNG",
+    "draft": false,
+    "nouveau": true
+  },{
+    "ref": "ICS-00047",
+    "title": "AGBADA A6",
+    "cat": "agbada",
+    "couleurs": "1",
+    "prixNum": 5000,
+    "img": "images/AGBADA A6.PNG",
+    "draft": false,
+    "nouveau": true
+  },{
+    "ref": "ICS-00048",
+    "title": "AGBADA A7",
+    "cat": "agbada",
+    "couleurs": "2",
+    "prixNum": 5000,
+    "img": "images/AGBADA A7.PNG",
+    "draft": false,
+    "nouveau": true
+  },{
+    "ref": "ICS-00049",
+    "title": "AGBADA A8",
+    "cat": "agbada",
+    "couleurs": "2",
+    "prixNum": 5000,
+    "img": "images/AGBADA A8.PNG",
+    "draft": false,
+    "nouveau": true
+  },{
+    "ref": "ICS-00050",
+    "title": "AGBADA A9",
+    "cat": "agbada",
+    "couleurs": "5",
+    "prixNum": 5000,
+    "img": "images/AGBADA A9.PNG",
+    "draft": false,
+    "nouveau": true
+  },{
+    "ref": "ICS-00051",
+    "title": "ICONIC DIVERS A1",
+    "cat": "tuniques",
+    "couleurs": "1",
+    "prixNum": 2500,
+    "img": "images/ICONIC DIVERS A1.PNG",
+    "draft": false,
+    "nouveau": true
+  },{
+    "ref": "ICS-00052",
+    "title": "ICONIC DIVERS A2",
+    "cat": "tuniques",
+    "couleurs": "1",
+    "prixNum": 2500,
+    "img": "images/ICONIC DIVERS A2.PNG",
+    "draft": false,
+    "nouveau": true
+  },{
+    "ref": "ICS-00053",
+    "title": "ICONIC DIVERS A3",
+    "cat": "tuniques",
+    "couleurs": "3",
+    "prixNum": 3000,
+    "img": "images/ICONIC DIVERS A3.PNG",
+    "draft": false,
+    "nouveau": false
+  },{
+    "ref": "ICS-00054",
+    "title": "ICONIC DIVERS A4",
+    "cat": "tuniques",
+    "couleurs": "1",
+    "prixNum": 2500,
+    "img": "images/ICONIC DIVERS A4.PNG",
+    "draft": false,
+    "nouveau": false
+  },{
+    "ref": "ICS-00055",
+    "title": "ICONIC DIVERS A5",
+    "cat": "tuniques",
+    "couleurs": "2",
+    "prixNum": 2500,
+    "img": "images/ICONIC DIVERS A5.PNG",
+    "draft": false,
+    "nouveau": true
+  },{
+    "ref": "ICS-00056",
+    "title": "ICONIC N1",
+    "cat": "tuniques",
+    "couleurs": "1",
+    "prixNum": 2500,
+    "img": "images/ICONIC N1.PNG",
+    "draft": false,
+    "nouveau": true
+  },{
+    "ref": "ICS-00057",
+    "title": "ICONIC N2",
+    "cat": "tuniques",
+    "couleurs": "2",
+    "prixNum": 2500,
+    "img": "images/ICONIC N2.PNG",
+    "draft": false,
+    "nouveau": true
+  },{
+    "ref": "ICS-00058",
+    "title": "ICONIC N3",
+    "cat": "tuniques",
+    "couleurs": "2",
+    "prixNum": 2500,
+    "img": "images/ICONIC N3.PNG",
+    "draft": false,
+    "nouveau": true
   }
 
 ]

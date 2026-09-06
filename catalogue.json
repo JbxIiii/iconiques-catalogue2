@@ -51,7 +51,7 @@
     "couleurs": "2",
     "prixNum": 3000,
     "img": "images/AFRI OUAT 1.PNG",
-    "draft": false,
+    "draft": true,
     "nouveau": true
   },
   {
@@ -788,15 +788,511 @@
     "draft": false,
     "nouveau": false
   },{
-    "ref": "ICS-00077",
-    "title": "ICONIC N23",
+    "ref": "ICS-00078",
+    "title": "ICONIC N24",
+    "cat": "trois-pieces",
+    "couleurs": "3",
+    "prixNum": 2500,
+    "img": "images/ICONIC N24.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00079",
+    "title": "ICONIC N25",
+    "cat": "trois-pieces",
+    "couleurs": "2",
+    "prixNum": 3500,
+    "img": "images/ICONIC N25.PNG",
+    "draft": false,
+    "nouveau": false
+  }, {
+    "ref": "ICS-00080",
+    "title": "ICONIC N26",
+    "cat": "tuniques",
+    "couleurs": "2",
+    "prixNum": 2500,
+    "img": "images/ICONIC N26.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00081",
+    "title": "ICONIC N27",
+    "cat": "tuniques",
+    "couleurs": "1",
+    "prixNum": 2500,
+    "img": "images/ICONIC N27.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00082",
+    "title": "ICONIC N28",
+    "cat": "tuniques",
+    "couleurs": "3",
+    "prixNum": 2500,
+    "img": "images/ICONIC N28.PNG",
+    "draft": false,
+    "nouveau": false
+  }, {
+    "ref": "ICS-00083",
+    "title": "ICONIC N30",
+    "cat": "tuniques",
+    "couleurs": "3",
+    "prixNum": 2500,
+    "img": "images/ICONIC N30.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00084",
+    "title": "ICONIC N30",
+    "cat": "tuniques",
+    "couleurs": "1",
+    "prixNum": 2500,
+    "img": "images/ICONIC N30.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00085",
+    "title": "ICONIC N31",
+    "cat": "trois-pieces",
+    "couleurs": "2",
+    "prixNum": 3000,
+    "img": "images/ICONIC N31.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00086",
+    "title": "ICONIC N32",
+    "cat": "tuniques",
+    "couleurs": "2",
+    "prixNum": 3000,
+    "img": "images/ICONIC N32.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00087",
+    "title": "ICONIC N33",
+    "cat": "trois-pieces",
+    "couleurs": "2",
+    "prixNum": 4000,
+    "img": "images/ICONIC N33.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00088",
+    "title": "ICONIC N34",
+    "cat": "trois-pieces",
+    "couleurs": "1",
+    "prixNum": 4000,
+    "img": "images/ICONIC N34.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00089",
+    "title": "ICONIC N35",
+    "cat": "tuniques",
+    "couleurs": "2",
+    "prixNum": 2500,
+    "img": "images/ICONIC N35.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00090",
+    "title": "ICONIC N36",
+    "cat": "tuniques",
+    "couleurs": "2",
+    "prixNum": 2500,
+    "img": "images/ICONIC N36.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00091",
+    "title": "ICONIC N37",
+    "cat": "tuniques",
+    "couleurs": "2",
+    "prixNum": 3500,
+    "img": "images/ICONIC N37.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00092",
+    "title": "ICONIC N38",
+    "cat": "trois-pieces",
+    "couleurs": "1",
+    "prixNum": 4000,
+    "img": "images/ICONIC N38.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00093",
+    "title": "ICONIC N39",
+    "cat": "tuniques",
+    "couleurs": "2",
+    "prixNum": 3500,
+    "img": "images/ICONIC N39.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00094",
+    "title": "ICONIC N40",
     "cat": "trois-pieces",
     "couleurs": "2",
     "prixNum": 2500,
-    "img": "images/ICONIC N23.PNG",
+    "img": "images/ICONIC N40.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00095",
+    "title": "ICONIC N41",
+    "cat": "tuniques",
+    "couleurs": "1",
+    "prixNum": 4000,
+    "img": "images/ICONIC N41.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00096",
+    "title": "ICONIC N42",
+    "cat": "tuniques",
+    "couleurs": "3",
+    "prixNum": 2500,
+    "img": "images/ICONIC N42.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00097",
+    "title": "ICONIC N44",
+    "cat": "tuniques",
+    "couleurs": "2",
+    "prixNum": 3000,
+    "img": "images/ICONIC N44.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00098",
+    "title": "ICONIC N45",
+    "cat": "tuniques",
+    "couleurs": "2",
+    "prixNum": 2500,
+    "img": "images/ICONIC N45.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00099",
+    "title": "ICONIC N46",
+    "cat": "tuniques",
+    "couleurs": "2",
+    "prixNum": 2500,
+    "img": "images/ICONIC N46.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00100",
+    "title": "ICONIC N47",
+    "cat": "trois-pieces",
+    "couleurs": "1",
+    "prixNum": 3000,
+    "img": "images/ICONIC N47.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00101",
+    "title": "ICONIC N48",
+    "cat": "tuniques",
+    "couleurs": "1",
+    "prixNum": 3000,
+    "img": "images/ICONIC N48.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00102",
+    "title": "ICONIC N49",
+    "cat": "trois-pieces",
+    "couleurs": "1",
+    "prixNum": 3000,
+    "img": "images/ICONIC N49.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00103",
+    "title": "ICONIC N50",
+    "cat": "trois-pieces",
+    "couleurs": "1",
+    "prixNum": 2500,
+    "img": "images/ICONIC N50.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00104",
+    "title": "ICONIC N51",
+    "cat": "tuniques",
+    "couleurs": "2",
+    "prixNum": 3000,
+    "img": "images/ICONIC N51.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00105",
+    "title": "ICONIC N52",
+    "cat": "tuniques",
+    "couleurs": "2",
+    "prixNum": 2500,
+    "img": "images/ICONIC N52.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00106",
+    "title": "ICONIC N53",
+    "cat": "tuniques",
+    "couleurs": "2",
+    "prixNum": 2500,
+    "img": "images/ICONIC N53 .PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00107",
+    "title": "ICONIC N54",
+    "cat": "trois-pieces",
+    "couleurs": "1",
+    "prixNum": 3000,
+    "img": "images/ICONIC N54.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00108",
+    "title": "ICONIC N55",
+    "cat": "tuniques",
+    "couleurs": "1",
+    "prixNum": 4000,
+    "img": "images/ICONIC N55.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00109",
+    "title": "ICONIC N56",
+    "cat": "tuniques",
+    "couleurs": "1",
+    "prixNum": 4000,
+    "img": "images/ICONIC N56.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-00110",
+    "title": "ICONIC N57",
+    "cat": "tuniques",
+    "couleurs": "2",
+    "prixNum": 3000,
+    "img": "images/ICONIC N57.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-000111",
+    "title": "ICONIC N58",
+    "cat": "tuniques",
+    "couleurs": "2",
+    "prixNum": 2500,
+    "img": "images/ICONIC N58.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-000112",
+    "title": "ICONIC N59",
+    "cat": "tuniques",
+    "couleurs": "2",
+    "prixNum": 3500,
+    "img": "images/ICONIC N59.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-000113",
+    "title": "ICONIC N60",
+    "cat": "tuniques",
+    "couleurs": "1",
+    "prixNum": 3000,
+    "img": "images/ICONIC N60.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-000114",
+    "title": "ICONIC N61",
+    "cat": "motifs-divers",
+    "couleurs": "1",
+    "prixNum": 1500,
+    "img": "images/ICONIC N61.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-000115",
+    "title": "ICONIC N62",
+    "cat": "tuniques",
+    "couleurs": "2",
+    "prixNum": 2500,
+    "img": "images/ICONIC N62.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-000116",
+    "title": "ICONIC N63",
+    "cat": "tuniques",
+    "couleurs": "1",
+    "prixNum": 2500,
+    "img": "images/ICONIC N63.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-000117",
+    "title": "ICONIC N64",
+    "cat": "tuniques",
+    "couleurs": "2",
+    "prixNum": 2500,
+    "img": "images/ICONIC N64.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-000118",
+    "title": "ICONIC N65",
+    "cat": "tuniques",
+    "couleurs": "2",
+    "prixNum": 4000,
+    "img": "images/ICONIC N65.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-000119",
+    "title": "ICONIC N66",
+    "cat": "trois-pieces",
+    "couleurs": "1",
+    "prixNum": 3500,
+    "img": "images/ICONIC N66.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-000120",
+    "title": "ICONIC N67",
+    "cat": "tuniques",
+    "couleurs": "2",
+    "prixNum": 2500,
+    "img": "images/ICONIC N67.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-000121",
+    "title": "ICONIC N68",
+    "cat": "tuniques",
+    "couleurs": "1",
+    "prixNum": 2500,
+    "img": "images/ICONIC N68.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-000122",
+    "title": "ICONIC N69",
+    "cat": "tuniques",
+    "couleurs": "3",
+    "prixNum": 2500,
+    "img": "images/ICONIC N69.PNG",
+    "draft": false,
+    "nouveau": false
+  },
+ {
+    "ref": "ICS-000123",
+    "title": "ICONIC DIVERS A6",
+    "cat": "motifs-divers",
+    "couleurs": "1",
+    "prixNum": 2500,
+    "img": "images/ICONIC DIVERS A6.PNG",
+    "draft": false,
+    "nouveau": false
+  }, {
+    "ref": "ICS-000124",
+    "title": "ICONIC DIVERS A7",
+    "cat": "motifs-divers",
+    "couleurs": "1",
+    "prixNum": 3500,
+    "img": "images/ICONIC DIVERS A7.PNG",
+    "draft": false,
+    "nouveau": false
+  }, {
+    "ref": "ICS-000125",
+    "title": "ICONIC DIVERS A8",
+    "cat": "motifs-divers",
+    "couleurs": "1",
+    "prixNum": 2500,
+    "img": "images/ICONIC DIVERS A8.PNG",
+    "draft": false,
+    "nouveau": false
+  }, {
+    "ref": "ICS-000126",
+    "title": "ICONIC DIVERS A9",
+    "cat": "motifs-divers",
+    "couleurs": "1",
+    "prixNum": 2500,
+    "img": "images/ICONIC DIVERS A9.PNG",
+    "draft": false,
+    "nouveau": false
+  }, {
+    "ref": "ICS-000127",
+    "title": "ICONIC DIVERS A10",
+    "cat": "motifs-divers",
+    "couleurs": "1",
+    "prixNum": 2500,
+    "img": "images/ICONIC DIVERS A10.PNG",
     "draft": false,
     "nouveau": false
   }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ]

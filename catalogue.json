@@ -51,7 +51,7 @@
     "couleurs": "2",
     "prixNum": 3000,
     "img": "images/AFRI OUAT 1.PNG",
-    "draft": true,
+    "draft": false,
     "nouveau": true
   },
   {

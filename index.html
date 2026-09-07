@@ -272,31 +272,52 @@
         .zoom-close { position: absolute; top: 24px; right: 32px; font-size: 2.2rem; color: rgba(255,255,255,0.8); cursor: pointer; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: all var(--transition-base); background: rgba(255,255,255,0.1); }
         .zoom-close:hover { color: white; background: rgba(255,255,255,0.2); transform: rotate(90deg); }
 
-        /* Cart */
+        /* ===== CART AVANCÉ - NOUVEAUX STYLES ===== */
         .cart-overlay { position: fixed; inset: 0; background: rgba(34,32,28,0.4); backdrop-filter: blur(4px); z-index: 200; opacity: 0; visibility: hidden; transition: all var(--transition-base); }
         .cart-overlay.open { opacity: 1; visibility: visible; }
         .cart-panel { position: fixed; top: 0; right: -420px; width: 400px; max-width: 92vw; height: 100%; background: var(--white); border-left: 1px solid var(--border-light); box-shadow: -8px 0 32px rgba(0,0,0,0.1); z-index: 201; transition: right var(--transition-slow); display: flex; flex-direction: column; padding: 28px; color: var(--ink); }
         .cart-panel.open { right: 0; }
-        .cart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; padding-bottom: 16px; border-bottom: 2px solid var(--emerald-100); }
+        .cart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 2px solid var(--emerald-100); }
         .cart-header h2 { font-family: var(--font-display); font-size: 1.5rem; color: var(--emerald-700); font-weight: 600; }
         .close-cart { background: none; border: none; font-size: 1.6rem; cursor: pointer; color: var(--text-light); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: all var(--transition-base); }
         .close-cart:hover { background: var(--emerald-50); color: var(--emerald-700); transform: rotate(90deg); }
-        .cart-items { flex: 1; overflow-y: auto; margin-bottom: 24px; padding-right: 4px; }
-        .cart-item { display: flex; align-items: center; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--border-light); animation: slideInRight 0.3s ease; }
+        .cart-items { flex: 1; overflow-y: auto; margin-bottom: 16px; padding-right: 4px; }
+        .cart-items .cart-item { display: flex; align-items: center; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--border-light); animation: slideInRight 0.3s ease; }
         @keyframes slideInRight { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
         .cart-item img { width: 56px; height: 56px; object-fit: contain; background: var(--emerald-50); border-radius: var(--radius-sm); border: 1px solid var(--border-light); padding: 4px; }
         .cart-item-info { flex: 1; }
         .cart-item-info .item-title { font-weight: 600; font-size: 0.95rem; color: var(--ink); }
         .cart-item-info .item-ref { font-size: 0.72rem; color: var(--gold-500); font-weight: 700; margin-top: 2px; }
         .cart-item-info .item-price { font-size: 0.85rem; color: var(--text-medium); margin-top: 4px; font-weight: 500; }
-        .remove-item-btn { background: none; border: none; color: var(--burgundy-600); cursor: pointer; font-weight: 600; font-size: 0.78rem; padding: 6px 10px; border-radius: var(--radius-sm); transition: all var(--transition-fast); }
+
+        .quantity-controls { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+        .quantity-btn { width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid var(--border); background: var(--white); cursor: pointer; font-weight: 700; font-size: 1rem; display: flex; align-items: center; justify-content: center; transition: all var(--transition-fast); color: var(--ink); }
+        .quantity-btn:hover { background: var(--emerald-50); border-color: var(--emerald-500); transform: scale(1.1); }
+        .quantity-btn:active { transform: scale(0.9); }
+        .quantity-display { font-weight: 600; font-size: 0.95rem; min-width: 24px; text-align: center; color: var(--ink); }
+        .remove-item-btn { background: none; border: none; color: var(--burgundy-600); cursor: pointer; font-weight: 600; font-size: 0.78rem; padding: 6px 10px; border-radius: var(--radius-sm); transition: all var(--transition-fast); margin-left: auto; }
         .remove-item-btn:hover { background: var(--burgundy-100); }
-        .cart-total { font-weight: 700; font-size: 1.2rem; margin-bottom: 18px; display: flex; justify-content: space-between; font-family: var(--font-display); color: var(--emerald-700); padding-top: 16px; border-top: 2px solid var(--emerald-100); }
+
+        .cart-summary { background: var(--emerald-50); border-radius: var(--radius-md); padding: 16px 20px; margin: 12px 0 16px; border: 1.5px solid var(--emerald-100); }
+        .summary-row { display: flex; justify-content: space-between; padding: 6px 0; font-size: 0.9rem; color: var(--text-medium); }
+        .summary-row.total-row { font-size: 1.2rem; color: var(--ink); border-top: 2px solid var(--emerald-200); padding-top: 12px; margin-top: 8px; }
+        .summary-row.total-row strong { color: var(--emerald-700); }
+        .discount-row { color: var(--gold-500); font-weight: 600; }
+        .discount-amount { color: var(--gold-500); }
+        .discount-info { text-align: center; font-size: 0.85rem; color: var(--emerald-600); font-weight: 600; margin-top: 8px; padding: 8px; background: var(--gold-50); border-radius: var(--radius-sm); border: 1px solid var(--gold-100); }
+
         .checkout-btn { display: block; width: 100%; padding: 16px; background: var(--emerald-700); color: var(--white); border: none; border-radius: var(--radius-full); font-weight: 600; font-size: 1rem; cursor: pointer; text-align: center; transition: all var(--transition-base); text-decoration: none; box-shadow: 0 4px 16px rgba(31,92,78,0.25); position: relative; overflow: hidden; }
         .checkout-btn:hover { background: var(--emerald-600); box-shadow: 0 6px 20px rgba(31,92,78,0.35); transform: translateY(-1px); }
         .checkout-btn:active { transform: translateY(0); }
+
+        .pdf-cart-btn { background: var(--gold-500) !important; color: var(--white) !important; box-shadow: 0 4px 16px rgba(200,155,60,0.3) !important; margin-top: 10px !important; }
+        .pdf-cart-btn:hover { background: var(--gold-400) !important; transform: translateY(-2px); }
+
         .empty-cart { text-align: center; color: var(--text-light); margin-top: 60px; font-style: italic; font-size: 0.95rem; }
         .empty-cart-icon { font-size: 3rem; margin-bottom: 16px; opacity: 0.4; }
+
+        @keyframes quantityPop { 0% { transform: scale(1); } 50% { transform: scale(1.3); color: var(--emerald-600); } 100% { transform: scale(1); } }
+        .quantity-pop { animation: quantityPop 0.3s ease; }
 
         /* Toast */
         .toast-container { position: fixed; top: 24px; right: 24px; z-index: 1000; display: flex; flex-direction: column; gap: 10px; pointer-events: none; }
@@ -381,6 +402,11 @@
             .filters-bar { flex-direction: column; align-items: stretch; }
             .filter-group, .price-range-wrapper { justify-content: space-between; }
             .quickview-body { flex-direction: column; } .quickview-image { flex: none; width: 100%; }
+            .cart-item { flex-wrap: wrap; }
+            .cart-item img { width: 44px; height: 44px; }
+            .quantity-controls { margin-top: 4px; }
+            .quantity-btn { width: 24px; height: 24px; font-size: 0.8rem; }
+            .cart-summary { padding: 12px 16px; }
         }
     </style>
 </head>
@@ -478,22 +504,43 @@
         <img id="zoomImage" src="" alt="Zoom">
     </div>
 
-    <!-- Cart -->
+    <!-- ===== CART PANEL AMÉLIORÉ ===== -->
     <div class="cart-overlay" id="cartOverlay"></div>
     <div class="cart-panel" id="cartPanel">
         <div class="cart-header">
-            <h2>Votre panier</h2>
+            <h2>🛒 Mon panier</h2>
             <button class="close-cart" id="closeCart">&times;</button>
         </div>
-        <div class="cart-items" id="cartItems"></div>
-        <div class="cart-total" id="cartTotal" style="display: none;">
-            <span>Total</span><span id="totalAmount">0 F</span>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart" id="emptyCart">
+                <div class="empty-cart-icon">🛒</div>
+                Votre panier est vide.
+            </div>
         </div>
-        <button class="checkout-btn" id="checkoutBtn" style="display: none;">Commander sur WhatsApp</button>
-        <div class="empty-cart" id="emptyCart">
-            <div class="empty-cart-icon">&#129525;</div>
-            Votre panier est vide.
+        
+        <!-- Résumé avec remises -->
+        <div class="cart-summary" id="cartSummary" style="display: none;">
+            <div class="summary-row">
+                <span>Sous-total</span>
+                <span id="subtotalDisplay">0 F</span>
+            </div>
+            <div class="summary-row discount-row" id="discountRow" style="display: none;">
+                <span>Remise <span id="discountPercent">0%</span></span>
+                <span class="discount-amount">-<span id="discountAmount">0</span> F</span>
+            </div>
+            <div class="summary-row total-row">
+                <span><strong>Total</strong></span>
+                <span><strong id="totalAmount">0 F</strong></span>
+            </div>
+            <div class="discount-info" id="discountInfo"></div>
         </div>
+        
+        <button class="checkout-btn" id="checkoutBtn" style="display: none;">
+            📱 Commander sur WhatsApp
+        </button>
+        <button class="checkout-btn pdf-cart-btn" id="printCartBtn" style="display: none;">
+            🖨️ Imprimer le récapitulatif
+        </button>
     </div>
 
     <!-- Toast Container -->
@@ -561,8 +608,6 @@
         let searchTimeout;
 
         /* ========== APP HISTORY ========== */
-        // The catalogue lives in one HTML page, so keep its views in browser
-        // history. The Back button can then restore the previous catalogue view.
         var isRestoringHistory = false;
         var activeModal = null;
 
@@ -669,59 +714,175 @@
             document.getElementById('catalogue').style.display = 'grid';
         }
 
-        /* ========== CART ========== */
-        function saveCart() { localStorage.setItem('iconiques_cart', JSON.stringify(cart)); }
-        function addToCart(ref) {
+        /* ========== CART AVANCÉ ========== */
+        function saveCart() { 
+            localStorage.setItem('iconiques_cart', JSON.stringify(cart)); 
+        }
+
+        function addToCart(ref, quantity = 1) {
             var m = motifs.find(function(x) { return x.ref === ref; });
             if (!m || m.draft) return;
-            if (cart.find(function(i) { return i.ref === ref; })) return;
-            cart.push({ ref: m.ref, title: m.title, prixNum: m.prixNum, img: m.img });
-            saveCart(); renderCartPanel(); updateAllButtons();
-            showToast('success', 'Ajoute au panier', m.title + ' a ete ajoute.');
+            
+            var existing = cart.find(function(i) { return i.ref === ref; });
+            if (existing) {
+                existing.quantity += quantity;
+            } else {
+                cart.push({ 
+                    ref: m.ref, 
+                    title: m.title, 
+                    prixNum: m.prixNum, 
+                    img: m.img,
+                    quantity: quantity
+                });
+            }
+            saveCart(); 
+            renderCartPanel(); 
+            updateAllButtons();
+            showToast('success', 'Ajouté au panier', m.title + ' (x' + quantity + ')');
         }
+
         function removeFromCart(ref) {
             var item = cart.find(function(i) { return i.ref === ref; });
             cart = cart.filter(function(i) { return i.ref !== ref; });
-            saveCart(); renderCartPanel(); updateAllButtons();
-            if (item) showToast('info', 'Retire du panier', item.title + ' a ete retire.');
+            saveCart(); 
+            renderCartPanel(); 
+            updateAllButtons();
+            if (item) showToast('info', 'Retiré du panier', item.title);
         }
-        function getTotal() { return cart.reduce(function(s, i) { return s + i.prixNum; }, 0); }
+
+        function updateQuantity(ref, delta) {
+            var item = cart.find(function(i) { return i.ref === ref; });
+            if (!item) return;
+            
+            item.quantity += delta;
+            if (item.quantity <= 0) {
+                removeFromCart(ref);
+                return;
+            }
+            saveCart();
+            renderCartPanel();
+            // Animation sur la quantité
+            var display = document.querySelector('[data-ref-quantity="' + ref + '"]');
+            if (display) {
+                display.classList.remove('quantity-pop');
+                display.offsetHeight;
+                display.classList.add('quantity-pop');
+            }
+        }
+
+        function getTotalItems() {
+            return cart.reduce(function(s, i) { return s + i.quantity; }, 0);
+        }
+
+        function getSubtotal() {
+            return cart.reduce(function(s, i) { return s + (i.prixNum * i.quantity); }, 0);
+        }
+
+        function getDiscount() {
+            var total = getTotalItems();
+            if (total >= 20) return 0.20;      // -20% pour 20+ motifs
+            if (total >= 10) return 0.15;      // -15% pour 10+ motifs
+            if (total >= 5) return 0.10;       // -10% pour 5+ motifs
+            return 0;
+        }
+
+        function getTotal() {
+            var subtotal = getSubtotal();
+            var discount = getDiscount();
+            return subtotal * (1 - discount);
+        }
+
+        function getDiscountMessage() {
+            var total = getTotalItems();
+            var discount = getDiscount();
+            if (discount === 0) {
+                if (total >= 5) {
+                    var nextDiscount = total < 10 ? 10 : 20;
+                    return '💡 Ajoutez ' + (nextDiscount - total) + ' motif(s) pour obtenir ' + 
+                        (nextDiscount >= 20 ? 20 : nextDiscount >= 10 ? 15 : 10) + '% de remise !';
+                }
+                return '';
+            }
+            return '🎉 ' + total + ' motifs - Remise ' + (discount * 100) + '% appliquée !';
+        }
 
         function renderCartPanel() {
             var container = document.getElementById('cartItems');
             var emptyEl = document.getElementById('emptyCart');
-            var totalEl = document.getElementById('cartTotal');
+            var summaryEl = document.getElementById('cartSummary');
             var checkoutBtn = document.getElementById('checkoutBtn');
+            var printBtn = document.getElementById('printCartBtn');
+            
             if (cart.length === 0) {
                 container.innerHTML = '';
                 emptyEl.style.display = 'block';
-                totalEl.style.display = 'none';
+                summaryEl.style.display = 'none';
                 checkoutBtn.style.display = 'none';
-            } else {
-                emptyEl.style.display = 'none';
-                totalEl.style.display = 'flex';
-                checkoutBtn.style.display = 'block';
-                container.innerHTML = cart.map(function(item) {
-                    return '<div class="cart-item">' +
-                        '<img src="' + item.img + '" alt="' + item.title + '" onerror="this.src=\'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2256%22 height=%2256%22%3E%3Crect fill=%22%23E3EFEA%22 width=%2256%22 height=%2256%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%232C7A68%22 font-size=%2210%22%3EImage%3C/text%3E%3C/svg%3E\'">' +
-                        '<div class="cart-item-info">' +
+                printBtn.style.display = 'none';
+                document.getElementById('cartCount').textContent = '0';
+                return;
+            }
+            
+            emptyEl.style.display = 'none';
+            summaryEl.style.display = 'block';
+            checkoutBtn.style.display = 'block';
+            printBtn.style.display = 'block';
+            
+            // Afficher les articles
+            container.innerHTML = cart.map(function(item) {
+                return '<div class="cart-item">' +
+                    '<img src="' + item.img + '" alt="' + item.title + '" onerror="this.src=\'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2256%22 height=%2256%22%3E%3Crect fill=%22%23E3EFEA%22 width=%2256%22 height=%2256%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%232C7A68%22 font-size=%2210%22%3EImage%3C/text%3E%3C/svg%3E\'">' +
+                    '<div class="cart-item-info">' +
                         '<div class="item-title">' + item.title + '</div>' +
                         '<div class="item-ref">' + item.ref + '</div>' +
-                        '<div class="item-price">' + item.prixNum.toLocaleString('fr-FR') + ' F</div>' +
+                        '<div class="item-price">' + (item.prixNum * item.quantity).toLocaleString('fr-FR') + ' F</div>' +
+                        '<div class="quantity-controls">' +
+                            '<button class="quantity-btn" onclick="updateQuantity(\'' + item.ref + '\', -1)">−</button>' +
+                            '<span class="quantity-display quantity-pop" data-ref-quantity="' + item.ref + '">' + item.quantity + '</span>' +
+                            '<button class="quantity-btn" onclick="updateQuantity(\'' + item.ref + '\', 1)">+</button>' +
                         '</div>' +
-                        '<button class="remove-item-btn" data-ref="' + item.ref + '">Retirer</button>' +
-                        '</div>';
-                }).join('');
-                document.getElementById('totalAmount').textContent = getTotal().toLocaleString('fr-FR') + ' F';
+                    '</div>' +
+                    '<button class="remove-item-btn" onclick="removeFromCart(\'' + item.ref + '\')">✕ Retirer</button>' +
+                '</div>';
+            }).join('');
+            
+            // Mettre à jour les totaux
+            var subtotal = getSubtotal();
+            var discount = getDiscount();
+            var total = getTotal();
+            var totalItems = getTotalItems();
+            
+            document.getElementById('subtotalDisplay').textContent = subtotal.toLocaleString('fr-FR') + ' F';
+            document.getElementById('totalAmount').textContent = total.toLocaleString('fr-FR') + ' F';
+            document.getElementById('cartCount').textContent = totalItems;
+            
+            // Gérer les remises
+            var discountRow = document.getElementById('discountRow');
+            var discountInfo = document.getElementById('discountInfo');
+            
+            if (discount > 0) {
+                discountRow.style.display = 'flex';
+                document.getElementById('discountPercent').textContent = (discount * 100) + '%';
+                var discountAmount = subtotal * discount;
+                document.getElementById('discountAmount').textContent = discountAmount.toLocaleString('fr-FR');
+                discountInfo.textContent = getDiscountMessage();
+                discountInfo.style.display = 'block';
+            } else {
+                var msg = getDiscountMessage();
+                if (msg) {
+                    discountInfo.textContent = msg;
+                    discountInfo.style.display = 'block';
+                } else {
+                    discountInfo.style.display = 'none';
+                }
+                discountRow.style.display = 'none';
             }
+            
+            // Animation du compteur
             var countEl = document.getElementById('cartCount');
-            var oldCount = parseInt(countEl.textContent);
-            countEl.textContent = cart.length;
-            if (cart.length !== oldCount) {
-                countEl.style.animation = 'none';
-                countEl.offsetHeight;
-                countEl.style.animation = 'popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-            }
+            countEl.style.animation = 'none';
+            countEl.offsetHeight;
+            countEl.style.animation = 'popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
         }
 
         function updateAllButtons() {
@@ -737,6 +898,124 @@
                 btn.classList.toggle('favorited', isFav);
                 btn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
             });
+        }
+
+        /* ========== IMPRESSION DU RÉCAPITULATIF ========== */
+        function printCartSummary() {
+            if (cart.length === 0) {
+                showToast('error', 'Panier vide', 'Ajoutez des motifs avant d\'imprimer.');
+                return;
+            }
+            
+            var date = new Date().toLocaleDateString('fr-FR', {
+                year: 'numeric', month: 'long', day: 'numeric'
+            });
+            
+            var html = `
+            <html>
+            <head>
+                <style>
+                    body { font-family: 'Georgia', serif; padding: 40px; max-width: 800px; margin: 0 auto; }
+                    h1 { color: #1F5C4E; border-bottom: 3px solid #C89B3C; padding-bottom: 10px; }
+                    .header { text-align: center; margin-bottom: 30px; }
+                    .header h1 { font-size: 28px; margin: 0; }
+                    .header p { color: #6B655A; font-size: 14px; }
+                    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+                    th { background: #1F5C4E; color: white; padding: 10px; text-align: left; }
+                    td { padding: 10px; border-bottom: 1px solid #EDE8DD; }
+                    .text-right { text-align: right; }
+                    .total-row { font-weight: bold; font-size: 18px; }
+                    .total-row td { border-top: 3px solid #C89B3C; padding-top: 15px; }
+                    .discount-row { color: #C89B3C; font-weight: bold; }
+                    .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #EDE8DD; text-align: center; font-size: 12px; color: #9B958A; }
+                    .badge { display: inline-block; background: #C89B3C; color: white; padding: 2px 10px; border-radius: 12px; font-size: 11px; }
+                    .totals { margin-top: 20px; padding: 20px; background: #F4FAF8; border-radius: 8px; }
+                    .totals div { display: flex; justify-content: space-between; padding: 5px 0; }
+                </style>
+            </head>
+            <body>
+                <div class="header">
+                    <h1>🪡 ICONIQUES S</h1>
+                    <p>Catalogue de motifs de broderie - Récapitulatif de commande</p>
+                    <p>📅 ${date}</p>
+                </div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Réf.</th>
+                            <th>Motif</th>
+                            <th>Prix unit.</th>
+                            <th>Qté</th>
+                            <th class="text-right">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+            
+            cart.forEach(function(item) {
+                html += `
+                    <tr>
+                        <td>${item.ref}</td>
+                        <td>${item.title}</td>
+                        <td>${item.prixNum.toLocaleString('fr-FR')} F</td>
+                        <td>${item.quantity}</td>
+                        <td class="text-right">${(item.prixNum * item.quantity).toLocaleString('fr-FR')} F</td>
+                    </tr>
+                `;
+            });
+            
+            var subtotal = getSubtotal();
+            var discount = getDiscount();
+            var total = getTotal();
+            var totalItems = getTotalItems();
+            
+            html += `
+                    </tbody>
+                </table>
+                
+                <div class="totals">
+                    <div><span>Nombre de motifs</span><span>${totalItems}</span></div>
+                    <div><span>Sous-total</span><span>${subtotal.toLocaleString('fr-FR')} F</span></div>
+            `;
+            
+            if (discount > 0) {
+                html += `
+                    <div class="discount-row">
+                        <span>Remise ${(discount * 100)}%</span>
+                        <span>-${(subtotal * discount).toLocaleString('fr-FR')} F</span>
+                    </div>
+                `;
+            }
+            
+            html += `
+                    <div style="font-size: 20px; font-weight: bold; border-top: 2px solid #1F5C4E; padding-top: 10px; margin-top: 10px;">
+                        <span>TOTAL</span>
+                        <span>${total.toLocaleString('fr-FR')} F</span>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 30px; padding: 20px; background: #FDF8ED; border-radius: 8px; border: 1px solid #C89B3C;">
+                    <h3>📱 Comment commander ?</h3>
+                    <p>1. Envoyez ce récapitulatif par WhatsApp au <strong>+226 77 95 67 81</strong></p>
+                    <p>2. Confirmez les motifs et la quantité</p>
+                    <p>3. Nous vous indiquerons les délais de livraison</p>
+                </div>
+                
+                <div class="footer">
+                    <p><strong>ICONIQUES S</strong> — Ouagadougou, Burkina Faso</p>
+                    <p>📞 +226 77 95 67 81 | 📧 iconiques.s@gmail.com</p>
+                    <p>Ce document fait office de devis. Merci de votre confiance !</p>
+                </div>
+            </body>
+            </html>
+            `;
+            
+            var printWindow = window.open('', '_blank', 'width=800,height=600');
+            printWindow.document.write(html);
+            printWindow.document.close();
+            printWindow.focus();
+            printWindow.print();
         }
 
         /* ========== FAVORITES ========== */
@@ -1000,11 +1279,39 @@
         document.getElementById('closeCart').addEventListener('click', closeCart);
         overlay.addEventListener('click', closeCart);
 
+        // Bouton WhatsApp amélioré avec quantités et remises
         document.getElementById('checkoutBtn').addEventListener('click', function() {
-            var msg = "Bonjour, je souhaite commander les motifs suivants :\n\n";
-            cart.forEach(function(i) { msg += "- " + i.ref + " \"" + i.title + "\" : " + i.prixNum.toLocaleString('fr-FR') + " F\n"; });
-            msg += "\nTotal : " + getTotal().toLocaleString('fr-FR') + " F";
+            if (cart.length === 0) {
+                showToast('error', 'Panier vide', 'Ajoutez des motifs avant de commander.');
+                return;
+            }
+            
+            var msg = "🪡 *Commande ICONIQUES S*\n\n";
+            msg += "📅 " + new Date().toLocaleDateString('fr-FR') + "\n\n";
+            msg += "*Détails de la commande :*\n";
+            
+            cart.forEach(function(i) {
+                msg += "• " + i.ref + " \"" + i.title + "\" x" + i.quantity + " = " + (i.prixNum * i.quantity).toLocaleString('fr-FR') + " F\n";
+            });
+            
+            msg += "\n*Résumé :*\n";
+            msg += "📦 " + getTotalItems() + " motifs\n";
+            msg += "💰 Sous-total : " + getSubtotal().toLocaleString('fr-FR') + " F\n";
+            
+            var discount = getDiscount();
+            if (discount > 0) {
+                msg += "🎉 Remise " + (discount * 100) + "% : -" + (getSubtotal() * discount).toLocaleString('fr-FR') + " F\n";
+            }
+            
+            msg += "💵 *Total : " + getTotal().toLocaleString('fr-FR') + " F*\n\n";
+            msg += "📱 Je souhaite valider cette commande. Merci !";
+            
             window.open("https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(msg), '_blank');
+        });
+
+        // Bouton d'impression du récapitulatif
+        document.getElementById('printCartBtn').addEventListener('click', function() {
+            printCartSummary();
         });
 
         document.getElementById('customUploadBtn').addEventListener('click', function(e) {

@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICONIQUES S — Catalogue de motifs de broderie</title>
-    <meta name="description" content="Catalogue professionnel de motifs de broderie numerises — ICONIQUES S, Ouagadougou, Burkina Faso">
+    <title>Motifs de broderie numérisés à Ouagadougou | ICONIQUES S</title>
+    <meta name="description" content="Découvrez les motifs de broderie numérisés ICONIQUES S à Ouagadougou. Consultez le catalogue, ajoutez vos modèles au panier et commandez facilement via WhatsApp.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1F5C4E">
+    <meta property="og:title" content="ICONIQUES S — Motifs de broderie numérisés">
+    <meta property="og:description" content="Catalogue de motifs de broderie numérisés à Ouagadougou. Commandez simplement par WhatsApp.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -342,6 +346,14 @@
         .back-to-top.visible { opacity: 1; transform: translateY(0); }
         .back-to-top:hover { background: var(--emerald-600); transform: translateY(-4px); box-shadow: var(--shadow-xl); }
 
+        /* Actions rapides sur mobile */
+        .mobile-cart-bar { display: none; }
+        .whatsapp-float { position: fixed; right: 20px; bottom: 24px; width: 56px; height: 56px; border-radius: 50%; background: #25D366; color: white; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.55rem; box-shadow: var(--shadow-lg); z-index: 92; transition: transform var(--transition-base), box-shadow var(--transition-base); }
+        .whatsapp-float:hover, .whatsapp-float:focus-visible { color: white; transform: translateY(-4px) scale(1.04); box-shadow: var(--shadow-xl); }
+        .footer-section details { margin-top: 10px; }
+        .footer-section summary { cursor: pointer; color: var(--emerald-700); font-weight: 600; font-size: 0.85rem; }
+        .footer-section details p { margin-top: 8px; }
+
         /* Pagination */
         .pagination { display: flex; justify-content: center; gap: 8px; padding: 20px 0 40px; flex-wrap: wrap; }
         .page-btn { font-family: var(--font-body); font-size: 0.85rem; font-weight: 500; background: var(--white); color: var(--text-medium); border: 1.5px solid var(--border-light); border-radius: var(--radius-sm); padding: 8px 16px; cursor: pointer; transition: all var(--transition-base); box-shadow: var(--shadow-sm); }
@@ -377,7 +389,7 @@
         @media print {
             body { background: white; }
             .announcement-bar, header, .controls-section, .categories, .cart-toggle, .custom-upload-btn, .pdf-btn, .view-toggle,
-            .cart-overlay, .cart-panel, .zoom-modal, .quickview-modal, .pagination, footer, .back-to-top, .toast-container,
+            .cart-overlay, .cart-panel, .zoom-modal, .quickview-modal, .pagination, footer, .back-to-top, .toast-container, .mobile-cart-bar, .whatsapp-float,
             .cart-action-btn, .card-image::after, .card-actions-overlay { display: none !important; }
             .catalogue { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; padding: 10px; }
             .card { break-inside: avoid; border: 1px solid #ccc; box-shadow: none; opacity: 1 !important; transform: none !important; animation: none !important; }
@@ -394,10 +406,11 @@
             .cart-action-btn { font-size: 0.78rem; padding: 9px 18px; }
         }
         @media (max-width: 480px) {
-            h1 { font-size: 1.25rem; } .btn { padding: 8px 14px; font-size: 0.72rem; }
-            .catalogue, .skeleton-container { grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 16px 10px 40px; }
+            body { padding-bottom: 82px; }
+            h1 { font-size: 1.25rem; } .btn { min-height: 44px; padding: 9px 14px; font-size: 0.78rem; }
+            .catalogue, .skeleton-container { grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 16px 10px 56px; }
             .card-body { padding: 12px 14px 16px; } .card-title { font-size: 0.9rem; }
-            .card-price { font-size: 0.9rem; } .cart-action-btn { padding: 6px 12px; font-size: 0.65rem; }
+            .card-price { font-size: 0.9rem; } .cart-action-btn { min-height: 44px; padding: 8px 12px; font-size: 0.72rem; }
             .cart-panel { padding: 20px; width: 100%; max-width: 100%; }
             .filters-bar { flex-direction: column; align-items: stretch; }
             .filter-group, .price-range-wrapper { justify-content: space-between; }
@@ -407,6 +420,12 @@
             .quantity-controls { margin-top: 4px; }
             .quantity-btn { width: 24px; height: 24px; font-size: 0.8rem; }
             .cart-summary { padding: 12px 16px; }
+            .mobile-cart-bar { position: fixed; display: flex; align-items: center; justify-content: space-between; gap: 12px; left: 0; right: 0; bottom: 0; min-height: 72px; padding: 12px 16px; background: var(--white); border-top: 1px solid var(--border); box-shadow: 0 -6px 18px rgba(31,92,78,0.12); z-index: 95; }
+            .mobile-cart-copy { display: flex; flex-direction: column; color: var(--ink); font-size: 0.78rem; line-height: 1.25; }
+            .mobile-cart-copy strong { color: var(--emerald-700); font-size: 0.95rem; }
+            .mobile-cart-bar .btn { flex-shrink: 0; }
+            .whatsapp-float { right: 16px; bottom: 90px; width: 52px; height: 52px; font-size: 1.4rem; }
+            .back-to-top { right: 16px; bottom: 152px; width: 44px; height: 44px; }
         }
     </style>
 </head>
@@ -549,6 +568,12 @@
     <!-- Back to Top -->
     <button class="back-to-top" id="backToTop" title="Retour en haut">&uarr;</button>
 
+    <a class="whatsapp-float" href="https://wa.me/22677956781?text=Bonjour%20ICONIQUES%20S%2C%20j%27ai%20une%20question%20sur%20vos%20motifs." target="_blank" rel="noopener noreferrer" aria-label="Poser une question sur WhatsApp" title="Une question ? Écrivez-nous sur WhatsApp">☏</a>
+    <div class="mobile-cart-bar" aria-label="Accès rapide au panier">
+        <div class="mobile-cart-copy"><span id="mobileCartLabel">Votre sélection</span><strong id="mobileCartTotal">Panier vide</strong></div>
+        <button class="btn btn-emerald" id="mobileCartToggle" type="button">Voir le panier</button>
+    </div>
+
     <!-- Footer -->
     <footer>
         <div class="footer-content">
@@ -584,6 +609,18 @@
                 <p>Catalogue mis a jour regulierement avec les nouveautes.</p>
                 <p>Commandez par WhatsApp pour une reponse rapide.</p>
                 <p>Livraison disponible a Ouagadougou.</p>
+                <details id="a-propos">
+                    <summary>À propos d’ICONIQUES S</summary>
+                    <p>Nous créons et proposons des motifs de broderie numérisés pour accompagner vos projets créatifs et professionnels.</p>
+                </details>
+                <details id="conditions">
+                    <summary>Comment commander et conditions</summary>
+                    <p>Ajoutez vos motifs au panier puis envoyez votre demande par WhatsApp. Les modalités de paiement, délais et formats disponibles sont confirmés avec vous avant validation.</p>
+                </details>
+                <details id="confidentialite">
+                    <summary>Confidentialité</summary>
+                    <p>Le panier est conservé uniquement dans votre navigateur. Vos coordonnées ne sont utilisées que pour répondre à votre demande de commande.</p>
+                </details>
             </div>
         </div>
         <div class="footer-bottom">
@@ -709,11 +746,26 @@
             var toast = document.createElement('div');
             toast.className = 'toast ' + type;
             var icons = { success: '\u2705', error: '\u274C', info: '\u2139' };
-            toast.innerHTML = '<span class="toast-icon">' + (icons[type] || '\u2139') + '</span>' +
-                '<div class="toast-content"><div class="toast-title">' + title + '</div>' +
-                '<div class="toast-message">' + message + '</div></div>' +
-                '<button class="toast-close">&times;</button>' +
-                '<div class="toast-progress"></div>';
+            var icon = document.createElement('span');
+            icon.className = 'toast-icon';
+            icon.textContent = icons[type] || '\u2139';
+            var content = document.createElement('div');
+            content.className = 'toast-content';
+            var toastTitle = document.createElement('div');
+            toastTitle.className = 'toast-title';
+            toastTitle.textContent = title;
+            var toastMessage = document.createElement('div');
+            toastMessage.className = 'toast-message';
+            toastMessage.textContent = message;
+            content.append(toastTitle, toastMessage);
+            var closeButton = document.createElement('button');
+            closeButton.className = 'toast-close';
+            closeButton.type = 'button';
+            closeButton.setAttribute('aria-label', 'Fermer la notification');
+            closeButton.textContent = '×';
+            var progress = document.createElement('div');
+            progress.className = 'toast-progress';
+            toast.append(icon, content, closeButton, progress);
             container.appendChild(toast);
             toast.querySelector('.toast-close').addEventListener('click', function() { removeToast(toast); });
             setTimeout(function() { removeToast(toast); }, 3000);
@@ -850,6 +902,8 @@
                 checkoutBtn.style.display = 'none';
                 printBtn.style.display = 'none';
                 document.getElementById('cartCount').textContent = '0';
+                document.getElementById('mobileCartLabel').textContent = 'Votre sélection';
+                document.getElementById('mobileCartTotal').textContent = 'Panier vide';
                 return;
             }
             
@@ -887,6 +941,8 @@
             document.getElementById('subtotalDisplay').textContent = subtotal.toLocaleString('fr-FR') + ' F';
             document.getElementById('totalAmount').textContent = total.toLocaleString('fr-FR') + ' F';
             document.getElementById('cartCount').textContent = totalItems;
+            document.getElementById('mobileCartLabel').textContent = totalItems + (totalItems > 1 ? ' motifs sélectionnés' : ' motif sélectionné');
+            document.getElementById('mobileCartTotal').textContent = total.toLocaleString('fr-FR') + ' F';
             
             // Gérer les remises
             var discountRow = document.getElementById('discountRow');
@@ -1309,6 +1365,7 @@
             if (!fromHistory && history.state && history.state.modal && history.state.modal.type === 'cart') history.back();
         }
         document.getElementById('cartToggle').addEventListener('click', openCart);
+        document.getElementById('mobileCartToggle').addEventListener('click', openCart);
         document.getElementById('closeCart').addEventListener('click', closeCart);
         overlay.addEventListener('click', closeCart);
 
@@ -1393,11 +1450,12 @@
                     '<div class="empty-state">' +
                     '<div class="error-box">' +
                     '<h3>\u26A0 Erreur de chargement</h3>' +
-                    '<p>Impossible de lire les motifs du catalogue.</p>' +
+                    '<p>Impossible de lire les motifs du catalogue (' + error.message + ').</p>' +
                     '<p style="margin-top:12px;">Verifiez que :</p>' +
                     '<p>\u2022 Le fichier <code>catalogue.json</code> est bien a cote de ce fichier HTML</p>' +
                     '<p>\u2022 Vous utilisez un serveur local (ex: <code>Live Server</code> sur VS Code)</p>' +
                     '<p>\u2022 Le fichier JSON est bien formate</p>' +
+                    '<button class="btn btn-emerald" type="button" onclick="initApp()">↻ Réessayer</button>' +
                     '</div>' +
                     '</div>';
                 hideSkeleton();

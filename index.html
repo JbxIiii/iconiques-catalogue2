@@ -596,8 +596,27 @@
         /* ========== STATE ========== */
         let motifs = [];
         const whatsappNumber = "22677956781";
-        let cart = JSON.parse(localStorage.getItem('iconiques_cart')) || [];
-        let favorites = JSON.parse(localStorage.getItem('iconiques_favorites')) || [];
+        function readStoredArray(key) {
+            try {
+                var value = JSON.parse(localStorage.getItem(key));
+                return Array.isArray(value) ? value : [];
+            } catch (error) {
+                // Des données anciennes ou incomplètes ne doivent pas bloquer le catalogue.
+                localStorage.removeItem(key);
+                return [];
+            }
+        }
+        let cart = readStoredArray('iconiques_cart').map(function(item) {
+            if (!item || typeof item.ref !== 'string' || !Number.isFinite(Number(item.prixNum))) return null;
+            return {
+                ref: item.ref,
+                title: typeof item.title === 'string' ? item.title : item.ref,
+                prixNum: Number(item.prixNum),
+                img: typeof item.img === 'string' ? item.img : '',
+                quantity: Number.isFinite(Number(item.quantity)) && Number(item.quantity) > 0 ? Number(item.quantity) : 1
+            };
+        }).filter(Boolean);
+        let favorites = readStoredArray('iconiques_favorites').filter(function(ref) { return typeof ref === 'string'; });
         let currentView = localStorage.getItem('iconiques_view') || 'grid';
         let currentTheme;
         const ITEMS_PER_PAGE = 20;
@@ -715,8 +734,13 @@
         }
 
         /* ========== CART AVANCÉ ========== */
-        function saveCart() { 
-            localStorage.setItem('iconiques_cart', JSON.stringify(cart)); 
+        function saveCart() {
+            try {
+                localStorage.setItem('iconiques_cart', JSON.stringify(cart));
+            } catch (error) {
+                console.error('Impossible d’enregistrer le panier :', error);
+                showToast('error', 'Panier non enregistré', 'Vérifiez l’espace disponible dans votre navigateur.');
+            }
         }
 
         function addToCart(ref, quantity = 1) {
@@ -814,7 +838,13 @@
             var printBtn = document.getElementById('printCartBtn');
             
             if (cart.length === 0) {
-                container.innerHTML = '';
+                // Ne pas supprimer #emptyCart : il doit rester disponible
+                // lorsque le premier article est ajouté au panier.
+                container.innerHTML = '<div class="empty-cart" id="emptyCart">' +
+                    '<div class="empty-cart-icon">🛒</div>' +
+                    'Votre panier est vide.' +
+                    '</div>';
+                emptyEl = document.getElementById('emptyCart');
                 emptyEl.style.display = 'block';
                 summaryEl.style.display = 'none';
                 checkoutBtn.style.display = 'none';
@@ -823,7 +853,9 @@
                 return;
             }
             
-            emptyEl.style.display = 'none';
+            // Après le rendu d'un panier non vide, #emptyCart n'est plus dans
+            // le DOM. Le test évite une erreur lors des ajouts suivants.
+            if (emptyEl) emptyEl.style.display = 'none';
             summaryEl.style.display = 'block';
             checkoutBtn.style.display = 'block';
             printBtn.style.display = 'block';
@@ -888,6 +920,7 @@
         function updateAllButtons() {
             document.querySelectorAll('.cart-action-btn').forEach(function(btn) {
                 var ref = btn.dataset.ref;
+                if (!ref) return;
                 var inCart = cart.some(function(i) { return i.ref === ref; });
                 btn.className = 'cart-action-btn ' + (inCart ? 'remove-btn' : 'add-btn');
                 btn.textContent = inCart ? '\u2715 Retirer' : '+ Ajouter';
@@ -1243,9 +1276,9 @@
 
         document.getElementById('pdfBtn').addEventListener('click', function() { window.print(); });
 
-        document.getElementById('catalogue').addEventListener('click', function(e) {
+        document.addEventListener('click', function(e) {
             var btn = e.target.closest('.cart-action-btn');
-            if (btn) {
+            if (btn && btn.dataset.ref) {
                 var ref = btn.dataset.ref;
                 var inCart = cart.some(function(i) { return i.ref === ref; });
                 if (inCart) removeFromCart(ref);

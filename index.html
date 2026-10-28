@@ -3,1465 +3,1057 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motifs de broderie numérisés à Ouagadougou | ICONIQUES S</title>
-    <meta name="description" content="Découvrez les motifs de broderie numérisés ICONIQUES S à Ouagadougou. Consultez le catalogue, ajoutez vos modèles au panier et commandez facilement via WhatsApp.">
+    <title>ICONIQUES S — Motifs de broderie numérisés à Ouagadougou</title>
+    <meta name="description" content="Catalogue de motifs de broderie numérisés pour tuniques, trois-pièces et agbada. Commandez sur WhatsApp, recevez votre fichier directement sur WhatsApp.">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#1F5C4E">
+    <meta name="theme-color" content="#18203A">
+    <meta name="color-scheme" content="light">
+    <link rel="canonical" href="https://iconiquess.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="ICONIQUES S">
+    <meta property="og:url" content="https://iconiquess.com/">
     <meta property="og:title" content="ICONIQUES S — Motifs de broderie numérisés">
-    <meta property="og:description" content="Catalogue de motifs de broderie numérisés à Ouagadougou. Commandez simplement par WhatsApp.">
+    <meta property="og:description" content="Fichiers de broderie pour tuniques, trois-pièces et agbada. Commandez sur WhatsApp, recevez votre fichier directement.">
+    <meta property="og:image" content="https://iconiquess.com/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="ICONIQUES S — Motifs de broderie numérisés">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://iconiquess.com/og-image.jpg">
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
     <style>
+        /* =========================================================
+           ICONIQUES S — charte
+           Indigo (teinture), or (fil de broderie), papier (toile claire)
+           ========================================================= */
         :root {
-            --ivory: #FBF7F0; --white: #FFFFFF; --emerald-700: #1F5C4E; --emerald-600: #2C7A68;
-            --emerald-500: #3D9A84; --emerald-100: #E3EFEA; --emerald-50: #F4FAF8;
-            --gold-500: #C89B3C; --gold-400: #D4A843; --gold-100: #F3E6C4; --gold-50: #FDF8ED;
-            --burgundy-600: #8C2F39; --burgundy-100: #F5E4E3; --ink: #22201C;
-            --text-medium: #6B655A; --text-light: #9B958A;
-            --border: #E3DBC8; --border-light: #EDE8DD;
-            --shadow-sm: 0 1px 3px rgba(31,92,78,0.04);
-            --shadow-md: 0 4px 16px rgba(31,92,78,0.08);
-            --shadow-lg: 0 12px 32px rgba(31,92,78,0.12);
-            --shadow-xl: 0 24px 48px rgba(31,92,78,0.16);
-            --font-display: "Fraunces", Georgia, serif;
-            --font-body: "Work Sans", system-ui, sans-serif;
-            --radius-sm: 8px; --radius-md: 12px; --radius-lg: 16px; --radius-full: 999px;
-            --transition-fast: 0.15s ease;
-            --transition-base: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        [data-theme="dark"] {
-            --ivory: #1A1A1A; --white: #242424;
-            --emerald-700: #4ADE80; --emerald-600: #34D399; --emerald-500: #6EE7B7;
-            --emerald-100: #064E3B; --emerald-50: #065F46;
-            --gold-500: #FBBF24; --gold-400: #FCD34D; --gold-100: #451A03; --gold-50: #78350F;
-            --burgundy-600: #F87171; --burgundy-100: #7F1D1D;
-            --ink: #F5F5F5; --text-medium: #A3A3A3; --text-light: #737373;
-            --border: #404040; --border-light: #333333;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
-            --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
-            --shadow-lg: 0 12px 32px rgba(0,0,0,0.5);
-            --shadow-xl: 0 24px 48px rgba(0,0,0,0.6);
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            background: var(--ivory); color: var(--ink); font-family: var(--font-body);
-            line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
-            transition: background var(--transition-slow), color var(--transition-slow);
-        }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--ivory); }
-        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: var(--radius-full); }
-        ::-webkit-scrollbar-thumb:hover { background: var(--text-light); }
+            --indigo-900: #18203A;
+            --indigo-800: #212C4D;
+            --indigo-700: #2D3B63;
+            --indigo-100: #E6E8EF;
+            --paper: #FBFAF7;
+            --white: #FFFFFF;
+            --sand: #F1ECE2;
+            --line: #E2DCCF;
+            --ink: #1B1D24;
+            --muted: #5E5A52;
+            --gold: #C29A4E;        /* fil : décor, sur fond sombre */
+            --gold-text: #876224;   /* or lisible sur fond clair */
+            --danger: #9B2C2C;
 
-        /* Announcement Bar */
-        .announcement-bar {
-            background: var(--emerald-700); color: var(--white); text-align: center;
-            padding: 10px 16px; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.02em;
-            position: relative; overflow: hidden;
-        }
-        .announcement-bar::before {
-            content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
-            animation: shimmer 3s infinite;
-        }
-        @keyframes shimmer { 0% { left: -100%; } 100% { left: 200%; } }
-        .announcement-bar strong { font-weight: 700; }
+            --serif-display: "Libre Caslon Display", "Libre Caslon Text", Georgia, serif;
+            --serif: "Libre Caslon Text", Georgia, serif;
+            --sans: "Instrument Sans", "Segoe UI", system-ui, sans-serif;
 
-        /* Header */
-        header {
-            padding: 20px 16px; background: rgba(255,255,255,0.92);
-            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-light); position: sticky; top: 0; z-index: 100;
-            display: flex; align-items: center; justify-content: space-between;
-            flex-wrap: wrap; gap: 14px; transition: box-shadow var(--transition-base);
+            --r-sm: 3px; --r-md: 6px;
+            --wrap: 1200px;
+            --gutter: clamp(16px, 4vw, 40px);
+            --header-h: 64px;
         }
-        [data-theme="dark"] header { background: rgba(36,36,36,0.92); }
-        header.scrolled { box-shadow: var(--shadow-md); border-bottom-color: transparent; }
-        .brand { display: flex; flex-direction: column; gap: 2px; }
-        .eyebrow { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--emerald-500); font-weight: 600; }
-        h1 { font-family: var(--font-display); font-weight: 600; font-size: 1.5rem; color: var(--ink); letter-spacing: -0.02em; line-height: 1.1; }
-        .header-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
 
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 12px); -webkit-text-size-adjust: 100%; }
+        html.locked { overflow: hidden; }
+        body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+        img { display: block; max-width: 100%; height: auto; }
+        [hidden] { display: none !important; }
+        button, input, select { font: inherit; color: inherit; }
+        button { cursor: pointer; background: none; border: 0; }
+        a { color: inherit; }
+        :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+        .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
+        .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+        /* Le point avant : trait de couture en pointillé */
+        .stitch { height: 2px; background: repeating-linear-gradient(90deg, var(--gold) 0 12px, transparent 12px 20px); }
+
+        /* ---------- Boutons ---------- */
         .btn {
-            font-family: var(--font-body); font-size: 0.78rem; font-weight: 600;
-            border-radius: var(--radius-full); padding: 9px 18px; cursor: pointer;
-            text-decoration: none; display: inline-flex; align-items: center; gap: 7px;
-            white-space: nowrap; border: 1.5px solid transparent;
-            transition: all var(--transition-base); position: relative; overflow: hidden;
-            background: none; color: inherit;
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            min-height: 44px; padding: 0 20px; border-radius: var(--r-sm);
+            font-family: var(--sans); font-size: 0.94rem; font-weight: 600; letter-spacing: 0.005em;
+            text-decoration: none; white-space: nowrap; border: 1px solid transparent;
+            transition: background-color .15s ease, border-color .15s ease, color .15s ease;
         }
-        .btn::after { content: ''; position: absolute; inset: 0; background: rgba(255,255,255,0); transition: background var(--transition-fast); }
-        .btn:hover::after { background: rgba(255,255,255,0.15); }
-        .btn:active { transform: scale(0.97); }
-        .btn-gold { background: var(--gold-50); color: var(--emerald-700); border-color: var(--gold-400); }
-        .btn-gold:hover { background: var(--gold-400); color: var(--white); border-color: var(--gold-400); box-shadow: 0 4px 12px rgba(200,155,60,0.25); }
-        .btn-emerald { background: var(--emerald-700); color: var(--white); border-color: var(--emerald-700); }
-        .btn-emerald:hover { background: var(--emerald-600); border-color: var(--emerald-600); box-shadow: 0 4px 16px rgba(31,92,78,0.3); }
-        .btn-outline { background: var(--white); color: var(--emerald-700); border-color: var(--emerald-700); }
-        .btn-outline:hover { background: var(--emerald-50); box-shadow: var(--shadow-sm); }
-        .btn-icon {
-            width: 40px; height: 40px; padding: 0; justify-content: center; border-radius: 50%;
-            background: var(--white); border: 1.5px solid var(--border); color: var(--text-medium); font-size: 1.1rem;
+        .btn svg { width: 18px; height: 18px; flex-shrink: 0; fill: currentColor; }
+        .btn-primary { background: var(--indigo-900); color: var(--paper); }
+        .btn-primary:hover { background: var(--indigo-700); }
+        .btn-secondary { background: var(--white); color: var(--indigo-900); border-color: var(--indigo-900); }
+        .btn-secondary:hover { background: var(--indigo-100); }
+        .btn-secondary[aria-pressed="true"] { background: var(--indigo-100); }
+        .btn-light { background: var(--paper); color: var(--indigo-900); }
+        .btn-light:hover { background: var(--white); }
+        .btn-outline-light { color: var(--paper); border-color: rgba(251,250,247,.55); }
+        .btn-outline-light:hover { border-color: var(--paper); background: rgba(251,250,247,.08); }
+        .btn-sm { min-height: 40px; padding: 0 14px; font-size: 0.86rem; }
+        .btn-block { width: 100%; }
+        .link-btn { font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+
+        /* ---------- En-tête ---------- */
+        .site-header { position: sticky; top: 0; z-index: 50; background: var(--indigo-900); color: var(--paper); }
+        .header-row { height: var(--header-h); display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+        .wordmark { text-decoration: none; display: flex; flex-direction: column; line-height: 1; }
+        .wordmark-name { font-family: var(--serif-display); font-size: 1.6rem; letter-spacing: 0.04em; }
+        .wordmark-sub { font-size: 0.72rem; color: rgba(251,250,247,.7); margin-top: 5px; letter-spacing: 0.02em; }
+        .header-nav { display: flex; align-items: center; gap: 6px; }
+        .header-link { color: rgba(251,250,247,.85); text-decoration: none; font-size: 0.9rem; font-weight: 500; padding: 10px 12px; border-radius: var(--r-sm); }
+        .header-link:hover { color: var(--paper); background: rgba(251,250,247,.08); }
+        .cart-btn { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px; border: 1px solid rgba(251,250,247,.4); border-radius: var(--r-sm); color: var(--paper); font-weight: 600; font-size: 0.9rem; }
+        .cart-btn:hover { border-color: var(--paper); }
+        .cart-btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.6; }
+        .cart-badge { min-width: 22px; height: 22px; padding: 0 6px; border-radius: 11px; background: var(--gold); color: var(--indigo-900); font-size: 0.78rem; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; }
+        .header-stitch { transform-origin: left center; }
+        @media (prefers-reduced-motion: no-preference) {
+            .header-stitch { animation: sew 1.4s cubic-bezier(.6,.1,.3,1) .2s both; }
+            @keyframes sew { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
         }
-        .btn-icon:hover { border-color: var(--emerald-500); color: var(--emerald-700); transform: translateY(-2px); box-shadow: var(--shadow-md); }
-        .cart-count {
-            background: var(--gold-400); color: var(--white); border-radius: 50%; min-width: 20px; height: 20px;
-            display: inline-flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; padding: 0 5px;
-            animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        /* ---------- Ouverture ---------- */
+        .hero { background: var(--indigo-900); color: var(--paper); padding: clamp(40px, 7vw, 88px) 0 clamp(48px, 7vw, 96px); overflow: hidden; }
+        .hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
+        .hero h1 { font-family: var(--serif-display); font-weight: 400; font-size: clamp(2.4rem, 5.2vw, 4.25rem); line-height: 1.04; letter-spacing: -0.01em; max-width: 13ch; }
+        .hero-lede { margin-top: 22px; font-size: clamp(1rem, 1.4vw, 1.12rem); line-height: 1.6; color: rgba(251,250,247,.82); max-width: 46ch; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+        .hero-note { margin-top: 22px; font-size: 0.88rem; color: rgba(251,250,247,.65); }
+        .hero-note strong { color: var(--gold); font-weight: 600; }
+        .vitrine { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; align-items: start; }
+        .vitrine button { display: block; border-radius: var(--r-sm); overflow: hidden; background: var(--sand); box-shadow: 0 18px 40px rgba(0,0,0,.28); transition: transform .25s ease; }
+        .vitrine button:hover { transform: translateY(-4px); }
+        .vitrine button:nth-child(2) { margin-top: 44px; }
+        .vitrine button:nth-child(3) { margin-top: 88px; }
+        .vitrine img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+
+        /* ---------- Sections ---------- */
+        .section { padding: clamp(56px, 8vw, 96px) 0; }
+        .section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 32px; }
+        .section-title { font-family: var(--serif-display); font-weight: 400; font-size: clamp(1.9rem, 3.4vw, 2.6rem); line-height: 1.1; }
+        .section-intro { color: var(--muted); max-width: 52ch; margin-top: 10px; }
+
+        /* Comment commander : vraie séquence, reliée par la couture */
+        .how { background: var(--white); border-bottom: 1px solid var(--line); }
+        .steps { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; position: relative; }
+        .steps::before { content: ""; position: absolute; left: calc(100% / 6); right: calc(100% / 6); top: 21px; height: 2px; background: repeating-linear-gradient(90deg, var(--gold) 0 12px, transparent 12px 20px); }
+        .step { position: relative; text-align: center; padding: 0 20px; }
+        .step-num { position: relative; z-index: 1; width: 44px; height: 44px; margin: 0 auto 18px; border-radius: 50%; background: var(--white); border: 1.5px solid var(--indigo-900); color: var(--indigo-900); font-family: var(--serif); font-size: 1.15rem; display: flex; align-items: center; justify-content: center; }
+        .step h3 { font-family: var(--serif); font-weight: 700; font-size: 1.08rem; margin-bottom: 6px; }
+        .step p { color: var(--muted); font-size: 0.95rem; max-width: 30ch; margin: 0 auto; }
+        .remise { margin-top: 40px; text-align: center; font-size: 0.95rem; color: var(--ink); }
+        .remise strong { color: var(--gold-text); }
+
+        /* ---------- Catalogue ---------- */
+        .toolbar { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; margin-bottom: 18px; }
+        .search { position: relative; }
+        .search svg { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; fill: none; stroke: var(--muted); stroke-width: 1.8; pointer-events: none; }
+        .search input { width: 100%; height: 46px; padding: 0 14px 0 42px; border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--white); font-size: 0.95rem; }
+        .search input:focus { outline: none; border-color: var(--indigo-900); box-shadow: 0 0 0 3px var(--indigo-100); }
+        .sort { display: flex; align-items: center; gap: 10px; height: 46px; padding: 0 12px; border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--white); }
+        .sort label { font-size: 0.88rem; color: var(--muted); }
+        .sort select { border: 0; background: transparent; font-weight: 600; font-size: 0.92rem; padding-right: 4px; cursor: pointer; }
+        .sort select:focus { outline: none; }
+
+        .tabs { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; border-bottom: 1px solid var(--line); margin-bottom: 14px; }
+        .tabs::-webkit-scrollbar { display: none; }
+        .tab { flex-shrink: 0; padding: 12px 14px; font-size: 0.93rem; font-weight: 500; color: var(--muted); border-bottom: 2px solid transparent; margin-bottom: -1px; white-space: nowrap; }
+        .tab:hover { color: var(--ink); }
+        .tab[aria-pressed="true"] { color: var(--indigo-900); border-bottom-color: var(--indigo-900); font-weight: 600; }
+        .tab-count { color: var(--muted); font-weight: 400; margin-left: 4px; font-size: 0.85rem; }
+        .result-line { font-size: 0.9rem; color: var(--muted); margin-bottom: 22px; min-height: 1.4em; }
+
+        .grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px 24px; }
+        .card { display: flex; flex-direction: column; }
+        .card-media { position: relative; display: block; width: 100%; background: var(--sand); border-radius: var(--r-sm); overflow: hidden; border: 1px solid var(--line); }
+        .card-media img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform .35s ease; }
+        .card-media:hover img { transform: scale(1.03); }
+        .card-media.noimg { aspect-ratio: 3 / 4; display: flex; align-items: center; justify-content: center; }
+        .card-media.noimg::after { content: "Aperçu indisponible"; color: var(--muted); font-size: 0.85rem; }
+        .tag-new { position: absolute; top: 10px; left: 10px; background: var(--indigo-900); color: var(--paper); font-size: 0.74rem; font-weight: 600; padding: 4px 9px; border-radius: var(--r-sm); }
+        .card-info { padding: 14px 2px 0; flex: 1; }
+        .card-ref { font-size: 0.8rem; font-weight: 600; color: var(--gold-text); font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
+        .card-title { font-family: var(--serif); font-weight: 400; font-size: 1.08rem; line-height: 1.3; margin-top: 3px; }
+        .card-title button { text-align: left; }
+        .card-title button:hover { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+        .card-row { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-top: 6px; }
+        .card-meta { font-size: 0.86rem; color: var(--muted); }
+        .card-price { font-weight: 600; font-size: 0.98rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+        .card-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 14px; }
+
+        .empty { grid-column: 1 / -1; text-align: center; padding: 64px 16px; border: 1px dashed var(--line); border-radius: var(--r-md); }
+        .empty h3 { font-family: var(--serif); font-weight: 400; font-size: 1.4rem; margin-bottom: 8px; }
+        .empty p { color: var(--muted); margin-bottom: 18px; }
+
+        .pagination { display: flex; justify-content: center; align-items: center; gap: 6px; margin-top: 48px; flex-wrap: wrap; }
+        .page-btn { min-width: 42px; height: 42px; padding: 0 12px; border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--white); font-weight: 500; font-size: 0.92rem; font-variant-numeric: tabular-nums; }
+        .page-btn:hover:not(:disabled) { border-color: var(--indigo-900); }
+        .page-btn[aria-current="page"] { background: var(--indigo-900); border-color: var(--indigo-900); color: var(--paper); }
+        .page-btn:disabled { opacity: .4; cursor: default; }
+
+        /* ---------- Sur mesure ---------- */
+        .custom { background: var(--sand); }
+        .custom-inner { display: grid; grid-template-columns: minmax(0, 1.4fr) auto; gap: 32px; align-items: center; }
+        .custom p { color: var(--muted); margin-top: 10px; max-width: 54ch; }
+
+        /* ---------- Pied de page ---------- */
+        .site-footer { background: var(--indigo-900); color: rgba(251,250,247,.8); font-size: 0.93rem; }
+        .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; padding: 56px 0 40px; }
+        .footer-brand .wordmark-name { color: var(--paper); font-size: 1.8rem; }
+        .footer-brand p { margin-top: 14px; max-width: 36ch; line-height: 1.6; }
+        .site-footer h2 { font-family: var(--serif); font-weight: 700; font-size: 1rem; color: var(--paper); margin-bottom: 14px; }
+        .site-footer ul { list-style: none; display: grid; gap: 8px; }
+        .site-footer a { text-decoration: none; color: rgba(251,250,247,.8); }
+        .site-footer a:hover { color: var(--paper); text-decoration: underline; text-underline-offset: 3px; }
+        .site-footer details { margin-top: 2px; }
+        .site-footer summary { cursor: pointer; color: rgba(251,250,247,.8); }
+        .site-footer summary:hover { color: var(--paper); }
+        .site-footer details p { margin-top: 8px; font-size: 0.88rem; line-height: 1.6; color: rgba(251,250,247,.65); }
+        .socials { display: flex; gap: 10px; margin-top: 20px; }
+        .socials a { width: 40px; height: 40px; border: 1px solid rgba(251,250,247,.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+        .socials a:hover { border-color: var(--paper); }
+        .socials svg { width: 18px; height: 18px; fill: var(--paper); }
+        .footer-bottom { border-top: 1px solid rgba(251,250,247,.12); padding: 20px 0 28px; font-size: 0.84rem; color: rgba(251,250,247,.55); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+        .footer-bottom button { color: rgba(251,250,247,.8); text-decoration: underline; text-underline-offset: 3px; }
+
+        /* ---------- Fenêtres (aperçu, zoom, panier) ---------- */
+        dialog { border: 0; padding: 0; color: var(--ink); background: var(--white); }
+        dialog::backdrop { background: rgba(24,32,58,.6); }
+        .dlg-close { position: absolute; top: 10px; right: 10px; z-index: 2; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--white); }
+        .dlg-close:hover { background: var(--sand); }
+        .dlg-close svg { width: 20px; height: 20px; stroke: currentColor; stroke-width: 1.8; fill: none; }
+
+        .quick { width: min(920px, calc(100% - 32px)); max-height: calc(100% - 32px); margin: auto; border-radius: var(--r-md); overflow: auto; }
+        .quick-inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); position: relative; }
+        .quick-media { background: var(--sand); cursor: zoom-in; display: block; width: 100%; }
+        .quick-media img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+        .quick-body { padding: 40px 36px 32px; display: flex; flex-direction: column; }
+        .quick-body .card-ref { font-size: 0.86rem; }
+        .quick-title { font-family: var(--serif-display); font-weight: 400; font-size: 2.1rem; line-height: 1.1; margin-top: 6px; }
+        .quick-price { font-size: 1.4rem; font-weight: 600; margin-top: 14px; font-variant-numeric: tabular-nums; }
+        .specs { margin-top: 24px; border-top: 1px solid var(--line); }
+        .specs div { display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 0.94rem; }
+        .specs dt { color: var(--muted); }
+        .specs dd { font-weight: 500; text-align: right; }
+        .quick-actions { display: grid; gap: 10px; margin-top: 28px; }
+        .quick-links { display: flex; gap: 20px; margin-top: 18px; font-size: 0.92rem; }
+        .quick-note { margin-top: auto; padding-top: 24px; font-size: 0.85rem; color: var(--muted); }
+
+        .zoom { width: 100%; height: 100%; max-width: none; max-height: none; background: rgba(18,22,36,.96); }
+        .zoom-inner { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; padding: 56px 16px 16px; }
+        .zoom img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: var(--r-sm); }
+        .zoom .dlg-close { background: rgba(251,250,247,.12); color: var(--paper); }
+
+        .drawer { margin: 0 0 0 auto; width: min(430px, 100%); height: 100%; max-height: none; }
+        .drawer-inner { height: 100%; display: flex; flex-direction: column; }
+        .drawer-head { padding: 22px 24px 18px; border-bottom: 1px solid var(--line); }
+        .drawer-head h2 { font-family: var(--serif-display); font-weight: 400; font-size: 1.7rem; }
+        .drawer-head p { color: var(--muted); font-size: 0.88rem; margin-top: 2px; }
+        .drawer-items { flex: 1; overflow-y: auto; padding: 8px 24px; list-style: none; }
+        .line-item { display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; gap: 14px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--line); }
+        .line-item img, .line-item .ph { width: 56px; height: 75px; object-fit: cover; border-radius: var(--r-sm); background: var(--sand); }
+        .line-item .card-title { font-size: 0.98rem; margin-top: 2px; }
+        .line-price { font-weight: 600; font-size: 0.92rem; font-variant-numeric: tabular-nums; margin-top: 2px; }
+        .line-remove { font-size: 0.85rem; color: var(--danger); font-weight: 500; padding: 8px 4px; }
+        .line-remove:hover { text-decoration: underline; }
+        .drawer-empty { text-align: center; padding: 56px 8px; color: var(--muted); }
+        .drawer-empty p { margin-bottom: 18px; }
+        .drawer-foot { padding: 18px 24px 24px; border-top: 1px solid var(--line); background: var(--paper); }
+        .totals { display: grid; gap: 6px; font-size: 0.94rem; font-variant-numeric: tabular-nums; }
+        .totals div { display: flex; justify-content: space-between; }
+        .totals .discount { color: var(--gold-text); font-weight: 600; }
+        .totals .grand { font-size: 1.15rem; font-weight: 600; padding-top: 10px; margin-top: 4px; border-top: 1px solid var(--line); }
+        .hint { margin-top: 12px; font-size: 0.86rem; color: var(--muted); }
+        .drawer-actions { display: grid; gap: 10px; margin-top: 16px; }
+
+        /* ---------- Barre panier mobile & message ---------- */
+        .mobile-bar { display: none; }
+        .toast { position: fixed; left: 50%; bottom: 24px; z-index: 200; transform: translate(-50%, 20px); opacity: 0; pointer-events: none; background: var(--ink); color: var(--paper); padding: 12px 18px; border-radius: var(--r-sm); font-size: 0.92rem; max-width: calc(100% - 32px); box-shadow: 0 10px 30px rgba(0,0,0,.2); transition: opacity .2s ease, transform .2s ease; }
+        .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+        .load-error { grid-column: 1 / -1; padding: 28px; border: 1px solid var(--danger); border-radius: var(--r-md); background: #FBF1F0; }
+        .load-error h3 { font-family: var(--serif); color: var(--danger); margin-bottom: 6px; }
+        .load-error p { color: var(--muted); margin-bottom: 14px; }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 1024px) {
+            .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
         }
-        @keyframes popIn { 0% { transform: scale(0); } 100% { transform: scale(1); } }
-
-        /* Controls */
-        .controls-section { max-width: 1240px; margin: 0 auto; padding: 28px 16px 0; }
-        .search-wrapper { position: relative; max-width: 640px; margin: 0 auto; }
-        .search-icon { position: absolute; left: 18px; top: 50%; transform: translateY(-50%); color: var(--text-light); font-size: 0.95rem; pointer-events: none; }
-        #searchInput {
-            width: 100%; padding: 14px 20px 14px 48px; font-family: var(--font-body); font-size: 0.92rem;
-            border: 1.5px solid var(--border); border-radius: var(--radius-full); outline: none;
-            color: var(--ink); background: var(--white); transition: all var(--transition-base); box-shadow: var(--shadow-sm);
+        @media (max-width: 860px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .vitrine { max-width: 520px; }
+            .vitrine button:nth-child(2) { margin-top: 28px; }
+            .vitrine button:nth-child(3) { margin-top: 56px; }
+            .steps { grid-template-columns: 1fr; gap: 28px; }
+            .steps::before { left: 21px; right: auto; top: 22px; bottom: 22px; width: 2px; height: auto; background: repeating-linear-gradient(180deg, var(--gold) 0 10px, transparent 10px 17px); }
+            .step { display: grid; grid-template-columns: 44px 1fr; gap: 0 18px; text-align: left; padding: 0; }
+            .step-num { margin: 0; grid-row: span 2; }
+            .step p { margin: 0; max-width: none; }
+            .remise { text-align: left; }
+            .custom-inner { grid-template-columns: 1fr; gap: 20px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .footer-brand { grid-column: 1 / -1; }
+            .quick-inner { grid-template-columns: 1fr; }
+            .quick-media img { aspect-ratio: auto; max-height: 52vh; object-fit: contain; margin: 0 auto; }
+            .quick-body { padding: 24px 20px 24px; }
+            .quick-title { font-size: 1.7rem; }
         }
-        #searchInput::placeholder { color: var(--text-light); }
-        #searchInput:focus { border-color: var(--emerald-500); box-shadow: 0 0 0 4px var(--emerald-100), var(--shadow-md); }
-
-        .filters-bar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: center; padding: 20px 0 8px; }
-        .filter-group { display: flex; align-items: center; gap: 8px; background: var(--white); border: 1.5px solid var(--border-light); border-radius: var(--radius-full); padding: 6px 16px; box-shadow: var(--shadow-sm); }
-        .filter-group label { font-size: 0.75rem; font-weight: 600; color: var(--text-medium); text-transform: uppercase; letter-spacing: 0.05em; }
-        .filter-group select { border: none; background: none; font-family: var(--font-body); font-size: 0.85rem; font-weight: 500; color: var(--ink); cursor: pointer; outline: none; }
-        .price-range-wrapper { display: flex; align-items: center; gap: 10px; background: var(--white); border: 1.5px solid var(--border-light); border-radius: var(--radius-full); padding: 6px 16px; box-shadow: var(--shadow-sm); }
-        .price-range-wrapper label { font-size: 0.75rem; font-weight: 600; color: var(--text-medium); text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; }
-        .price-display { font-size: 0.85rem; font-weight: 600; color: var(--emerald-700); min-width: 80px; text-align: center; }
-        .range-slider { -webkit-appearance: none; appearance: none; width: 140px; height: 4px; background: var(--border); border-radius: 2px; outline: none; }
-        .range-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; background: var(--emerald-600); border-radius: 50%; cursor: pointer; border: 2px solid var(--white); box-shadow: var(--shadow-sm); transition: transform var(--transition-fast); }
-        .range-slider::-webkit-slider-thumb:hover { transform: scale(1.2); }
-        .view-toggle { display: flex; gap: 4px; background: var(--white); border: 1.5px solid var(--border-light); border-radius: var(--radius-full); padding: 4px; box-shadow: var(--shadow-sm); }
-        .view-btn { background: none; border: none; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--text-light); transition: all var(--transition-fast); font-size: 0.9rem; }
-        .view-btn:hover { color: var(--emerald-600); background: var(--emerald-50); }
-        .view-btn.active { background: var(--emerald-700); color: var(--white); box-shadow: var(--shadow-sm); }
-
-        /* Categories */
-        .categories { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; padding: 16px 14px 8px; max-width: 900px; margin: 0 auto; }
-        .cat-btn {
-            font-family: var(--font-body); font-size: 0.8rem; font-weight: 500; background: var(--white);
-            color: var(--text-medium); border: 1.5px solid var(--border-light); border-radius: var(--radius-full);
-            padding: 9px 20px; cursor: pointer; white-space: nowrap; transition: all var(--transition-base); box-shadow: var(--shadow-sm);
+        @media (max-width: 640px) {
+            :root { --header-h: 58px; }
+            .wordmark-name { font-size: 1.35rem; }
+            .wordmark-sub, .header-link { display: none; }
+            .cart-label { display: none; }
+            .toolbar { grid-template-columns: 1fr; }
+            .sort { justify-content: space-between; }
+            .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 14px; }
+            .card-title { font-size: 0.98rem; }
+            .card-row { flex-direction: column; gap: 2px; }
+            .card-actions { grid-template-columns: 1fr; gap: 6px; }
+            .card-actions .btn { min-height: 40px; font-size: 0.84rem; padding: 0 8px; }
+            .hero-actions .btn { flex: 1 1 100%; }
+            body.has-cart { padding-bottom: 76px; }
+            .mobile-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: none; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: var(--white); border-top: 1px solid var(--line); box-shadow: 0 -8px 24px rgba(24,32,58,.08); }
+            body.has-cart .mobile-bar { display: flex; }
+            .mobile-bar p { font-size: 0.85rem; color: var(--muted); line-height: 1.3; }
+            .mobile-bar strong { display: block; color: var(--ink); font-size: 1rem; font-variant-numeric: tabular-nums; }
+            body.has-cart .toast { bottom: 92px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
         }
-        .cat-btn:hover { border-color: var(--emerald-500); color: var(--emerald-700); transform: translateY(-1px); box-shadow: var(--shadow-md); }
-        .cat-btn.active { background: var(--emerald-700); color: var(--white); border-color: var(--emerald-700); font-weight: 600; box-shadow: 0 4px 12px rgba(31,92,78,0.2); }
-        .cat-btn.active:hover { background: var(--emerald-600); border-color: var(--emerald-600); }
-
-        /* Skeleton */
-        .skeleton-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; padding: 24px 14px; max-width: 1240px; margin: 0 auto; }
-        .skeleton-card { background: var(--white); border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); }
-        .skeleton-image { width: 100%; aspect-ratio: 4 / 3; background: linear-gradient(90deg, var(--border-light) 25%, var(--border) 50%, var(--border-light) 75%); background-size: 200% 100%; animation: skeletonShine 1.5s infinite; }
-        .skeleton-body { padding: 16px 18px 20px; }
-        .skeleton-line { height: 12px; background: linear-gradient(90deg, var(--border-light) 25%, var(--border) 50%, var(--border-light) 75%); background-size: 200% 100%; animation: skeletonShine 1.5s infinite; border-radius: 4px; margin-bottom: 10px; }
-        .skeleton-line.short { width: 60%; }
-        .skeleton-line.medium { width: 80%; }
-        @keyframes skeletonShine { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
-
-        /* Catalogue */
-        .catalogue { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; padding: 24px 14px 60px; max-width: 1240px; margin: 0 auto; min-height: 400px; }
-        .catalogue.list-view { grid-template-columns: 1fr; max-width: 800px; }
-        .catalogue.list-view .card { flex-direction: row; align-items: stretch; }
-        .catalogue.list-view .card-image { width: 200px; min-width: 200px; aspect-ratio: auto; }
-        .catalogue.list-view .card-body { flex-direction: row; align-items: center; gap: 20px; flex-wrap: wrap; }
-        .catalogue.list-view .card-specs { flex: 1; margin-bottom: 0; }
-        .catalogue.list-view .card-footer { flex-direction: column; border-top: none; padding-top: 0; min-width: 120px; }
-
-        .card {
-            background: var(--white); border-radius: var(--radius-md); overflow: hidden;
-            border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);
-            transition: transform var(--transition-slow), box-shadow var(--transition-slow), border-color var(--transition-base);
-            display: flex; flex-direction: column; opacity: 0; transform: translateY(20px);
-            animation: cardEnter 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards; position: relative;
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
         }
-        .card:nth-child(1) { animation-delay: 0.05s; }
-        .card:nth-child(2) { animation-delay: 0.1s; }
-        .card:nth-child(3) { animation-delay: 0.15s; }
-        .card:nth-child(4) { animation-delay: 0.2s; }
-        .card:nth-child(5) { animation-delay: 0.25s; }
-        .card:nth-child(6) { animation-delay: 0.3s; }
-        .card:nth-child(7) { animation-delay: 0.35s; }
-        .card:nth-child(8) { animation-delay: 0.4s; }
-        @keyframes cardEnter { to { opacity: 1; transform: translateY(0); } }
-        .card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--emerald-500); }
-        .card.draft { opacity: 0.5; border: 1.5px dashed var(--burgundy-600); box-shadow: none; animation: none; }
-        .card.draft:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
 
-        .card-actions-overlay { position: absolute; top: 12px; right: 12px; display: flex; gap: 8px; opacity: 0; transform: translateY(-8px); transition: all var(--transition-base); z-index: 5; }
-        .card:hover .card-actions-overlay { opacity: 1; transform: translateY(0); }
-        .card-action-icon {
-            width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.95);
-            border: 1px solid var(--border-light); display: flex; align-items: center; justify-content: center;
-            cursor: pointer; font-size: 1rem; transition: all var(--transition-fast); box-shadow: var(--shadow-sm); color: var(--text-medium);
-        }
-        .card-action-icon:hover { background: var(--emerald-700); color: var(--white); border-color: var(--emerald-700); transform: scale(1.1); }
-        .card-action-icon.favorited { background: var(--burgundy-100); color: var(--burgundy-600); border-color: var(--burgundy-600); }
-        .card-action-icon.favorited:hover { background: var(--burgundy-600); color: var(--white); }
-
-        .badge-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
-        .badge { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 4px 10px; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; }
-        .badge-draft { background: var(--burgundy-100); color: var(--burgundy-600); }
-        .badge-new { background: var(--gold-50); color: var(--gold-500); border: 1px solid var(--gold-100); }
-        .badge-new::before { content: '\2726'; font-size: 0.7rem; }
-
-        .card-image {
-            width: 100%; aspect-ratio: 4 / 3; background: linear-gradient(135deg, var(--emerald-50) 0%, var(--emerald-100) 100%);
-            display: flex; align-items: center; justify-content: center; overflow: hidden; cursor: zoom-in; position: relative;
-        }
-        .card-image::after {
-            content: '\1F50D'; position: absolute; bottom: 12px; right: 12px; width: 32px; height: 32px;
-            background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            font-size: 0.8rem; opacity: 0; transform: scale(0.8); transition: all var(--transition-base); box-shadow: var(--shadow-sm);
-        }
-        .card:hover .card-image::after { opacity: 1; transform: scale(1); }
-        .card-image img { max-width: 85%; max-height: 85%; object-fit: contain; transition: transform var(--transition-slow); }
-        .card-image:hover img { transform: scale(1.06); }
-        .card-image .img-fallback { color: var(--emerald-600); font-size: 0.8rem; font-weight: 500; text-align: center; padding: 10px; }
-
-        .card-body { padding: 16px 18px 20px; flex: 1; display: flex; flex-direction: column; }
-        .card-ref { font-size: 0.65rem; color: var(--gold-500); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 4px; }
-        .card-title { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; margin: 0 0 10px; line-height: 1.3; color: var(--ink); }
-        .card-specs { list-style: none; font-size: 0.78rem; color: var(--text-medium); margin-bottom: 14px; flex: 1; }
-        .card-specs li { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px dotted var(--border-light); }
-        .card-specs li:last-child { border-bottom: none; }
-
-        .card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; gap: 8px; padding-top: 12px; border-top: 1px solid var(--border-light); }
-        .card-price { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: var(--emerald-700); }
-        .card-price .currency { font-size: 0.75rem; font-weight: 500; color: var(--text-light); margin-left: 2px; }
-
-        .cart-action-btn {
-            font-family: var(--font-body); font-size: 0.72rem; font-weight: 600; border: none;
-            border-radius: var(--radius-full); padding: 8px 16px; cursor: pointer;
-            transition: all var(--transition-base); white-space: nowrap; display: inline-flex; align-items: center; gap: 5px;
-        }
-        .cart-action-btn:active { transform: scale(0.95); }
-        .add-btn { background: var(--emerald-700); color: var(--white); box-shadow: 0 2px 8px rgba(31,92,78,0.2); }
-        .add-btn:hover { background: var(--emerald-600); box-shadow: 0 4px 12px rgba(31,92,78,0.3); }
-        .add-btn:disabled { background: var(--border); color: var(--text-light); cursor: not-allowed; box-shadow: none; }
-        .remove-btn { background: var(--burgundy-100); color: var(--burgundy-600); }
-        .remove-btn:hover { background: var(--burgundy-600); color: var(--white); }
-
-        /* Quick View */
-        .quickview-modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(8px); z-index: 998; justify-content: center; align-items: center; padding: 20px; opacity: 0; transition: opacity var(--transition-base); }
-        .quickview-modal.open { display: flex; opacity: 1; }
-        .quickview-content { background: var(--white); border-radius: var(--radius-lg); max-width: 700px; width: 100%; max-height: 90vh; overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-xl); transform: scale(0.92); transition: transform var(--transition-slow); }
-        .quickview-modal.open .quickview-content { transform: scale(1); }
-        .quickview-header { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; border-bottom: 1px solid var(--border-light); }
-        .quickview-header h3 { font-family: var(--font-display); font-size: 1.3rem; color: var(--emerald-700); }
-        .quickview-close { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-light); width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: all var(--transition-fast); }
-        .quickview-close:hover { background: var(--emerald-50); color: var(--emerald-700); }
-        .quickview-body { display: flex; gap: 24px; padding: 24px; overflow-y: auto; }
-        .quickview-image { flex: 0 0 280px; aspect-ratio: 1; background: linear-gradient(135deg, var(--emerald-50) 0%, var(--emerald-100) 100%); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        .quickview-image img { max-width: 85%; max-height: 85%; object-fit: contain; }
-        .quickview-details { flex: 1; }
-        .quickview-details .badge-row { margin-bottom: 16px; }
-        .quickview-details .card-ref { font-size: 0.75rem; margin-bottom: 8px; }
-        .quickview-details .card-title { font-size: 1.5rem; margin-bottom: 16px; }
-        .quickview-details .card-specs { font-size: 0.9rem; margin-bottom: 20px; }
-        .quickview-details .card-price { font-size: 1.5rem; margin-bottom: 20px; display: block; }
-        .quickview-actions { display: flex; gap: 12px; }
-        @media (max-width: 640px) { .quickview-body { flex-direction: column; } .quickview-image { flex: none; width: 100%; aspect-ratio: 4/3; } }
-
-        /* Zoom */
-        .zoom-modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.88); backdrop-filter: blur(8px); z-index: 999; justify-content: center; align-items: center; flex-direction: column; opacity: 0; transition: opacity var(--transition-base); }
-        .zoom-modal.open { display: flex; opacity: 1; }
-        .zoom-modal img { max-width: 92%; max-height: 82vh; object-fit: contain; border: 3px solid rgba(255,255,255,0.9); border-radius: var(--radius-md); box-shadow: 0 24px 64px rgba(0,0,0,0.4); transform: scale(0.9); transition: transform var(--transition-slow); }
-        .zoom-modal.open img { transform: scale(1); }
-        .zoom-close { position: absolute; top: 24px; right: 32px; font-size: 2.2rem; color: rgba(255,255,255,0.8); cursor: pointer; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: all var(--transition-base); background: rgba(255,255,255,0.1); }
-        .zoom-close:hover { color: white; background: rgba(255,255,255,0.2); transform: rotate(90deg); }
-
-        /* ===== CART AVANCÉ - NOUVEAUX STYLES ===== */
-        .cart-overlay { position: fixed; inset: 0; background: rgba(34,32,28,0.4); backdrop-filter: blur(4px); z-index: 200; opacity: 0; visibility: hidden; transition: all var(--transition-base); }
-        .cart-overlay.open { opacity: 1; visibility: visible; }
-        .cart-panel { position: fixed; top: 0; right: -420px; width: 400px; max-width: 92vw; height: 100%; background: var(--white); border-left: 1px solid var(--border-light); box-shadow: -8px 0 32px rgba(0,0,0,0.1); z-index: 201; transition: right var(--transition-slow); display: flex; flex-direction: column; padding: 28px; color: var(--ink); }
-        .cart-panel.open { right: 0; }
-        .cart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 2px solid var(--emerald-100); }
-        .cart-header h2 { font-family: var(--font-display); font-size: 1.5rem; color: var(--emerald-700); font-weight: 600; }
-        .close-cart { background: none; border: none; font-size: 1.6rem; cursor: pointer; color: var(--text-light); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: all var(--transition-base); }
-        .close-cart:hover { background: var(--emerald-50); color: var(--emerald-700); transform: rotate(90deg); }
-        .cart-items { flex: 1; overflow-y: auto; margin-bottom: 16px; padding-right: 4px; }
-        .cart-items .cart-item { display: flex; align-items: center; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--border-light); animation: slideInRight 0.3s ease; }
-        @keyframes slideInRight { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
-        .cart-item img { width: 56px; height: 56px; object-fit: contain; background: var(--emerald-50); border-radius: var(--radius-sm); border: 1px solid var(--border-light); padding: 4px; }
-        .cart-item-info { flex: 1; }
-        .cart-item-info .item-title { font-weight: 600; font-size: 0.95rem; color: var(--ink); }
-        .cart-item-info .item-ref { font-size: 0.72rem; color: var(--gold-500); font-weight: 700; margin-top: 2px; }
-        .cart-item-info .item-price { font-size: 0.85rem; color: var(--text-medium); margin-top: 4px; font-weight: 500; }
-
-        .quantity-controls { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
-        .quantity-btn { width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid var(--border); background: var(--white); cursor: pointer; font-weight: 700; font-size: 1rem; display: flex; align-items: center; justify-content: center; transition: all var(--transition-fast); color: var(--ink); }
-        .quantity-btn:hover { background: var(--emerald-50); border-color: var(--emerald-500); transform: scale(1.1); }
-        .quantity-btn:active { transform: scale(0.9); }
-        .quantity-display { font-weight: 600; font-size: 0.95rem; min-width: 24px; text-align: center; color: var(--ink); }
-        .remove-item-btn { background: none; border: none; color: var(--burgundy-600); cursor: pointer; font-weight: 600; font-size: 0.78rem; padding: 6px 10px; border-radius: var(--radius-sm); transition: all var(--transition-fast); margin-left: auto; }
-        .remove-item-btn:hover { background: var(--burgundy-100); }
-
-        .cart-summary { background: var(--emerald-50); border-radius: var(--radius-md); padding: 16px 20px; margin: 12px 0 16px; border: 1.5px solid var(--emerald-100); }
-        .summary-row { display: flex; justify-content: space-between; padding: 6px 0; font-size: 0.9rem; color: var(--text-medium); }
-        .summary-row.total-row { font-size: 1.2rem; color: var(--ink); border-top: 2px solid var(--emerald-200); padding-top: 12px; margin-top: 8px; }
-        .summary-row.total-row strong { color: var(--emerald-700); }
-        .discount-row { color: var(--gold-500); font-weight: 600; }
-        .discount-amount { color: var(--gold-500); }
-        .discount-info { text-align: center; font-size: 0.85rem; color: var(--emerald-600); font-weight: 600; margin-top: 8px; padding: 8px; background: var(--gold-50); border-radius: var(--radius-sm); border: 1px solid var(--gold-100); }
-
-        .checkout-btn { display: block; width: 100%; padding: 16px; background: var(--emerald-700); color: var(--white); border: none; border-radius: var(--radius-full); font-weight: 600; font-size: 1rem; cursor: pointer; text-align: center; transition: all var(--transition-base); text-decoration: none; box-shadow: 0 4px 16px rgba(31,92,78,0.25); position: relative; overflow: hidden; }
-        .checkout-btn:hover { background: var(--emerald-600); box-shadow: 0 6px 20px rgba(31,92,78,0.35); transform: translateY(-1px); }
-        .checkout-btn:active { transform: translateY(0); }
-
-        .pdf-cart-btn { background: var(--gold-500) !important; color: var(--white) !important; box-shadow: 0 4px 16px rgba(200,155,60,0.3) !important; margin-top: 10px !important; }
-        .pdf-cart-btn:hover { background: var(--gold-400) !important; transform: translateY(-2px); }
-
-        .empty-cart { text-align: center; color: var(--text-light); margin-top: 60px; font-style: italic; font-size: 0.95rem; }
-        .empty-cart-icon { font-size: 3rem; margin-bottom: 16px; opacity: 0.4; }
-
-        @keyframes quantityPop { 0% { transform: scale(1); } 50% { transform: scale(1.3); color: var(--emerald-600); } 100% { transform: scale(1); } }
-        .quantity-pop { animation: quantityPop 0.3s ease; }
-
-        /* Toast */
-        .toast-container { position: fixed; top: 24px; right: 24px; z-index: 1000; display: flex; flex-direction: column; gap: 10px; pointer-events: none; }
-        .toast { background: var(--white); border-left: 4px solid var(--emerald-600); border-radius: var(--radius-md); padding: 14px 20px; box-shadow: var(--shadow-lg); display: flex; align-items: center; gap: 12px; min-width: 280px; max-width: 360px; animation: toastIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); pointer-events: all; position: relative; overflow: hidden; }
-        .toast.removing { animation: toastOut 0.3s ease forwards; }
-        .toast.success { border-left-color: var(--emerald-600); }
-        .toast.error { border-left-color: var(--burgundy-600); }
-        .toast.info { border-left-color: var(--gold-400); }
-        .toast-icon { font-size: 1.3rem; }
-        .toast-content { flex: 1; }
-        .toast-title { font-weight: 600; font-size: 0.9rem; color: var(--ink); }
-        .toast-message { font-size: 0.8rem; color: var(--text-medium); margin-top: 2px; }
-        .toast-close { background: none; border: none; color: var(--text-light); cursor: pointer; font-size: 1.1rem; padding: 4px; transition: color var(--transition-fast); }
-        .toast-close:hover { color: var(--ink); }
-        .toast-progress { position: absolute; bottom: 0; left: 0; height: 3px; background: var(--emerald-600); animation: progress 3s linear forwards; }
-        @keyframes toastIn { from { opacity: 0; transform: translateX(100px); } to { opacity: 1; transform: translateX(0); } }
-        @keyframes toastOut { from { opacity: 1; transform: translateX(0); } to { opacity: 0; transform: translateX(100px); } }
-        @keyframes progress { from { width: 100%; } to { width: 0%; } }
-
-        /* Back to Top */
-        .back-to-top { position: fixed; bottom: 28px; right: 28px; width: 48px; height: 48px; border-radius: 50%; background: var(--emerald-700); color: var(--white); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; box-shadow: var(--shadow-lg); opacity: 0; transform: translateY(20px); transition: all var(--transition-base); z-index: 90; }
-        .back-to-top.visible { opacity: 1; transform: translateY(0); }
-        .back-to-top:hover { background: var(--emerald-600); transform: translateY(-4px); box-shadow: var(--shadow-xl); }
-
-        /* Actions rapides sur mobile */
-        .mobile-cart-bar { display: none; }
-        .whatsapp-float { position: fixed; right: 20px; bottom: 24px; width: 56px; height: 56px; border-radius: 50%; background: #25D366; color: white; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.55rem; box-shadow: var(--shadow-lg); z-index: 92; transition: transform var(--transition-base), box-shadow var(--transition-base); }
-        .whatsapp-float:hover, .whatsapp-float:focus-visible { color: white; transform: translateY(-4px) scale(1.04); box-shadow: var(--shadow-xl); }
-        .footer-section details { margin-top: 10px; }
-        .footer-section summary { cursor: pointer; color: var(--emerald-700); font-weight: 600; font-size: 0.85rem; }
-        .footer-section details p { margin-top: 8px; }
-
-        /* Pagination */
-        .pagination { display: flex; justify-content: center; gap: 8px; padding: 20px 0 40px; flex-wrap: wrap; }
-        .page-btn { font-family: var(--font-body); font-size: 0.85rem; font-weight: 500; background: var(--white); color: var(--text-medium); border: 1.5px solid var(--border-light); border-radius: var(--radius-sm); padding: 8px 16px; cursor: pointer; transition: all var(--transition-base); box-shadow: var(--shadow-sm); }
-        .page-btn:hover { border-color: var(--emerald-500); color: var(--emerald-700); transform: translateY(-1px); box-shadow: var(--shadow-md); }
-        .page-btn.active { background: var(--emerald-700); color: white; border-color: var(--emerald-700); font-weight: 600; box-shadow: 0 4px 12px rgba(31,92,78,0.2); }
-        .page-btn:disabled { opacity: 0.35; cursor: not-allowed; transform: none; box-shadow: none; }
-
-        /* Footer */
-        footer { background: var(--white); border-top: 1px solid var(--border-light); margin-top: 10px; }
-        .footer-content { max-width: 1240px; margin: 0 auto; padding: 48px 24px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; }
-        .footer-section h4 { font-family: var(--font-display); font-size: 1.1rem; color: var(--emerald-700); margin-bottom: 16px; font-weight: 600; }
-        .footer-section p, .footer-section a { font-size: 0.85rem; color: var(--text-medium); line-height: 1.8; text-decoration: none; display: block; transition: color var(--transition-fast); }
-        .footer-section a:hover { color: var(--emerald-600); }
-        .footer-bottom { text-align: center; padding: 24px; color: var(--text-light); font-size: 0.8rem; border-top: 1px solid var(--border-light); }
-        .footer-bottom strong { color: var(--emerald-700); font-weight: 600; }
-        .social-links { display: flex; gap: 12px; margin-top: 12px; }
-        .social-links a { width: 36px; height: 36px; border-radius: 50%; background: var(--emerald-50); display: flex; align-items: center; justify-content: center; transition: all var(--transition-base); }
-        .social-links svg { width: 18px; height: 18px; fill: currentColor; }
-        .social-links a:hover { background: var(--emerald-700); color: var(--white); transform: translateY(-2px); }
-
-        /* Empty / Error */
-        .empty-state { grid-column: 1 / -1; text-align: center; padding: 80px 24px; color: var(--text-medium); animation: fadeIn 0.5s ease; }
-        .empty-state h3 { color: var(--ink); font-family: var(--font-display); margin-bottom: 12px; font-size: 1.4rem; }
-        .empty-state p { margin-bottom: 8px; line-height: 1.7; }
-        .empty-state .btn { margin-top: 20px; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .error-box { background: var(--burgundy-100); border: 1.5px solid var(--burgundy-600); border-radius: var(--radius-md); padding: 28px; max-width: 500px; margin: 0 auto; }
-        .error-box h3 { color: var(--burgundy-600); margin-bottom: 8px; font-family: var(--font-display); }
-        .error-box p { color: var(--text-medium); font-size: 0.9rem; }
-        .error-box code { background: rgba(140,47,57,0.08); padding: 2px 8px; border-radius: 4px; font-size: 0.85rem; color: var(--burgundy-600); }
-
-        /* Print */
+        /* ---------- Impression du catalogue ---------- */
         @media print {
-            body { background: white; }
-            .announcement-bar, header, .controls-section, .categories, .cart-toggle, .custom-upload-btn, .pdf-btn, .view-toggle,
-            .cart-overlay, .cart-panel, .zoom-modal, .quickview-modal, .pagination, footer, .back-to-top, .toast-container, .mobile-cart-bar, .whatsapp-float,
-            .cart-action-btn, .card-image::after, .card-actions-overlay { display: none !important; }
-            .catalogue { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; padding: 10px; }
-            .card { break-inside: avoid; border: 1px solid #ccc; box-shadow: none; opacity: 1 !important; transform: none !important; animation: none !important; }
-            .card-image img { max-width: 100%; }
+            body { background: #fff; }
+            .site-header, .hero, .how, .custom, .site-footer, .toolbar, .tabs, .pagination, .card-actions, .mobile-bar, .toast, dialog { display: none !important; }
+            .section { padding: 0; }
+            .print-head { display: block !important; margin-bottom: 16px; }
+            .grid { grid-template-columns: repeat(4, 1fr); gap: 14px; }
+            .card { break-inside: avoid; }
+            .card-media img { transform: none !important; }
+            .result-line { display: none; }
         }
-
-        /* Responsive */
-        @media (min-width: 768px) {
-            header { padding: 24px 32px; } h1 { font-size: 2rem; }
-            .controls-section { padding-top: 36px; } .categories { padding: 20px 20px 12px; }
-            .catalogue, .skeleton-container { grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 28px; padding: 36px 24px 80px; }
-            .card-body { padding: 20px 22px 24px; } .card-title { font-size: 1.25rem; }
-            .card-specs { font-size: 0.82rem; } .card-price { font-size: 1.15rem; }
-            .cart-action-btn { font-size: 0.78rem; padding: 9px 18px; }
-        }
-        @media (max-width: 480px) {
-            body { padding-bottom: 82px; }
-            h1 { font-size: 1.25rem; } .btn { min-height: 44px; padding: 9px 14px; font-size: 0.78rem; }
-            .catalogue, .skeleton-container { grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 16px 10px 56px; }
-            .card-body { padding: 12px 14px 16px; } .card-title { font-size: 0.9rem; }
-            .card-price { font-size: 0.9rem; } .cart-action-btn { min-height: 44px; padding: 8px 12px; font-size: 0.72rem; }
-            .cart-panel { padding: 20px; width: 100%; max-width: 100%; }
-            .filters-bar { flex-direction: column; align-items: stretch; }
-            .filter-group, .price-range-wrapper { justify-content: space-between; }
-            .quickview-body { flex-direction: column; } .quickview-image { flex: none; width: 100%; }
-            .cart-item { flex-wrap: wrap; }
-            .cart-item img { width: 44px; height: 44px; }
-            .quantity-controls { margin-top: 4px; }
-            .quantity-btn { width: 24px; height: 24px; font-size: 0.8rem; }
-            .cart-summary { padding: 12px 16px; }
-            .mobile-cart-bar { position: fixed; display: flex; align-items: center; justify-content: space-between; gap: 12px; left: 0; right: 0; bottom: 0; min-height: 72px; padding: 12px 16px; background: var(--white); border-top: 1px solid var(--border); box-shadow: 0 -6px 18px rgba(31,92,78,0.12); z-index: 95; }
-            .mobile-cart-copy { display: flex; flex-direction: column; color: var(--ink); font-size: 0.78rem; line-height: 1.25; }
-            .mobile-cart-copy strong { color: var(--emerald-700); font-size: 0.95rem; }
-            .mobile-cart-bar .btn { flex-shrink: 0; }
-            .whatsapp-float { right: 16px; bottom: 90px; width: 52px; height: 52px; font-size: 1.4rem; }
-            .back-to-top { right: 16px; bottom: 152px; width: 44px; height: 44px; }
-        }
+        .print-head { display: none; font-family: var(--serif); }
+        .print-head strong { font-family: var(--serif-display); font-weight: 400; font-size: 1.6rem; display: block; }
     </style>
 </head>
 <body>
 
-    <!-- Announcement Bar -->
-    <div class="announcement-bar">
-        <span style="display:inline-block;animation:bounce 2s infinite;">&#127881;</span> <strong>Nouveautes chaque semaine</strong> &mdash; Commandez directement par WhatsApp, livraison rapide a Ouagadougou
-    </div>
-    <style>@keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-4px)} }</style>
-
-    <!-- Header -->
-    <header id="mainHeader">
-        <div class="brand">
-            <div class="eyebrow">Numerisation professionnelle &middot; Wilcom Embroidery Studio</div>
-            <h1>ICONIQUES&nbsp;S</h1>
+    <header class="site-header">
+        <div class="wrap header-row">
+            <a class="wordmark" href="#top" aria-label="ICONIQUES S, retour en haut de page">
+                <span class="wordmark-name">ICONIQUES S</span>
+                <span class="wordmark-sub">Motifs de broderie numérisés</span>
+            </a>
+            <nav class="header-nav" aria-label="Navigation principale">
+                <a class="header-link" href="#catalogue">Catalogue</a>
+                <a class="header-link" href="#commander">Comment commander</a>
+                <a class="header-link" href="#sur-mesure">Sur mesure</a>
+                <button class="cart-btn" id="cartOpen" type="button" aria-label="Ouvrir le panier">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 7Z"/><path d="M9 7V6a3 3 0 0 1 6 0v1"/></svg>
+                    <span class="cart-label">Panier</span>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </button>
+            </nav>
         </div>
-        <div class="header-actions">
-            <a class="btn btn-gold" id="customUploadBtn" href="#">&#128228; Soumettre</a>
-            <button class="btn btn-outline" id="pdfBtn">&#128196; PDF</button>
-            <button class="btn btn-emerald" id="cartToggle">
-                &#129525; Panier <span class="cart-count" id="cartCount">0</span>
-            </button>
-        </div>
+        <div class="stitch header-stitch" aria-hidden="true"></div>
     </header>
 
-    <!-- Controls -->
-    <div class="controls-section">
-        <div class="search-wrapper">
-            <span class="search-icon">&#128269;</span>
-            <input type="text" id="searchInput" placeholder="Rechercher une reference (ex: ICS-00001) ou un nom...">
-        </div>
-        <div class="filters-bar">
-            <div class="filter-group">
-                <label for="sortSelect">Trier</label>
-                <select id="sortSelect">
-                    <option value="default">Par defaut</option>
-                    <option value="price-asc">Prix croissant</option>
-                    <option value="price-desc">Prix decroissant</option>
-                    <option value="name-az">Nom A &rarr; Z</option>
-                    <option value="name-za">Nom Z &rarr; A</option>
-                    <option value="newest">Nouveautes d'abord</option>
-                </select>
-            </div>
-            <div class="view-toggle">
-                <button class="view-btn active" data-view="grid" title="Vue grille">&#9642;&#9642;&#9642;</button>
-                <button class="view-btn" data-view="list" title="Vue liste">&#9776;</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Categories -->
-    <nav class="categories">
-        <button class="cat-btn active" data-cat="all">Tous</button>
-        <button class="cat-btn" data-cat="nouveau">&#10024; Nouveau</button>
-        <button class="cat-btn" data-cat="tuniques">Tuniques frappe &amp; poche</button>
-        <button class="cat-btn" data-cat="trois-pieces">3 Pieces</button>
-        <button class="cat-btn" data-cat="agbada">Agbada</button>
-        <button class="cat-btn" data-cat="modeles-dames">Modeles Dames</button>
-        <button class="cat-btn" data-cat="motifs-divers">Motifs Divers</button>
-    </nav>
-
-    <!-- Skeleton Loading -->
-    <div class="skeleton-container" id="skeletonLoader">
-        <div class="skeleton-card"><div class="skeleton-image"></div><div class="skeleton-body"><div class="skeleton-line short"></div><div class="skeleton-line medium"></div><div class="skeleton-line"></div></div></div>
-        <div class="skeleton-card"><div class="skeleton-image"></div><div class="skeleton-body"><div class="skeleton-line short"></div><div class="skeleton-line medium"></div><div class="skeleton-line"></div></div></div>
-        <div class="skeleton-card"><div class="skeleton-image"></div><div class="skeleton-body"><div class="skeleton-line short"></div><div class="skeleton-line medium"></div><div class="skeleton-line"></div></div></div>
-        <div class="skeleton-card"><div class="skeleton-image"></div><div class="skeleton-body"><div class="skeleton-line short"></div><div class="skeleton-line medium"></div><div class="skeleton-line"></div></div></div>
-        <div class="skeleton-card"><div class="skeleton-image"></div><div class="skeleton-body"><div class="skeleton-line short"></div><div class="skeleton-line medium"></div><div class="skeleton-line"></div></div></div>
-        <div class="skeleton-card"><div class="skeleton-image"></div><div class="skeleton-body"><div class="skeleton-line short"></div><div class="skeleton-line medium"></div><div class="skeleton-line"></div></div></div>
-        <div class="skeleton-card"><div class="skeleton-image"></div><div class="skeleton-body"><div class="skeleton-line short"></div><div class="skeleton-line medium"></div><div class="skeleton-line"></div></div></div>
-        <div class="skeleton-card"><div class="skeleton-image"></div><div class="skeleton-body"><div class="skeleton-line short"></div><div class="skeleton-line medium"></div><div class="skeleton-line"></div></div></div>
-    </div>
-
-    <!-- Catalogue -->
-    <main class="catalogue" id="catalogue" style="display:none;"></main>
-
-    <!-- Pagination -->
-    <div class="pagination" id="pagination"></div>
-
-    <!-- Quick View Modal -->
-    <div class="quickview-modal" id="quickViewModal">
-        <div class="quickview-content">
-            <div class="quickview-header">
-                <h3>Apercu rapide</h3>
-                <button class="quickview-close" id="quickViewClose">&times;</button>
-            </div>
-            <div class="quickview-body" id="quickViewBody"></div>
-        </div>
-    </div>
-
-    <!-- Zoom Modal -->
-    <div class="zoom-modal" id="zoomModal">
-        <span class="zoom-close" id="zoomClose">&times;</span>
-        <img id="zoomImage" src="" alt="Zoom">
-    </div>
-
-    <!-- ===== CART PANEL AMÉLIORÉ ===== -->
-    <div class="cart-overlay" id="cartOverlay"></div>
-    <div class="cart-panel" id="cartPanel">
-        <div class="cart-header">
-            <h2>🛒 Mon panier</h2>
-            <button class="close-cart" id="closeCart">&times;</button>
-        </div>
-        <div class="cart-items" id="cartItems">
-            <div class="empty-cart" id="emptyCart">
-                <div class="empty-cart-icon">🛒</div>
-                Votre panier est vide.
-            </div>
-        </div>
-        
-        <!-- Résumé avec remises -->
-        <div class="cart-summary" id="cartSummary" style="display: none;">
-            <div class="summary-row">
-                <span>Sous-total</span>
-                <span id="subtotalDisplay">0 F</span>
-            </div>
-            <div class="summary-row discount-row" id="discountRow" style="display: none;">
-                <span>Remise <span id="discountPercent">0%</span></span>
-                <span class="discount-amount">-<span id="discountAmount">0</span> F</span>
-            </div>
-            <div class="summary-row total-row">
-                <span><strong>Total</strong></span>
-                <span><strong id="totalAmount">0 F</strong></span>
-            </div>
-            <div class="discount-info" id="discountInfo"></div>
-        </div>
-        
-        <button class="checkout-btn" id="checkoutBtn" style="display: none;">
-            📱 Commander sur WhatsApp
-        </button>
-        <button class="checkout-btn pdf-cart-btn" id="printCartBtn" style="display: none;">
-            🖨️ Imprimer le récapitulatif
-        </button>
-    </div>
-
-    <!-- Toast Container -->
-    <div class="toast-container" id="toastContainer"></div>
-
-    <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop" title="Retour en haut">&uarr;</button>
-
-    <a class="whatsapp-float" href="https://wa.me/22677956781?text=Bonjour%20ICONIQUES%20S%2C%20j%27ai%20une%20question%20sur%20vos%20motifs." target="_blank" rel="noopener noreferrer" aria-label="Poser une question sur WhatsApp" title="Une question ? Écrivez-nous sur WhatsApp">☏</a>
-    <div class="mobile-cart-bar" aria-label="Accès rapide au panier">
-        <div class="mobile-cart-copy"><span id="mobileCartLabel">Votre sélection</span><strong id="mobileCartTotal">Panier vide</strong></div>
-        <button class="btn btn-emerald" id="mobileCartToggle" type="button">Voir le panier</button>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>ICONIQUES S</h4>
-                <p>Numerisation professionnelle de motifs de broderie avec Wilcom Embroidery Studio. Base a Ouagadougou, Burkina Faso.</p>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/share/p/18gvsvjyQ1/" target="_blank" rel="noopener noreferrer" title="Suivez-nous sur Facebook" aria-label="Facebook">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.3v3h2.8v8h3.4z"/></svg>
-                    </a>
-                    <a href="https://www.instagram.com/saddabe13?igsh=MW9weDV1N214NzN6bg==" target="_blank" rel="noopener noreferrer" title="Suivez-nous sur Instagram" aria-label="Instagram">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5ZM17.7 6.2a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1Z"/></svg>
-                    </a>
-                    <a href="https://wa.me/22677956781?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20motifs." target="_blank" rel="noopener noreferrer" title="Contactez-nous sur WhatsApp" aria-label="WhatsApp">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.2 1.6 6L0 24l6.4-1.7a11.9 11.9 0 0 0 5.7 1.5h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.3-6.1-3.5-8.5ZM12.1 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.3-.4a9.8 9.8 0 1 1 8.5 4.7Zm5.4-7.3c-.3-.2-1.7-.8-2-.9s-.5-.2-.7.2-.8.9-1 1.1-.4.2-.7.1a8 8 0 0 1-2.4-1.5 8.8 8.8 0 0 1-1.6-2c-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6s0-.5-.1-.7l-.9-2.1c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.7.1-1 .5s-1.3 1.2-1.3 2.9 1.3 3.3 1.5 3.6 2.6 4 6.3 5.6c.9.4 1.6.7 2.2.9.9.3 1.8.2 2.4.1.7-.1 1.7-.7 1.9-1.4s.2-1.3.1-1.4-.2-.2-.5-.4Z"/></svg>
-                    </a>
+    <main id="top">
+        <section class="hero" aria-labelledby="heroTitle">
+            <div class="wrap hero-grid">
+                <div>
+                    <h1 id="heroTitle">Motifs de broderie numérisés, prêts pour votre machine</h1>
+                    <p class="hero-lede">Des fichiers pour tuniques, trois-pièces et agbada, numérisés à Ouagadougou sur Wilcom Embroidery Studio. Choisissez votre motif ici, commandez sur WhatsApp et recevez le fichier sur WhatsApp.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-light" href="#catalogue">Voir le catalogue</a>
+                        <a class="btn btn-outline-light" id="heroWhatsapp" href="https://wa.me/22677956781" target="_blank" rel="noopener noreferrer">Écrire sur WhatsApp</a>
+                    </div>
+                    <p class="hero-note"><strong id="heroCount">Plus de 120 motifs</strong> disponibles, avec des nouveautés chaque semaine.</p>
+                </div>
+                <div class="vitrine" aria-label="Quelques motifs du catalogue">
+                    <button type="button" data-open="ICS-00043"><img src="images/mini/AGBADA%20A1.jpg" data-full="images/AGBADA%20A1.webp" alt="Motif ICONIC 043" width="480" height="640"></button>
+                    <button type="button" data-open="ICS-00006"><img src="images/mini/AFRICAIN%20ART%20MAP.jpg" data-full="images/AFRICAIN%20ART%20MAP.webp" alt="Motif ICONIC 006" width="480" height="640"></button>
+                    <button type="button" data-open="ICS-00001"><img src="images/mini/ics-00001.jpg" data-full="images/ics-00001.webp" alt="Motif ICONIC 001" width="480" height="640"></button>
                 </div>
             </div>
-            <div class="footer-section">
-                <h4>Navigation</h4>
-                <a href="#" onclick="document.getElementById('customUploadBtn').click(); return false;">Soumettre un motif</a>
-                <a href="#" onclick="document.getElementById('cartToggle').click(); return false;">Mon panier</a>
-                <a href="#" onclick="window.print(); return false;">Imprimer le catalogue</a>
+        </section>
+
+        <section class="section how" id="commander" aria-labelledby="howTitle">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <h2 class="section-title" id="howTitle">Comment commander</h2>
+                        <p class="section-intro">Le paiement et l'envoi des fichiers se font sur WhatsApp, avec une personne qui vous répond.</p>
+                    </div>
+                </div>
+                <ol class="steps">
+                    <li class="step">
+                        <span class="step-num" aria-hidden="true">1</span>
+                        <h3>Choisissez votre motif</h3>
+                        <p>Touchez « Commander » sur un motif, ou rassemblez-en plusieurs dans le panier.</p>
+                    </li>
+                    <li class="step">
+                        <span class="step-num" aria-hidden="true">2</span>
+                        <h3>Payez par Wave ou Orange Money</h3>
+                        <p>Sur WhatsApp, nous confirmons le format de votre machine et le numéro de paiement.</p>
+                    </li>
+                    <li class="step">
+                        <span class="step-num" aria-hidden="true">3</span>
+                        <h3>Recevez votre fichier</h3>
+                        <p>Le fichier vous est envoyé sur WhatsApp dès la confirmation du paiement.</p>
+                    </li>
+                </ol>
+                <p class="remise">Remise automatique dans le panier : <strong>10 %</strong> dès 5 motifs, <strong>15 %</strong> dès 10 motifs, <strong>20 %</strong> dès 20 motifs.</p>
             </div>
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <p>&#128205; Ouagadougou, Burkina Faso</p>
-                <p>&#128241; +226 77 95 67 81</p>
-                <p>&#128338; Lun - Sam : 8h00 - 18h00</p>
+        </section>
+
+        <section class="section" id="catalogue" aria-labelledby="catalogueTitle">
+            <div class="wrap">
+                <div class="print-head"><strong>ICONIQUES S</strong>Catalogue des motifs de broderie numérisés, iconiquess.com, WhatsApp +226 77 95 67 81</div>
+                <div class="section-head">
+                    <div>
+                        <h2 class="section-title" id="catalogueTitle">Catalogue</h2>
+                        <p class="section-intro">Touchez un motif pour le voir en grand, le partager ou le commander.</p>
+                    </div>
+                </div>
+
+                <div class="toolbar">
+                    <div class="search">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                        <label class="sr-only" for="searchInput">Rechercher un motif</label>
+                        <input type="search" id="searchInput" placeholder="Rechercher une référence ou un nom, par exemple ICS-00045" autocomplete="off">
+                    </div>
+                    <div class="sort">
+                        <label for="sortSelect">Trier par</label>
+                        <select id="sortSelect">
+                            <option value="default">Ordre du catalogue</option>
+                            <option value="newest">Nouveautés d'abord</option>
+                            <option value="price-asc">Prix croissant</option>
+                            <option value="price-desc">Prix décroissant</option>
+                            <option value="ref">Référence</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="tabs" id="tabs" role="group" aria-label="Catégories"></div>
+                <p class="result-line" id="resultLine" aria-live="polite"></p>
+                <div class="grid" id="grid" aria-busy="true"></div>
+                <nav class="pagination" id="pagination" aria-label="Pages du catalogue"></nav>
             </div>
-            <div class="footer-section">
-                <h4>Informations</h4>
-                <p>Catalogue mis a jour regulierement avec les nouveautes.</p>
-                <p>Commandez par WhatsApp pour une reponse rapide.</p>
-                <p>Livraison disponible a Ouagadougou.</p>
-                <details id="a-propos">
-                    <summary>À propos d’ICONIQUES S</summary>
-                    <p>Nous créons et proposons des motifs de broderie numérisés pour accompagner vos projets créatifs et professionnels.</p>
-                </details>
-                <details id="conditions">
-                    <summary>Comment commander et conditions</summary>
-                    <p>Ajoutez vos motifs au panier puis envoyez votre demande par WhatsApp. Les modalités de paiement, délais et formats disponibles sont confirmés avec vous avant validation.</p>
-                </details>
-                <details id="confidentialite">
-                    <summary>Confidentialité</summary>
-                    <p>Le panier est conservé uniquement dans votre navigateur. Vos coordonnées ne sont utilisées que pour répondre à votre demande de commande.</p>
-                </details>
+        </section>
+
+        <section class="section custom" id="sur-mesure" aria-labelledby="customTitle">
+            <div class="wrap custom-inner">
+                <div>
+                    <h2 class="section-title" id="customTitle">Vous ne trouvez pas votre motif ?</h2>
+                    <p>Envoyez-nous une photo du modèle sur WhatsApp. Nous le numérisons pour votre machine et vous indiquons le prix avant de commencer.</p>
+                </div>
+                <button class="btn btn-primary" id="customBtn" type="button">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path id="waPath" d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.2 1.6 6L0 24l6.4-1.7a11.9 11.9 0 0 0 5.7 1.5h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.3-6.1-3.5-8.5ZM12.1 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.3-.4a9.8 9.8 0 1 1 8.5 4.7Zm5.4-7.3c-.3-.2-1.7-.8-2-.9s-.5-.2-.7.2-.8.9-1 1.1-.4.2-.7.1a8 8 0 0 1-2.4-1.5 8.8 8.8 0 0 1-1.6-2c-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6s0-.5-.1-.7l-.9-2.1c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.7.1-1 .5s-1.3 1.2-1.3 2.9 1.3 3.3 1.5 3.6 2.6 4 6.3 5.6c.9.4 1.6.7 2.2.9.9.3 1.8.2 2.4.1.7-.1 1.7-.7 1.9-1.4s.2-1.3.1-1.4-.2-.2-.5-.4Z"/></svg>
+                    Envoyer mon modèle
+                </button>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <strong>ICONIQUES S</strong> &mdash; Catalogue de motifs de broderie &mdash; Tous droits reserves
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="stitch" aria-hidden="true"></div>
+        <div class="wrap">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="wordmark-name">ICONIQUES S</span>
+                    <p>Numérisation professionnelle de motifs de broderie avec Wilcom Embroidery Studio, à Ouagadougou, Burkina Faso. Fichiers envoyés sur WhatsApp, où que vous soyez.</p>
+                    <div class="socials">
+                        <a href="https://www.facebook.com/share/p/18gvsvjyQ1/" target="_blank" rel="noopener noreferrer" aria-label="ICONIQUES S sur Facebook">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.3v3h2.8v8h3.4z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/saddabe13?igsh=MW9weDV1N214NzN6bg==" target="_blank" rel="noopener noreferrer" aria-label="ICONIQUES S sur Instagram">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5ZM17.7 6.2a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1Z"/></svg>
+                        </a>
+                        <a href="https://wa.me/22677956781" target="_blank" rel="noopener noreferrer" aria-label="ICONIQUES S sur WhatsApp">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#waPath"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h2>Contact</h2>
+                    <ul>
+                        <li><a href="https://wa.me/22677956781" target="_blank" rel="noopener noreferrer">WhatsApp : +226 77 95 67 81</a></li>
+                        <li><a href="mailto:iconiques.s@gmail.com">iconiques.s@gmail.com</a></li>
+                        <li>Du lundi au samedi, de 8 h à 18 h</li>
+                        <li>Ouagadougou, Burkina Faso</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Informations</h2>
+                    <ul>
+                        <li><a href="#commander">Comment commander</a></li>
+                        <li>
+                            <details>
+                                <summary>Conditions de vente</summary>
+                                <p>Les motifs sont vendus sous forme de fichiers numériques. Le format adapté à votre machine, le prix et le paiement sont confirmés avec vous sur WhatsApp avant l'envoi. Les remises du panier s'appliquent automatiquement selon le nombre de motifs différents.</p>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>Confidentialité</summary>
+                                <p>Votre panier est enregistré uniquement dans votre navigateur. Votre numéro WhatsApp sert seulement à traiter votre commande.</p>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© <span id="year">2026</span> ICONIQUES S. Tous droits réservés.</span>
+                <button type="button" id="printCatalogue">Imprimer le catalogue</button>
+            </div>
         </div>
     </footer>
 
-    <script>
+    <!-- Aperçu d'un motif -->
+    <dialog class="quick" id="quickDlg" aria-labelledby="quickTitle">
+        <div class="quick-inner" id="quickInner"></div>
+    </dialog>
 
-        /* ========== STATE ========== */
-        let motifs = [];
-        const whatsappNumber = "22677956781";
-        function readStoredArray(key) {
-            try {
-                var value = JSON.parse(localStorage.getItem(key));
-                return Array.isArray(value) ? value : [];
-            } catch (error) {
-                // Des données anciennes ou incomplètes ne doivent pas bloquer le catalogue.
-                localStorage.removeItem(key);
-                return [];
-            }
-        }
-        let cart = readStoredArray('iconiques_cart').map(function(item) {
-            if (!item || typeof item.ref !== 'string' || !Number.isFinite(Number(item.prixNum))) return null;
-            return {
-                ref: item.ref,
-                title: typeof item.title === 'string' ? item.title : item.ref,
-                prixNum: Number(item.prixNum),
-                img: typeof item.img === 'string' ? item.img : '',
-                quantity: Number.isFinite(Number(item.quantity)) && Number(item.quantity) > 0 ? Number(item.quantity) : 1
-            };
-        }).filter(Boolean);
-        let favorites = readStoredArray('iconiques_favorites').filter(function(ref) { return typeof ref === 'string'; });
-        let currentView = localStorage.getItem('iconiques_view') || 'grid';
-        let currentTheme;
-        const ITEMS_PER_PAGE = 20;
-        let currentPage = 1;
-        let currentCategory = 'all';
-        let currentSearchQuery = '';
-        let currentSort = 'default';
-        let searchTimeout;
+    <!-- Zoom -->
+    <dialog class="zoom" id="zoomDlg" aria-label="Image agrandie">
+        <div class="zoom-inner">
+            <button class="dlg-close" type="button" data-close aria-label="Fermer l'image">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+            <img id="zoomImg" src="" alt="">
+        </div>
+    </dialog>
 
-        /* ========== APP HISTORY ========== */
-        var isRestoringHistory = false;
-        var activeModal = null;
-
-        function getAppState() {
-            return {
-                iconiquesCatalogue: true,
-                page: currentPage,
-                category: currentCategory,
-                search: currentSearchQuery,
-                sort: currentSort,
-                modal: activeModal
-            };
-        }
-        function saveAppState() {
-            if (!isRestoringHistory) history.pushState(getAppState(), '', window.location.href);
-        }
-        function hideOpenPanels() {
-            document.getElementById('quickViewModal').classList.remove('open');
-            document.getElementById('zoomModal').classList.remove('open');
-            document.getElementById('cartPanel').classList.remove('open');
-            document.getElementById('cartOverlay').classList.remove('open');
-            document.body.style.overflow = '';
-            activeModal = null;
-        }
-        function restoreAppState(state) {
-            if (!state || !state.iconiquesCatalogue) return;
-            isRestoringHistory = true;
-            currentPage = state.page || 1;
-            currentCategory = state.category || 'all';
-            currentSearchQuery = state.search || '';
-            currentSort = state.sort || 'default';
-            document.getElementById('searchInput').value = currentSearchQuery;
-            document.getElementById('sortSelect').value = currentSort;
-            document.querySelectorAll('.cat-btn').forEach(function(btn) {
-                btn.classList.toggle('active', btn.dataset.cat === currentCategory);
-            });
-            hideOpenPanels();
-            renderCatalogue();
-            if (state.modal && state.modal.type === 'quick') openQuickView(state.modal.ref);
-            else if (state.modal && state.modal.type === 'zoom') openZoom(state.modal.img);
-            else if (state.modal && state.modal.type === 'cart') openCart();
-            isRestoringHistory = false;
-        }
-        history.replaceState(getAppState(), '', window.location.href);
-        window.addEventListener('popstate', function(event) { restoreAppState(event.state); });
-
-        /* ========== THEME ========== */
-        function applyTheme(theme) {
-            document.documentElement.setAttribute('data-theme', theme);
-        }
-        var systemThemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        currentTheme = systemThemeQuery.matches ? 'dark' : 'light';
-        applyTheme(currentTheme);
-        systemThemeQuery.addEventListener('change', function(event) {
-            currentTheme = event.matches ? 'dark' : 'light';
-            applyTheme(currentTheme);
-        });
-
-        /* ========== VIEW TOGGLE ========== */
-        function applyView(view) {
-            var catalogue = document.getElementById('catalogue');
-            document.querySelectorAll('.view-btn').forEach(function(b) {
-                b.classList.toggle('active', b.dataset.view === view);
-            });
-            if (view === 'list') catalogue.classList.add('list-view');
-            else catalogue.classList.remove('list-view');
-            localStorage.setItem('iconiques_view', view);
-        }
-        applyView(currentView);
-        document.querySelectorAll('.view-btn').forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                currentView = btn.dataset.view;
-                applyView(currentView);
-            });
-        });
-
-        /* ========== TOAST ========== */
-        function showToast(type, title, message) {
-            var container = document.getElementById('toastContainer');
-            var toast = document.createElement('div');
-            toast.className = 'toast ' + type;
-            var icons = { success: '\u2705', error: '\u274C', info: '\u2139' };
-            var icon = document.createElement('span');
-            icon.className = 'toast-icon';
-            icon.textContent = icons[type] || '\u2139';
-            var content = document.createElement('div');
-            content.className = 'toast-content';
-            var toastTitle = document.createElement('div');
-            toastTitle.className = 'toast-title';
-            toastTitle.textContent = title;
-            var toastMessage = document.createElement('div');
-            toastMessage.className = 'toast-message';
-            toastMessage.textContent = message;
-            content.append(toastTitle, toastMessage);
-            var closeButton = document.createElement('button');
-            closeButton.className = 'toast-close';
-            closeButton.type = 'button';
-            closeButton.setAttribute('aria-label', 'Fermer la notification');
-            closeButton.textContent = '×';
-            var progress = document.createElement('div');
-            progress.className = 'toast-progress';
-            toast.append(icon, content, closeButton, progress);
-            container.appendChild(toast);
-            toast.querySelector('.toast-close').addEventListener('click', function() { removeToast(toast); });
-            setTimeout(function() { removeToast(toast); }, 3000);
-        }
-        function removeToast(toast) {
-            toast.classList.add('removing');
-            setTimeout(function() { if (toast.parentNode) toast.parentNode.removeChild(toast); }, 300);
-        }
-
-        /* ========== SKELETON ========== */
-        function showSkeleton() {
-            document.getElementById('skeletonLoader').style.display = 'grid';
-            document.getElementById('catalogue').style.display = 'none';
-        }
-        function hideSkeleton() {
-            document.getElementById('skeletonLoader').style.display = 'none';
-            document.getElementById('catalogue').style.display = 'grid';
-        }
-
-        /* ========== CART AVANCÉ ========== */
-        function saveCart() {
-            try {
-                localStorage.setItem('iconiques_cart', JSON.stringify(cart));
-            } catch (error) {
-                console.error('Impossible d’enregistrer le panier :', error);
-                showToast('error', 'Panier non enregistré', 'Vérifiez l’espace disponible dans votre navigateur.');
-            }
-        }
-
-        function addToCart(ref, quantity = 1) {
-            var m = motifs.find(function(x) { return x.ref === ref; });
-            if (!m || m.draft) return;
-            
-            var existing = cart.find(function(i) { return i.ref === ref; });
-            if (existing) {
-                existing.quantity += quantity;
-            } else {
-                cart.push({ 
-                    ref: m.ref, 
-                    title: m.title, 
-                    prixNum: m.prixNum, 
-                    img: m.img,
-                    quantity: quantity
-                });
-            }
-            saveCart(); 
-            renderCartPanel(); 
-            updateAllButtons();
-            showToast('success', 'Ajouté au panier', m.title + ' (x' + quantity + ')');
-        }
-
-        function removeFromCart(ref) {
-            var item = cart.find(function(i) { return i.ref === ref; });
-            cart = cart.filter(function(i) { return i.ref !== ref; });
-            saveCart(); 
-            renderCartPanel(); 
-            updateAllButtons();
-            if (item) showToast('info', 'Retiré du panier', item.title);
-        }
-
-        function updateQuantity(ref, delta) {
-            var item = cart.find(function(i) { return i.ref === ref; });
-            if (!item) return;
-            
-            item.quantity += delta;
-            if (item.quantity <= 0) {
-                removeFromCart(ref);
-                return;
-            }
-            saveCart();
-            renderCartPanel();
-            // Animation sur la quantité
-            var display = document.querySelector('[data-ref-quantity="' + ref + '"]');
-            if (display) {
-                display.classList.remove('quantity-pop');
-                display.offsetHeight;
-                display.classList.add('quantity-pop');
-            }
-        }
-
-        function getTotalItems() {
-            return cart.reduce(function(s, i) { return s + i.quantity; }, 0);
-        }
-
-        function getSubtotal() {
-            return cart.reduce(function(s, i) { return s + (i.prixNum * i.quantity); }, 0);
-        }
-
-        function getDiscount() {
-            var total = getTotalItems();
-            if (total >= 20) return 0.20;      // -20% pour 20+ motifs
-            if (total >= 10) return 0.15;      // -15% pour 10+ motifs
-            if (total >= 5) return 0.10;       // -10% pour 5+ motifs
-            return 0;
-        }
-
-        function getTotal() {
-            var subtotal = getSubtotal();
-            var discount = getDiscount();
-            return subtotal * (1 - discount);
-        }
-
-        function getDiscountMessage() {
-            var total = getTotalItems();
-            var discount = getDiscount();
-            if (discount === 0) {
-                if (total >= 5) {
-                    var nextDiscount = total < 10 ? 10 : 20;
-                    return '💡 Ajoutez ' + (nextDiscount - total) + ' motif(s) pour obtenir ' + 
-                        (nextDiscount >= 20 ? 20 : nextDiscount >= 10 ? 15 : 10) + '% de remise !';
-                }
-                return '';
-            }
-            return '🎉 ' + total + ' motifs - Remise ' + (discount * 100) + '% appliquée !';
-        }
-
-        function renderCartPanel() {
-            var container = document.getElementById('cartItems');
-            var emptyEl = document.getElementById('emptyCart');
-            var summaryEl = document.getElementById('cartSummary');
-            var checkoutBtn = document.getElementById('checkoutBtn');
-            var printBtn = document.getElementById('printCartBtn');
-            
-            if (cart.length === 0) {
-                // Ne pas supprimer #emptyCart : il doit rester disponible
-                // lorsque le premier article est ajouté au panier.
-                container.innerHTML = '<div class="empty-cart" id="emptyCart">' +
-                    '<div class="empty-cart-icon">🛒</div>' +
-                    'Votre panier est vide.' +
-                    '</div>';
-                emptyEl = document.getElementById('emptyCart');
-                emptyEl.style.display = 'block';
-                summaryEl.style.display = 'none';
-                checkoutBtn.style.display = 'none';
-                printBtn.style.display = 'none';
-                document.getElementById('cartCount').textContent = '0';
-                document.getElementById('mobileCartLabel').textContent = 'Votre sélection';
-                document.getElementById('mobileCartTotal').textContent = 'Panier vide';
-                return;
-            }
-            
-            // Après le rendu d'un panier non vide, #emptyCart n'est plus dans
-            // le DOM. Le test évite une erreur lors des ajouts suivants.
-            if (emptyEl) emptyEl.style.display = 'none';
-            summaryEl.style.display = 'block';
-            checkoutBtn.style.display = 'block';
-            printBtn.style.display = 'block';
-            
-            // Afficher les articles
-            container.innerHTML = cart.map(function(item) {
-                return '<div class="cart-item">' +
-                    '<img src="' + item.img + '" alt="' + item.title + '" onerror="this.src=\'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2256%22 height=%2256%22%3E%3Crect fill=%22%23E3EFEA%22 width=%2256%22 height=%2256%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%232C7A68%22 font-size=%2210%22%3EImage%3C/text%3E%3C/svg%3E\'">' +
-                    '<div class="cart-item-info">' +
-                        '<div class="item-title">' + item.title + '</div>' +
-                        '<div class="item-ref">' + item.ref + '</div>' +
-                        '<div class="item-price">' + (item.prixNum * item.quantity).toLocaleString('fr-FR') + ' F</div>' +
-                        '<div class="quantity-controls">' +
-                            '<button class="quantity-btn" onclick="updateQuantity(\'' + item.ref + '\', -1)">−</button>' +
-                            '<span class="quantity-display quantity-pop" data-ref-quantity="' + item.ref + '">' + item.quantity + '</span>' +
-                            '<button class="quantity-btn" onclick="updateQuantity(\'' + item.ref + '\', 1)">+</button>' +
-                        '</div>' +
-                    '</div>' +
-                    '<button class="remove-item-btn" onclick="removeFromCart(\'' + item.ref + '\')">✕ Retirer</button>' +
-                '</div>';
-            }).join('');
-            
-            // Mettre à jour les totaux
-            var subtotal = getSubtotal();
-            var discount = getDiscount();
-            var total = getTotal();
-            var totalItems = getTotalItems();
-            
-            document.getElementById('subtotalDisplay').textContent = subtotal.toLocaleString('fr-FR') + ' F';
-            document.getElementById('totalAmount').textContent = total.toLocaleString('fr-FR') + ' F';
-            document.getElementById('cartCount').textContent = totalItems;
-            document.getElementById('mobileCartLabel').textContent = totalItems + (totalItems > 1 ? ' motifs sélectionnés' : ' motif sélectionné');
-            document.getElementById('mobileCartTotal').textContent = total.toLocaleString('fr-FR') + ' F';
-            
-            // Gérer les remises
-            var discountRow = document.getElementById('discountRow');
-            var discountInfo = document.getElementById('discountInfo');
-            
-            if (discount > 0) {
-                discountRow.style.display = 'flex';
-                document.getElementById('discountPercent').textContent = (discount * 100) + '%';
-                var discountAmount = subtotal * discount;
-                document.getElementById('discountAmount').textContent = discountAmount.toLocaleString('fr-FR');
-                discountInfo.textContent = getDiscountMessage();
-                discountInfo.style.display = 'block';
-            } else {
-                var msg = getDiscountMessage();
-                if (msg) {
-                    discountInfo.textContent = msg;
-                    discountInfo.style.display = 'block';
-                } else {
-                    discountInfo.style.display = 'none';
-                }
-                discountRow.style.display = 'none';
-            }
-            
-            // Animation du compteur
-            var countEl = document.getElementById('cartCount');
-            countEl.style.animation = 'none';
-            countEl.offsetHeight;
-            countEl.style.animation = 'popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-        }
-
-        function updateAllButtons() {
-            document.querySelectorAll('.cart-action-btn').forEach(function(btn) {
-                var ref = btn.dataset.ref;
-                if (!ref) return;
-                var inCart = cart.some(function(i) { return i.ref === ref; });
-                btn.className = 'cart-action-btn ' + (inCart ? 'remove-btn' : 'add-btn');
-                btn.textContent = inCart ? '\u2715 Retirer' : '+ Ajouter';
-            });
-            document.querySelectorAll('.fav-btn').forEach(function(btn) {
-                var ref = btn.dataset.ref;
-                var isFav = favorites.includes(ref);
-                btn.classList.toggle('favorited', isFav);
-                btn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
-            });
-        }
-
-        /* ========== IMPRESSION DU RÉCAPITULATIF ========== */
-        function printCartSummary() {
-            if (cart.length === 0) {
-                showToast('error', 'Panier vide', 'Ajoutez des motifs avant d\'imprimer.');
-                return;
-            }
-            
-            var date = new Date().toLocaleDateString('fr-FR', {
-                year: 'numeric', month: 'long', day: 'numeric'
-            });
-            
-            var html = `
-            <html>
-            <head>
-                <style>
-                    body { font-family: 'Georgia', serif; padding: 40px; max-width: 800px; margin: 0 auto; }
-                    h1 { color: #1F5C4E; border-bottom: 3px solid #C89B3C; padding-bottom: 10px; }
-                    .header { text-align: center; margin-bottom: 30px; }
-                    .header h1 { font-size: 28px; margin: 0; }
-                    .header p { color: #6B655A; font-size: 14px; }
-                    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-                    th { background: #1F5C4E; color: white; padding: 10px; text-align: left; }
-                    td { padding: 10px; border-bottom: 1px solid #EDE8DD; }
-                    .text-right { text-align: right; }
-                    .total-row { font-weight: bold; font-size: 18px; }
-                    .total-row td { border-top: 3px solid #C89B3C; padding-top: 15px; }
-                    .discount-row { color: #C89B3C; font-weight: bold; }
-                    .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #EDE8DD; text-align: center; font-size: 12px; color: #9B958A; }
-                    .badge { display: inline-block; background: #C89B3C; color: white; padding: 2px 10px; border-radius: 12px; font-size: 11px; }
-                    .totals { margin-top: 20px; padding: 20px; background: #F4FAF8; border-radius: 8px; }
-                    .totals div { display: flex; justify-content: space-between; padding: 5px 0; }
-                </style>
-            </head>
-            <body>
-                <div class="header">
-                    <h1>🪡 ICONIQUES S</h1>
-                    <p>Catalogue de motifs de broderie - Récapitulatif de commande</p>
-                    <p>📅 ${date}</p>
-                </div>
-                
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Réf.</th>
-                            <th>Motif</th>
-                            <th>Prix unit.</th>
-                            <th>Qté</th>
-                            <th class="text-right">Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-            `;
-            
-            cart.forEach(function(item) {
-                html += `
-                    <tr>
-                        <td>${item.ref}</td>
-                        <td>${item.title}</td>
-                        <td>${item.prixNum.toLocaleString('fr-FR')} F</td>
-                        <td>${item.quantity}</td>
-                        <td class="text-right">${(item.prixNum * item.quantity).toLocaleString('fr-FR')} F</td>
-                    </tr>
-                `;
-            });
-            
-            var subtotal = getSubtotal();
-            var discount = getDiscount();
-            var total = getTotal();
-            var totalItems = getTotalItems();
-            
-            html += `
-                    </tbody>
-                </table>
-                
+    <!-- Panier -->
+    <dialog class="drawer" id="cartDlg" aria-labelledby="cartTitle">
+        <div class="drawer-inner">
+            <button class="dlg-close" type="button" data-close aria-label="Fermer le panier">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+            <div class="drawer-head">
+                <h2 id="cartTitle">Votre panier</h2>
+                <p id="cartSub">Aucun motif sélectionné</p>
+            </div>
+            <ul class="drawer-items" id="cartItems"></ul>
+            <div class="drawer-foot" id="cartFoot" hidden>
                 <div class="totals">
-                    <div><span>Nombre de motifs</span><span>${totalItems}</span></div>
-                    <div><span>Sous-total</span><span>${subtotal.toLocaleString('fr-FR')} F</span></div>
-            `;
-            
-            if (discount > 0) {
-                html += `
-                    <div class="discount-row">
-                        <span>Remise ${(discount * 100)}%</span>
-                        <span>-${(subtotal * discount).toLocaleString('fr-FR')} F</span>
-                    </div>
-                `;
-            }
-            
-            html += `
-                    <div style="font-size: 20px; font-weight: bold; border-top: 2px solid #1F5C4E; padding-top: 10px; margin-top: 10px;">
-                        <span>TOTAL</span>
-                        <span>${total.toLocaleString('fr-FR')} F</span>
-                    </div>
+                    <div><span>Sous-total</span><span id="subtotal">0 FCFA</span></div>
+                    <div class="discount" id="discountRow" hidden><span id="discountLabel">Remise</span><span id="discountAmount">0 FCFA</span></div>
+                    <div class="grand"><span>Total</span><span id="total">0 FCFA</span></div>
                 </div>
-                
-                <div style="margin-top: 30px; padding: 20px; background: #FDF8ED; border-radius: 8px; border: 1px solid #C89B3C;">
-                    <h3>📱 Comment commander ?</h3>
-                    <p>1. Envoyez ce récapitulatif par WhatsApp au <strong>+226 77 95 67 81</strong></p>
-                    <p>2. Confirmez les motifs et la quantité</p>
-                    <p>3. Nous vous indiquerons les délais de livraison</p>
+                <p class="hint" id="discountHint"></p>
+                <div class="drawer-actions">
+                    <button class="btn btn-primary btn-block" id="checkoutBtn" type="button">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#waPath"/></svg>
+                        Commander sur WhatsApp
+                    </button>
+                    <button class="btn btn-secondary btn-block" id="printCartBtn" type="button">Imprimer le récapitulatif</button>
                 </div>
-                
-                <div class="footer">
-                    <p><strong>ICONIQUES S</strong> — Ouagadougou, Burkina Faso</p>
-                    <p>📞 +226 77 95 67 81 | 📧 iconiques.s@gmail.com</p>
-                    <p>Ce document fait office de devis. Merci de votre confiance !</p>
-                </div>
-            </body>
-            </html>
-            `;
-            
-            var printWindow = window.open('', '_blank', 'width=800,height=600');
-            printWindow.document.write(html);
-            printWindow.document.close();
-            printWindow.focus();
-            printWindow.print();
+            </div>
+        </div>
+    </dialog>
+
+    <div class="mobile-bar" aria-label="Accès au panier">
+        <p><span id="mobileCount">0 motif</span><strong id="mobileTotal">0 FCFA</strong></p>
+        <button class="btn btn-primary btn-sm" id="mobileCartOpen" type="button">Voir le panier</button>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script>
+    (function () {
+        'use strict';
+
+        /* ================= Réglages ================= */
+        var WHATSAPP = '22677956781';
+        var PER_PAGE = 24;
+        var NEW_DAYS = 30; // un motif reste « Nouveau » pendant ce nombre de jours après sa date d'ajout
+        var CATEGORIES = [
+            { id: 'all', label: 'Tous les motifs' },
+            { id: 'nouveau', label: 'Nouveautés' },
+            { id: 'tuniques', label: 'Tuniques frappe et poche' },
+            { id: 'trois-pieces', label: 'Trois-pièces' },
+            { id: 'agbada', label: 'Agbada' },
+            { id: 'modeles-dames', label: 'Modèles dames' },
+            { id: 'motifs-divers', label: 'Motifs divers' }
+        ];
+        var DISCOUNTS = [ { min: 20, rate: 0.20 }, { min: 10, rate: 0.15 }, { min: 5, rate: 0.10 } ];
+        var WA_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#waPath"/></svg>';
+        var CLOSE_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>';
+
+        /* ================= État ================= */
+        var motifs = [];
+        var state = { cat: 'all', q: '', sort: 'default', page: 1 };
+        var cart = loadCart();
+
+        /* ================= Outils ================= */
+        function $(id) { return document.getElementById(id); }
+        function esc(v) {
+            return String(v == null ? '' : v).replace(/[&<>"']/g, function (c) {
+                return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+            });
+        }
+        function money(n) { return Math.round(n).toLocaleString('fr-FR') + ' FCFA'; }
+        function imgSrc(path) { return encodeURI(path || ''); }
+        // Vignette légère (images/mini/NOM.jpg) pour les listes ; l'image complète reste pour l'aperçu et le zoom.
+        function thumbSrc(path) { return path ? imgSrc(String(path).replace(/^images\/(.+)\.\w+$/, 'images/mini/$1.jpg')) : ''; }
+        function thumbTag(path, alt, extra) {
+            return '<img src="' + esc(thumbSrc(path)) + '" data-full="' + esc(imgSrc(path)) + '" alt="' + esc(alt) + '" loading="lazy"' + (extra || '') + '>';
+        }
+        function isNew(m) {
+            var t = Date.parse(m.ajout);
+            return isFinite(t) && Date.now() - t < NEW_DAYS * 864e5;
+        }
+        function catLabel(id) { var c = CATEGORIES.find(function (x) { return x.id === id; }); return c ? c.label : ''; }
+        function plural(n, word) { return n + ' ' + word + (n > 1 ? 's' : ''); }
+        function findMotif(ref) { return motifs.find(function (m) { return m.ref === ref; }); }
+        function norm(s) { return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]/g, ''); }
+        function motifLink(ref) { return location.origin + location.pathname + '?ref=' + encodeURIComponent(ref); }
+        function openWhatsApp(text) { window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(text), '_blank', 'noopener'); }
+
+        var toastTimer;
+        function toast(msg) {
+            var t = $('toast');
+            t.textContent = msg;
+            t.classList.add('show');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(function () { t.classList.remove('show'); }, 2600);
         }
 
-        /* ========== FAVORITES ========== */
-        function toggleFavorite(ref) {
-            var idx = favorites.indexOf(ref);
-            var m = motifs.find(function(x) { return x.ref === ref; });
-            if (idx > -1) {
-                favorites.splice(idx, 1);
-                if (m) showToast('info', 'Favori retire', m.title + ' retire des favoris.');
-            } else {
-                favorites.push(ref);
-                if (m) showToast('success', 'Favori ajoute', m.title + ' ajoute aux favoris.');
-            }
-            localStorage.setItem('iconiques_favorites', JSON.stringify(favorites));
-            updateAllButtons();
+        function storageGet(key) { try { return JSON.parse(localStorage.getItem(key)); } catch (e) { return null; } }
+        function storageSet(key, val) { try { localStorage.setItem(key, JSON.stringify(val)); } catch (e) { /* navigation privée : le panier reste en mémoire */ } }
+
+        /* ================= Panier ================= */
+        // Un fichier numérique s'achète une seule fois : chaque motif apparaît une fois au maximum.
+        function loadCart() {
+            var raw = storageGet('iconiques_cart');
+            var out = [];
+            (Array.isArray(raw) ? raw : []).forEach(function (i) {
+                if (!i || typeof i.ref !== 'string' || !isFinite(Number(i.prixNum))) return;
+                if (out.some(function (o) { return o.ref === i.ref; })) return;
+                out.push({ ref: i.ref, title: String(i.title || i.ref), prixNum: Number(i.prixNum), img: String(i.img || '') });
+            });
+            return out;
+        }
+        function inCart(ref) { return cart.some(function (i) { return i.ref === ref; }); }
+        function subtotal() { return cart.reduce(function (s, i) { return s + i.prixNum; }, 0); }
+        function discountRate() { var d = DISCOUNTS.find(function (x) { return cart.length >= x.min; }); return d ? d.rate : 0; }
+        function total() { return subtotal() * (1 - discountRate()); }
+        function nextDiscount() {
+            var tiers = DISCOUNTS.slice().reverse();
+            return tiers.find(function (x) { return cart.length < x.min; }) || null;
         }
 
-        /* ========== QUICK VIEW ========== */
-        function openQuickView(ref) {
-            var m = motifs.find(function(x) { return x.ref === ref; });
+        function toggleCart(ref) {
+            var m = findMotif(ref);
             if (!m) return;
-            var body = document.getElementById('quickViewBody');
-            var inCart = cart.some(function(i) { return i.ref === ref; });
-            var isFav = favorites.includes(ref);
-            body.innerHTML =
-                '<div class="quickview-image">' +
-                '<img src="' + m.img + '" alt="' + m.title + '" onerror="this.style.display=\'none\'; this.parentElement.innerHTML=\'<div style=color:var(--emerald-600);font-size:0.9rem;font-weight:500;text-align:center;padding:20px;>Image non disponible</div>\';">' +
+            if (inCart(ref)) {
+                cart = cart.filter(function (i) { return i.ref !== ref; });
+                toast(m.title.trim() + ' retiré du panier');
+            } else {
+                cart.push({ ref: m.ref, title: m.title.trim(), prixNum: m.prixNum, img: m.img });
+                toast(m.title.trim() + ' ajouté au panier');
+            }
+            storageSet('iconiques_cart', cart);
+            renderCart();
+            syncCartButtons();
+        }
+
+        function syncCartButtons() {
+            document.querySelectorAll('[data-cart]').forEach(function (b) {
+                if (b.hasAttribute('data-keep')) return;
+                var on = inCart(b.dataset.cart);
+                b.setAttribute('aria-pressed', on ? 'true' : 'false');
+                b.textContent = on ? 'Dans le panier' : (b.dataset.long ? 'Ajouter au panier' : 'Ajouter');
+            });
+        }
+
+        function renderCart() {
+            var n = cart.length;
+            $('cartCount').textContent = n;
+            $('cartOpen').setAttribute('aria-label', 'Ouvrir le panier, ' + plural(n, 'motif'));
+            $('cartSub').textContent = n ? plural(n, 'motif') + ' sélectionné' + (n > 1 ? 's' : '') : 'Aucun motif sélectionné';
+            document.body.classList.toggle('has-cart', n > 0);
+            $('mobileCount').textContent = plural(n, 'motif');
+            $('mobileTotal').textContent = money(total());
+
+            var list = $('cartItems');
+            if (!n) {
+                list.innerHTML = '<li class="drawer-empty"><p>Votre panier est vide. Ajoutez les motifs qui vous intéressent pour les commander en une fois.</p><button class="btn btn-secondary" type="button" data-close-go="#catalogue">Parcourir le catalogue</button></li>';
+                $('cartFoot').hidden = true;
+                return;
+            }
+            list.innerHTML = cart.map(function (i) {
+                return '<li class="line-item">' +
+                    (i.img ? thumbTag(i.img, '') : '<span class="ph"></span>') +
+                    '<div><p class="card-ref">' + esc(i.ref) + '</p><p class="card-title">' + esc(i.title) + '</p><p class="line-price">' + money(i.prixNum) + '</p></div>' +
+                    '<button class="line-remove" type="button" data-cart="' + esc(i.ref) + '" data-keep aria-label="Retirer ' + esc(i.title) + ' du panier">Retirer</button>' +
+                '</li>';
+            }).join('');
+            $('cartFoot').hidden = false;
+            $('subtotal').textContent = money(subtotal());
+            var rate = discountRate();
+            $('discountRow').hidden = rate === 0;
+            $('discountLabel').textContent = 'Remise ' + Math.round(rate * 100) + ' %';
+            $('discountAmount').textContent = '− ' + money(subtotal() * rate);
+            $('total').textContent = money(total());
+            var next = nextDiscount();
+            $('discountHint').textContent = next
+                ? 'Ajoutez ' + plural(next.min - n, 'motif') + ' pour obtenir ' + Math.round(next.rate * 100) + ' % de remise.'
+                : 'Vous bénéficiez de la remise maximale.';
+        }
+
+        function checkout() {
+            if (!cart.length) return;
+            var lines = cart.map(function (i) { return '• ' + i.ref + ' « ' + i.title + ' » : ' + money(i.prixNum); });
+            var rate = discountRate();
+            var msg = 'Bonjour ICONIQUES S, je souhaite commander ces motifs :\n\n' + lines.join('\n') + '\n\n' +
+                'Sous-total : ' + money(subtotal()) + '\n' +
+                (rate ? 'Remise ' + Math.round(rate * 100) + ' % : − ' + money(subtotal() * rate) + '\n' : '') +
+                'Total : ' + money(total()) + '\n\n' +
+                'Merci de me confirmer le format pour ma machine et le paiement.';
+            openWhatsApp(msg);
+        }
+
+        function orderOne(ref) {
+            var m = findMotif(ref);
+            if (!m) return;
+            openWhatsApp('Bonjour ICONIQUES S, je souhaite commander ce motif :\n\n• ' + m.ref + ' « ' + m.title.trim() + ' » : ' + money(m.prixNum) +
+                '\n' + motifLink(m.ref) + '\n\nMerci de me confirmer le format pour ma machine et le paiement.');
+        }
+
+        function shareMotif(ref) {
+            var m = findMotif(ref);
+            if (!m) return;
+            var url = motifLink(ref);
+            var text = m.title.trim() + ' (' + m.ref + '), motif de broderie ICONIQUES S';
+            if (navigator.share) { navigator.share({ title: text, text: text, url: url }).catch(function () {}); return; }
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(url).then(function () { toast('Lien copié. Collez-le dans WhatsApp ou Facebook.'); },
+                    function () { window.prompt('Copiez ce lien :', url); });
+            } else {
+                window.prompt('Copiez ce lien :', url);
+            }
+        }
+
+        function printRecap() {
+            if (!cart.length) return;
+            var rate = discountRate();
+            var date = new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+            var rows = cart.map(function (i) { return '<tr><td>' + esc(i.ref) + '</td><td>' + esc(i.title) + '</td><td class="r">' + money(i.prixNum) + '</td></tr>'; }).join('');
+            var html = '<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Récapitulatif ICONIQUES S</title><style>' +
+                'body{font-family:Georgia,serif;color:#1B1D24;max-width:720px;margin:40px auto;padding:0 24px}' +
+                'h1{font-weight:400;font-size:30px;letter-spacing:.04em;margin:0}' +
+                '.stitch{height:2px;margin:14px 0 24px;background:repeating-linear-gradient(90deg,#C29A4E 0 12px,transparent 12px 20px)}' +
+                'p{color:#5E5A52;font-size:14px;margin:4px 0}table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}' +
+                'th{text-align:left;border-bottom:1.5px solid #18203A;padding:8px 6px;font-weight:700}td{border-bottom:1px solid #E2DCCF;padding:9px 6px}' +
+                '.r{text-align:right;white-space:nowrap}.tot td{border:0;padding:4px 6px}.grand td{font-size:17px;font-weight:700;border-top:1.5px solid #18203A;padding-top:10px}' +
+                'ol{font-size:14px;line-height:1.7;padding-left:20px}footer{margin-top:36px;font-size:12px;color:#5E5A52}</style></head><body>' +
+                '<h1>ICONIQUES S</h1><div class="stitch"></div>' +
+                '<p>Récapitulatif de commande du ' + date + '</p>' +
+                '<table><thead><tr><th>Référence</th><th>Motif</th><th class="r">Prix</th></tr></thead><tbody>' + rows + '</tbody>' +
+                '<tbody><tr class="tot"><td></td><td>Sous-total (' + plural(cart.length, 'motif') + ')</td><td class="r">' + money(subtotal()) + '</td></tr>' +
+                (rate ? '<tr class="tot"><td></td><td>Remise ' + Math.round(rate * 100) + ' %</td><td class="r">− ' + money(subtotal() * rate) + '</td></tr>' : '') +
+                '<tr class="tot grand"><td></td><td>Total</td><td class="r">' + money(total()) + '</td></tr></tbody></table>' +
+                '<ol><li>Envoyez ce récapitulatif sur WhatsApp au +226 77 95 67 81.</li><li>Payez par Wave ou Orange Money au numéro que nous vous indiquons.</li><li>Recevez vos fichiers directement sur WhatsApp.</li></ol>' +
+                '<footer>ICONIQUES S, Ouagadougou, Burkina Faso. iconiquess.com, iconiques.s@gmail.com</footer></body></html>';
+            var w = window.open('', '_blank', 'width=820,height=900');
+            if (!w) { toast('Autorisez les fenêtres pop-up pour imprimer le récapitulatif.'); return; }
+            w.document.write(html);
+            w.document.close();
+            w.focus();
+            setTimeout(function () { w.print(); }, 300);
+        }
+
+        /* ================= Catalogue ================= */
+        function filtered() {
+            var list = motifs.slice();
+            if (state.cat === 'nouveau') list = list.filter(function (m) { return m.nouveau; });
+            else if (state.cat !== 'all') list = list.filter(function (m) { return m.cat === state.cat; });
+            var q = norm(state.q);
+            if (q) list = list.filter(function (m) { return norm(m.ref).indexOf(q) > -1 || norm(m.title).indexOf(q) > -1; });
+            if (state.sort === 'price-asc') list.sort(function (a, b) { return a.prixNum - b.prixNum; });
+            else if (state.sort === 'price-desc') list.sort(function (a, b) { return b.prixNum - a.prixNum; });
+            else if (state.sort === 'newest') list.sort(function (a, b) { return String(b.ajout || '').localeCompare(String(a.ajout || '')); });
+            else if (state.sort === 'ref') list.sort(function (a, b) { return a.ref.localeCompare(b.ref); });
+            return list;
+        }
+
+        function renderTabs() {
+            var html = CATEGORIES.map(function (c) {
+                var count = c.id === 'all' ? motifs.length
+                    : c.id === 'nouveau' ? motifs.filter(function (m) { return m.nouveau; }).length
+                    : motifs.filter(function (m) { return m.cat === c.id; }).length;
+                if (!count) return ''; // une catégorie vide n'est pas affichée
+                return '<button class="tab" type="button" data-cat="' + c.id + '" aria-pressed="' + (state.cat === c.id) + '">' +
+                    esc(c.label) + '<span class="tab-count">' + count + '</span></button>';
+            }).join('');
+            $('tabs').innerHTML = html;
+        }
+
+        function cardHTML(m) {
+            var t = esc(m.title.trim());
+            var colors = m.couleurs ? plural(Number(m.couleurs) || m.couleurs, 'couleur') : catLabel(m.cat);
+            return '<article class="card">' +
+                '<button class="card-media" type="button" data-open="' + esc(m.ref) + '" aria-label="Voir ' + t + ' en détail">' +
+                    thumbTag(m.img, '', ' width="480" height="640"') +
+                    (m.nouveau ? '<span class="tag-new">Nouveau</span>' : '') +
+                '</button>' +
+                '<div class="card-info">' +
+                    '<p class="card-ref">' + esc(m.ref) + '</p>' +
+                    '<h3 class="card-title"><button type="button" data-open="' + esc(m.ref) + '">' + t + '</button></h3>' +
+                    '<div class="card-row"><span class="card-meta">' + esc(colors) + '</span><span class="card-price">' + money(m.prixNum) + '</span></div>' +
                 '</div>' +
-                '<div class="quickview-details">' +
-                '<div class="badge-row">' +
-                (m.draft ? '<div class="badge badge-draft">Brouillon</div>' : '') +
-                (m.nouveau ? '<div class="badge badge-new">Nouveau</div>' : '') +
+                '<div class="card-actions">' +
+                    '<button class="btn btn-primary btn-sm" type="button" data-order="' + esc(m.ref) + '">' + WA_ICON + 'Commander</button>' +
+                    '<button class="btn btn-secondary btn-sm" type="button" data-cart="' + esc(m.ref) + '" aria-pressed="false">Ajouter</button>' +
                 '</div>' +
-                '<div class="card-ref">' + m.ref + '</div>' +
-                '<h3 class="card-title">' + m.title + '</h3>' +
-                '<ul class="card-specs">' +
-                '<li><span>Couleurs</span><span>' + m.couleurs + '</span></li>' +
-                '</ul>' +
-                '<span class="card-price">' + (m.draft ? '\u2014' : m.prixNum.toLocaleString('fr-FR') + '<span class="currency">F</span>') + '</span>' +
-                '<div class="quickview-actions">' +
-                (m.draft ? '' : '<button class="cart-action-btn ' + (inCart ? 'remove-btn' : 'add-btn') + '" data-ref="' + m.ref + '">' + (inCart ? '\u2715 Retirer du panier' : '+ Ajouter au panier') + '</button>') +
-                '<button class="cart-action-btn btn-outline" onclick="openZoom(\'' + m.img + '\')" style="border:1.5px solid var(--emerald-700);">\uD83D\uDD0D Zoom</button>' +
-                '</div>' +
+            '</article>';
+        }
+
+        function render(opts) {
+            opts = opts || {};
+            var list = filtered();
+            var pages = Math.max(1, Math.ceil(list.length / PER_PAGE));
+            if (state.page > pages) state.page = pages;
+            var slice = opts.all ? list : list.slice((state.page - 1) * PER_PAGE, state.page * PER_PAGE);
+
+            var line = plural(list.length, 'motif');
+            if (state.q.trim()) line += ' pour « ' + state.q.trim() + ' »';
+            if (state.cat !== 'all') line += ' dans ' + catLabel(state.cat);
+            $('resultLine').textContent = line;
+
+            var grid = $('grid');
+            grid.setAttribute('aria-busy', 'false');
+            if (!list.length) {
+                grid.innerHTML = '<div class="empty"><h3>Aucun motif ne correspond</h3>' +
+                    '<p>Vérifiez la référence, essayez un autre nom, ou demandez-nous ce motif sur mesure.</p>' +
+                    '<button class="btn btn-secondary" type="button" data-reset>Voir tous les motifs</button></div>';
+            } else {
+                grid.innerHTML = slice.map(cardHTML).join('');
+            }
+            syncCartButtons();
+            renderPagination(opts.all ? 1 : pages);
+        }
+
+        function renderPagination(pages) {
+            var nav = $('pagination');
+            if (pages <= 1) { nav.innerHTML = ''; return; }
+            var p = state.page, html = '';
+            html += '<button class="page-btn" type="button" data-page="' + (p - 1) + '"' + (p === 1 ? ' disabled' : '') + ' aria-label="Page précédente">Précédent</button>';
+            var start = Math.max(1, Math.min(p - 2, pages - 4)), end = Math.min(pages, start + 4);
+            for (var i = start; i <= end; i++) {
+                html += '<button class="page-btn" type="button" data-page="' + i + '"' + (i === p ? ' aria-current="page"' : '') + '>' + i + '</button>';
+            }
+            html += '<button class="page-btn" type="button" data-page="' + (p + 1) + '"' + (p === pages ? ' disabled' : '') + ' aria-label="Page suivante">Suivant</button>';
+            nav.innerHTML = html;
+        }
+
+        function goToCatalogue() {
+            var top = $('catalogue').getBoundingClientRect().top + window.scrollY - parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h'), 10) - 8;
+            window.scrollTo({ top: top, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+        }
+
+        /* ================= Fenêtres et historique ================= */
+        // Chaque fenêtre ouverte ajoute une étape à l'historique : le bouton « Retour »
+        // du téléphone la ferme au lieu de quitter le site.
+        var dialogs = { quick: $('quickDlg'), zoom: $('zoomDlg'), cart: $('cartDlg') };
+        var parentOf = { zoom: 'quick' };
+
+        function updateLock() {
+            var any = Object.keys(dialogs).some(function (k) { return dialogs[k].open; });
+            document.documentElement.classList.toggle('locked', any);
+        }
+        function openDialog(name, url, extra) {
+            var d = dialogs[name];
+            if (!d.open) d.showModal();
+            updateLock();
+            history.pushState(Object.assign({ ov: name }, extra || {}), '', url || (location.pathname + location.hash));
+        }
+        function closeDialog(name) { if (dialogs[name].open) dialogs[name].close(); }
+
+        Object.keys(dialogs).forEach(function (name) {
+            var d = dialogs[name];
+            d.addEventListener('close', function () {
+                updateLock();
+                // Fermé par l'utilisateur : on retire l'étape d'historique correspondante.
+                if (history.state && history.state.ov === name) history.back();
+            });
+            d.addEventListener('click', function (e) {
+                if (e.target === d || e.target.classList.contains('zoom-inner') || e.target.closest('[data-close]')) { closeDialog(name); }
+                var go = e.target.closest('[data-close-go]');
+                if (go) { closeDialog(name); setTimeout(goToCatalogue, 50); }
+            });
+        });
+        window.addEventListener('popstate', function (e) {
+            var target = e.state && e.state.ov;
+            Object.keys(dialogs).forEach(function (name) {
+                var keep = target === name || (target && parentOf[target] === name);
+                if (!keep) closeDialog(name);
+            });
+            if (target === 'quick' && e.state.ref && !dialogs.quick.open) showQuick(e.state.ref, false);
+            if (target === 'cart' && !dialogs.cart.open) { dialogs.cart.showModal(); updateLock(); }
+        });
+
+        function showQuick(ref, push) {
+            var m = findMotif(ref);
+            if (!m) return;
+            var t = esc(m.title.trim());
+            $('quickInner').innerHTML =
+                '<button class="dlg-close" type="button" data-close aria-label="Fermer">' + CLOSE_ICON + '</button>' +
+                '<button class="quick-media" type="button" data-zoom="' + esc(m.ref) + '" aria-label="Agrandir l\'image">' +
+                    '<img src="' + esc(imgSrc(m.img)) + '" alt="Motif ' + t + '" width="1417" height="1890">' +
+                '</button>' +
+                '<div class="quick-body">' +
+                    '<p class="card-ref">' + esc(m.ref) + '</p>' +
+                    '<h2 class="quick-title" id="quickTitle">' + t + '</h2>' +
+                    '<p class="quick-price">' + money(m.prixNum) + '</p>' +
+                    '<dl class="specs">' +
+                        '<div><dt>Catégorie</dt><dd>' + esc(catLabel(m.cat) || '—') + '</dd></div>' +
+                        '<div><dt>Couleurs de fil</dt><dd>' + esc(m.couleurs || '—') + '</dd></div>' +
+                    '</dl>' +
+                    '<div class="quick-actions">' +
+                        '<button class="btn btn-primary btn-block" type="button" data-order="' + esc(m.ref) + '">' + WA_ICON + 'Commander ce motif</button>' +
+                        '<button class="btn btn-secondary btn-block" type="button" data-cart="' + esc(m.ref) + '" data-long="1" aria-pressed="false">Ajouter au panier</button>' +
+                    '</div>' +
+                    '<div class="quick-links">' +
+                        '<button class="link-btn" type="button" data-share="' + esc(m.ref) + '">Partager ce motif</button>' +
+                        '<button class="link-btn" type="button" data-zoom="' + esc(m.ref) + '">Agrandir l\'image</button>' +
+                    '</div>' +
+                    '<p class="quick-note">Le fichier est envoyé sur WhatsApp après confirmation du paiement.</p>' +
                 '</div>';
-            document.getElementById('quickViewModal').classList.add('open');
-            document.body.style.overflow = 'hidden';
-            activeModal = { type: 'quick', ref: ref };
-            saveAppState();
-        }
-        function closeQuickView(fromHistory) {
-            document.getElementById('quickViewModal').classList.remove('open');
-            document.body.style.overflow = '';
-            if (!fromHistory && history.state && history.state.modal && history.state.modal.type === 'quick') history.back();
-        }
-        document.getElementById('quickViewClose').addEventListener('click', closeQuickView);
-        document.getElementById('quickViewModal').addEventListener('click', function(e) {
-            if (e.target === document.getElementById('quickViewModal')) closeQuickView();
-        });
-
-        /* ========== ZOOM ========== */
-        function openZoom(imgUrl) {
-            if (!imgUrl) return;
-            document.getElementById('zoomImage').src = imgUrl;
-            document.getElementById('zoomModal').classList.add('open');
-            document.body.style.overflow = 'hidden';
-            activeModal = { type: 'zoom', img: imgUrl };
-            saveAppState();
-        }
-        function closeZoom(fromHistory) {
-            document.getElementById('zoomModal').classList.remove('open');
-            document.body.style.overflow = '';
-            if (!fromHistory && history.state && history.state.modal && history.state.modal.type === 'zoom') history.back();
-        }
-        document.getElementById('zoomClose').addEventListener('click', closeZoom);
-        document.getElementById('zoomModal').addEventListener('click', function(e) {
-            if (e.target === document.getElementById('zoomModal')) closeZoom();
-        });
-        document.addEventListener('keydown', function(e) {
-            if (e.key !== 'Escape') return;
-            if (document.getElementById('zoomModal').classList.contains('open')) closeZoom();
-            else if (document.getElementById('quickViewModal').classList.contains('open')) closeQuickView();
-            else if (document.getElementById('cartPanel').classList.contains('open')) closeCart();
-        });
-
-        /* ========== CATALOGUE RENDER ========== */
-        function getFilteredMotifs() {
-            var filtered = motifs;
-            if (currentCategory === 'nouveau') {
-                filtered = filtered.filter(function(m) { return m.nouveau; });
-            } else if (currentCategory !== 'all') {
-                filtered = filtered.filter(function(m) { return m.cat === currentCategory; });
-            }
-            if (currentSearchQuery.trim() !== '') {
-                var query = currentSearchQuery.toLowerCase().trim();
-                filtered = filtered.filter(function(m) {
-                    return m.ref.toLowerCase().includes(query) || m.title.toLowerCase().includes(query);
-                });
-            }
-            if (currentSort === 'price-asc') filtered.sort(function(a, b) { return a.prixNum - b.prixNum; });
-            else if (currentSort === 'price-desc') filtered.sort(function(a, b) { return b.prixNum - a.prixNum; });
-            else if (currentSort === 'name-az') filtered.sort(function(a, b) { return a.title.localeCompare(b.title); });
-            else if (currentSort === 'name-za') filtered.sort(function(a, b) { return b.title.localeCompare(a.title); });
-            else if (currentSort === 'newest') filtered.sort(function(a, b) { return (b.nouveau ? 1 : 0) - (a.nouveau ? 1 : 0); });
-            return filtered;
+            syncCartButtons();
+            if (!dialogs.quick.open) dialogs.quick.showModal();
+            updateLock();
+            if (push !== false) history.pushState({ ov: 'quick', ref: m.ref }, '', motifLink(m.ref));
         }
 
-        function renderCatalogue() {
-            var catalogueEl = document.getElementById('catalogue');
-            var filtered = getFilteredMotifs();
-            var totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE) || 1;
-            if (currentPage > totalPages) currentPage = Math.max(1, totalPages);
-            var start = (currentPage - 1) * ITEMS_PER_PAGE;
-            var pageMotifs = filtered.slice(start, start + ITEMS_PER_PAGE);
+        function showZoom(ref) {
+            var m = findMotif(ref);
+            if (!m) return;
+            $('zoomImg').src = imgSrc(m.img);
+            $('zoomImg').alt = 'Motif ' + m.title.trim() + ', image agrandie';
+            openDialog('zoom', location.pathname + location.search, { ref: ref });
+        }
 
-            if (pageMotifs.length === 0) {
-                catalogueEl.innerHTML =
-                    '<div class="empty-state">' +
-                    '<h3>Aucun motif trouve</h3>' +
-                    '<p>Nous n\'avons pas trouve de resultat pour "<strong>' + currentSearchQuery + '</strong>".</p>' +
-                    '<p>Essayez une autre recherche ou parcourez les categories.</p>' +
-                    '<a href="#" class="btn btn-gold" onclick="document.getElementById(\'customUploadBtn\').click(); return false;">Demander un motif sur mesure</a>' +
-                    '</div>';
-                renderPagination(1);
+        /* ================= Événements ================= */
+        document.addEventListener('click', function (e) {
+            var el;
+            if ((el = e.target.closest('[data-order]'))) { orderOne(el.dataset.order); return; }
+            if ((el = e.target.closest('[data-cart]'))) { toggleCart(el.dataset.cart); return; }
+            if ((el = e.target.closest('[data-share]'))) { shareMotif(el.dataset.share); return; }
+            if ((el = e.target.closest('[data-zoom]'))) { showZoom(el.dataset.zoom); return; }
+            if ((el = e.target.closest('[data-open]'))) { if (motifs.length) showQuick(el.dataset.open); return; }
+            if ((el = e.target.closest('[data-cat]'))) {
+                state.cat = el.dataset.cat; state.page = 1;
+                renderTabs(); render();
                 return;
             }
-
-            catalogueEl.innerHTML = '';
-            pageMotifs.forEach(function(m, index) {
-                var card = document.createElement('div');
-                card.className = 'card' + (m.draft ? ' draft' : '');
-                card.dataset.ref = m.ref;
-                card.style.animationDelay = Math.min(index * 0.05, 0.6) + 's';
-                var isFav = favorites.includes(m.ref);
-                card.innerHTML =
-                    '<div class="card-actions-overlay">' +
-                    '<div class="card-action-icon fav-btn ' + (isFav ? 'favorited' : '') + '" data-ref="' + m.ref + '" title="' + (isFav ? 'Retirer des favoris' : 'Ajouter aux favoris') + '">' + (isFav ? '\u2764' : '\u2661') + '</div>' +
-                    '<div class="card-action-icon" onclick="openQuickView(\'' + m.ref + '\')" title="Apercu rapide">\uD83D\uDC41</div>' +
-                    '</div>' +
-                    '<div class="card-image" data-img="' + m.img + '">' +
-                    '<img src="' + m.img + '" alt="' + m.title + '" loading="lazy" onerror="this.style.display=\'none\'; this.parentElement.innerHTML=\'<div class=img-fallback>Image non disponible</div>\';">' +
-                    '</div>' +
-                    '<div class="card-body">' +
-                    '<div class="badge-row">' +
-                    (m.draft ? '<div class="badge badge-draft">Brouillon</div>' : '') +
-                    (m.nouveau ? '<div class="badge badge-new">Nouveau</div>' : '') +
-                    '</div>' +
-                    '<div class="card-ref">' + m.ref + '</div>' +
-                    '<h3 class="card-title">' + m.title + '</h3>' +
-                    '<ul class="card-specs">' +
-                    '<li><span>Couleurs</span><span>' + m.couleurs + '</span></li>' +
-                    '</ul>' +
-                    '<div class="card-footer">' +
-                    '<span class="card-price">' + (m.draft ? '\u2014' : m.prixNum.toLocaleString('fr-FR') + '<span class="currency">F</span>') + '</span>' +
-                    (m.draft ? '' : '<button class="cart-action-btn add-btn" data-ref="' + m.ref + '">+ Ajouter</button>') +
-                    '</div>' +
-                    '</div>';
-                catalogueEl.appendChild(card);
-            });
-            updateAllButtons();
-            renderPagination(totalPages);
-        }
-
-        function renderPagination(totalPages) {
-            var paginationEl = document.getElementById('pagination');
-            paginationEl.innerHTML = '';
-            if (totalPages <= 1) return;
-
-            var prevBtn = document.createElement('button');
-            prevBtn.className = 'page-btn';
-            prevBtn.textContent = '\u2190 Precedent';
-            prevBtn.disabled = (currentPage === 1);
-            prevBtn.addEventListener('click', function() {
-                if (currentPage > 1) { currentPage--; renderCatalogue(); saveAppState(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
-            });
-            paginationEl.appendChild(prevBtn);
-
-            var maxPagesToShow = 5;
-            var startPage = Math.max(1, currentPage - Math.floor(maxPagesToShow / 2));
-            var endPage = startPage + maxPagesToShow - 1;
-            if (endPage > totalPages) { endPage = totalPages; startPage = Math.max(1, endPage - maxPagesToShow + 1); }
-            for (var p = startPage; p <= endPage; p++) {
-                var pageBtn = document.createElement('button');
-                pageBtn.className = 'page-btn' + (p === currentPage ? ' active' : '');
-                pageBtn.textContent = p;
-                pageBtn.addEventListener('click', (function(page) {
-                    return function() { currentPage = page; renderCatalogue(); saveAppState(); window.scrollTo({ top: 0, behavior: 'smooth' }); };
-                })(p));
-                paginationEl.appendChild(pageBtn);
-            }
-
-            var nextBtn = document.createElement('button');
-            nextBtn.className = 'page-btn';
-            nextBtn.textContent = 'Suivant \u2192';
-            nextBtn.disabled = (currentPage === totalPages);
-            nextBtn.addEventListener('click', function() {
-                if (currentPage < totalPages) { currentPage++; renderCatalogue(); saveAppState(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
-            });
-            paginationEl.appendChild(nextBtn);
-        }
-
-        /* ========== EVENT LISTENERS ========== */
-        document.getElementById('searchInput').addEventListener('input', function(e) {
-            clearTimeout(searchTimeout);
-            searchTimeout = setTimeout(function() {
-                currentSearchQuery = e.target.value;
-                currentPage = 1;
-                renderCatalogue();
-                saveAppState();
-            }, 300);
-        });
-
-        document.getElementById('sortSelect').addEventListener('change', function(e) {
-            currentSort = e.target.value;
-            currentPage = 1;
-            renderCatalogue();
-            saveAppState();
-        });
-
-        document.addEventListener('click', function(e) {
-            var imgWrap = e.target.closest('.card-image');
-            if (imgWrap && !e.target.closest('.card-actions-overlay')) {
-                openZoom(imgWrap.dataset.img);
-            }
-        });
-
-        document.getElementById('pdfBtn').addEventListener('click', function() { window.print(); });
-
-        document.addEventListener('click', function(e) {
-            var btn = e.target.closest('.cart-action-btn');
-            if (btn && btn.dataset.ref) {
-                var ref = btn.dataset.ref;
-                var inCart = cart.some(function(i) { return i.ref === ref; });
-                if (inCart) removeFromCart(ref);
-                else addToCart(ref);
+            if ((el = e.target.closest('[data-page]'))) {
+                state.page = Number(el.dataset.page); render(); goToCatalogue();
                 return;
             }
-            var favBtn = e.target.closest('.fav-btn');
-            if (favBtn) {
-                toggleFavorite(favBtn.dataset.ref);
-                return;
+            if (e.target.closest('[data-reset]')) {
+                state = { cat: 'all', q: '', sort: state.sort, page: 1 };
+                $('searchInput').value = '';
+                renderTabs(); render();
             }
         });
 
-        document.getElementById('cartItems').addEventListener('click', function(e) {
-            var btn = e.target.closest('.remove-item-btn');
-            if (btn) removeFromCart(btn.dataset.ref);
+        var searchTimer;
+        $('searchInput').addEventListener('input', function (e) {
+            clearTimeout(searchTimer);
+            searchTimer = setTimeout(function () { state.q = e.target.value; state.page = 1; render(); }, 250);
         });
+        $('sortSelect').addEventListener('change', function (e) { state.sort = e.target.value; state.page = 1; render(); });
 
-        var panel = document.getElementById('cartPanel');
-        var overlay = document.getElementById('cartOverlay');
-        function openCart() {
-            panel.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow = 'hidden';
-            activeModal = { type: 'cart' };
-            saveAppState();
-        }
-        function closeCart(fromHistory) {
-            panel.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = '';
-            if (!fromHistory && history.state && history.state.modal && history.state.modal.type === 'cart') history.back();
-        }
-        document.getElementById('cartToggle').addEventListener('click', openCart);
-        document.getElementById('mobileCartToggle').addEventListener('click', openCart);
-        document.getElementById('closeCart').addEventListener('click', closeCart);
-        overlay.addEventListener('click', closeCart);
-
-        // Bouton WhatsApp amélioré avec quantités et remises
-        document.getElementById('checkoutBtn').addEventListener('click', function() {
-            if (cart.length === 0) {
-                showToast('error', 'Panier vide', 'Ajoutez des motifs avant de commander.');
-                return;
-            }
-            
-            var msg = "🪡 *Commande ICONIQUES S*\n\n";
-            msg += "📅 " + new Date().toLocaleDateString('fr-FR') + "\n\n";
-            msg += "*Détails de la commande :*\n";
-            
-            cart.forEach(function(i) {
-                msg += "• " + i.ref + " \"" + i.title + "\" x" + i.quantity + " = " + (i.prixNum * i.quantity).toLocaleString('fr-FR') + " F\n";
-            });
-            
-            msg += "\n*Résumé :*\n";
-            msg += "📦 " + getTotalItems() + " motifs\n";
-            msg += "💰 Sous-total : " + getSubtotal().toLocaleString('fr-FR') + " F\n";
-            
-            var discount = getDiscount();
-            if (discount > 0) {
-                msg += "🎉 Remise " + (discount * 100) + "% : -" + (getSubtotal() * discount).toLocaleString('fr-FR') + " F\n";
-            }
-            
-            msg += "💵 *Total : " + getTotal().toLocaleString('fr-FR') + " F*\n\n";
-            msg += "📱 Je souhaite valider cette commande. Merci !";
-            
-            window.open("https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(msg), '_blank');
+        function openCart() { renderCart(); openDialog('cart'); }
+        $('cartOpen').addEventListener('click', openCart);
+        $('mobileCartOpen').addEventListener('click', openCart);
+        $('checkoutBtn').addEventListener('click', checkout);
+        $('printCartBtn').addEventListener('click', printRecap);
+        $('customBtn').addEventListener('click', function () {
+            openWhatsApp('Bonjour ICONIQUES S, je cherche un motif que je n\'ai pas trouvé dans votre catalogue. Je vous envoie une photo du modèle.');
         });
-
-        // Bouton d'impression du récapitulatif
-        document.getElementById('printCartBtn').addEventListener('click', function() {
-            printCartSummary();
-        });
-
-        document.getElementById('customUploadBtn').addEventListener('click', function(e) {
+        $('heroWhatsapp').addEventListener('click', function (e) {
             e.preventDefault();
-            var msg = "Bonjour, je souhaite vous soumettre un modele personnalise que je n'ai pas trouve dans votre catalogue.";
-            window.open("https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(msg), '_blank');
+            openWhatsApp('Bonjour ICONIQUES S, j\'ai une question sur vos motifs de broderie.');
         });
 
-        document.querySelectorAll('.cat-btn').forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                document.querySelectorAll('.cat-btn').forEach(function(b) { b.classList.remove('active'); });
-                btn.classList.add('active');
-                currentCategory = btn.dataset.cat;
-                currentPage = 1;
-                renderCatalogue();
-                saveAppState();
-            });
-        });
+        // Impression : on affiche toute la sélection en cours, puis on revient à la page.
+        $('printCatalogue').addEventListener('click', function () { render({ all: true }); window.print(); });
+        window.addEventListener('afterprint', function () { render(); });
 
-        /* ========== HEADER SCROLL ========== */
-        window.addEventListener('scroll', function() {
-            var header = document.getElementById('mainHeader');
-            if (window.scrollY > 10) header.classList.add('scrolled');
-            else header.classList.remove('scrolled');
-            var backToTop = document.getElementById('backToTop');
-            if (window.scrollY > 400) backToTop.classList.add('visible');
-            else backToTop.classList.remove('visible');
-        });
-        document.getElementById('backToTop').addEventListener('click', function() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+        // Image manquante : un cadre propre plutôt qu'une icône cassée.
+        document.addEventListener('error', function (e) {
+            var img = e.target;
+            if (img.tagName !== 'IMG') return;
+            // Vignette pas encore générée : on retombe sur l'image complète.
+            var full = img.getAttribute('data-full');
+            if (full) { img.removeAttribute('data-full'); img.src = full; return; }
+            var box = img.closest('.card-media, .vitrine button');
+            if (box) { img.remove(); box.classList.add('noimg'); }
+            else if (img.closest('.line-item')) { var ph = document.createElement('span'); ph.className = 'ph'; img.replaceWith(ph); }
+        }, true);
 
-        /* ========== INIT ========== */
-        async function initApp() {
-            showSkeleton();
-            try {
-                var response = await fetch('catalogue.json');
-                if (!response.ok) throw new Error("Erreur HTTP: " + response.status);
-                motifs = await response.json();
-                hideSkeleton();
-                renderCatalogue();
-                renderCartPanel();
-            } catch (error) {
-                console.error("Erreur lors du chargement du catalogue:", error);
-                document.getElementById('catalogue').innerHTML =
-                    '<div class="empty-state">' +
-                    '<div class="error-box">' +
-                    '<h3>\u26A0 Erreur de chargement</h3>' +
-                    '<p>Impossible de lire les motifs du catalogue (' + error.message + ').</p>' +
-                    '<p style="margin-top:12px;">Verifiez que :</p>' +
-                    '<p>\u2022 Le fichier <code>catalogue.json</code> est bien a cote de ce fichier HTML</p>' +
-                    '<p>\u2022 Vous utilisez un serveur local (ex: <code>Live Server</code> sur VS Code)</p>' +
-                    '<p>\u2022 Le fichier JSON est bien formate</p>' +
-                    '<button class="btn btn-emerald" type="button" onclick="initApp()">↻ Réessayer</button>' +
-                    '</div>' +
-                    '</div>';
-                hideSkeleton();
-            }
+        $('year').textContent = new Date().getFullYear();
+
+        /* ================= Démarrage ================= */
+        function openFromUrl() {
+            var ref = new URLSearchParams(location.search).get('ref');
+            history.replaceState({}, '', location.pathname + location.hash);
+            if (!ref) return;
+            // Comparaison par numéro : les anciens liens partagés (ex. ICS-000111) ouvrent toujours le bon motif.
+            var num = parseInt(String(ref).replace(/\D/g, ''), 10);
+            var m = motifs.find(function (x) { return norm(x.ref) === norm(ref); }) ||
+                (isFinite(num) ? motifs.find(function (x) { return parseInt(x.ref.replace(/\D/g, ''), 10) === num; }) : null);
+            if (m) showQuick(m.ref);
+            else toast('La référence ' + ref + ' n\'existe pas dans le catalogue.');
         }
-        initApp();
+
+        function init() {
+            $('grid').innerHTML = '';
+            $('grid').setAttribute('aria-busy', 'true');
+            $('resultLine').textContent = 'Chargement du catalogue…';
+            fetch('catalogue.json', { cache: 'no-cache' })
+                .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+                .then(function (data) {
+                    motifs = (Array.isArray(data) ? data : []).filter(function (m) {
+                        return m && m.ref && m.title && !m.draft && isFinite(Number(m.prixNum));
+                    }).map(function (m) { m.prixNum = Number(m.prixNum); m.nouveau = isNew(m); return m; });
+                    // Le panier reprend les prix et noms à jour du catalogue.
+                    cart = cart.filter(function (i) { return findMotif(i.ref); }).map(function (i) {
+                        var m = findMotif(i.ref);
+                        return { ref: m.ref, title: m.title.trim(), prixNum: m.prixNum, img: m.img };
+                    });
+                    storageSet('iconiques_cart', cart);
+                    $('heroCount').textContent = motifs.length + ' motifs';
+                    renderTabs();
+                    render();
+                    renderCart();
+                    openFromUrl();
+                })
+                .catch(function (err) {
+                    $('resultLine').textContent = '';
+                    $('grid').innerHTML = '<div class="load-error"><h3>Le catalogue ne s\'est pas chargé</h3>' +
+                        '<p>Vérifiez votre connexion internet, puis réessayez. (' + esc(err.message) + ')</p>' +
+                        '<button class="btn btn-primary" type="button" id="retryBtn">Réessayer</button></div>';
+                    $('retryBtn').addEventListener('click', init);
+                });
+        }
+
+        renderCart();
+        init();
+    })();
     </script>
 </body>
 </html>

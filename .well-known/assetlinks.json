@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.iconiquess.app",
+        "sha256_cert_fingerprints": ["30:59:13:3D:E4:8B:6A:C1:0A:B4:F3:01:8E:5F:3B:20:61:69:FB:E7:86:4A:72:6A:6C:6B:43:1D:00:EB:10:38"]
+      }
+    }]

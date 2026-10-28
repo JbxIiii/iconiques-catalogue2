@@ -6,8 +6,8 @@
     <title>ICONIQUES S — Motifs de broderie numérisés à Ouagadougou</title>
     <meta name="description" content="Catalogue de motifs de broderie numérisés pour tuniques, trois-pièces et agbada. Commandez sur WhatsApp, recevez votre fichier directement sur WhatsApp.">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#18203A" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#151B2E" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#161412" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1B1916" media="(prefers-color-scheme: dark)">
     <meta name="color-scheme" content="light dark">
     <link rel="canonical" href="https://iconiquess.com/">
 
@@ -57,38 +57,43 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
         /* =========================================================
            ICONIQUES S — charte
-           Indigo (teinture), or (fil de broderie), papier (toile claire)
+           Ivoire, sable, or et noir chaud, tirés de l'icône.
+           L'or pur (--gold) : étoiles, boutons, filets. Petit texte doré : --gold-text.
            Les couleurs sont nommées par rôle : le mode sombre ne fait que les redéfinir.
            ========================================================= */
         :root {
-            --bg: #FBFAF7;            /* fond de page : toile claire */
+            --bg: #FAF6EF;            /* fond de page : ivoire */
             --surface: #FFFFFF;       /* cartes, fenêtres, champs */
-            --surface-2: #F1ECE2;     /* sable : fonds d'image, encarts */
-            --line: #E2DCCF;
-            --ink: #1B1D24;
-            --muted: #5E5A52;
-            --brand: #18203A;         /* indigo : en-tête, ouverture, pied de page */
-            --on-brand: #FBFAF7;
-            --accent: #18203A;        /* boutons principaux, onglet actif */
-            --accent-hover: #2D3B63;
-            --on-accent: #FBFAF7;
-            --accent-text: #18203A;
-            --accent-soft: #E6E8EF;
-            --gold: #C29A4E;          /* fil : décor */
-            --gold-text: #876224;     /* or lisible sur le fond */
+            --surface-2: #F2EADC;     /* sable : fonds d'image, sections alternées */
+            --line: #E4D7C2;
+            --ink: #161412;
+            --muted: #6B6153;
+            --brand: #161412;         /* noir chaud : en-tête, ouverture, pied de page */
+            --on-brand: #FAF6EF;
+            --accent: #C9972F;        /* or signature : boutons principaux */
+            --accent-hover: #B5861F;
+            --on-accent: #161412;
+            --accent-text: #8A6416;   /* or pour les liens, onglet actif */
+            --accent-soft: #F3E3BF;   /* or doux : badges, survols */
+            --gold: #C9972F;
+            --gold-text: #8A6416;
             --danger: #9B2C2C;
             --danger-bg: #FBF1F0;
-            --overlay: rgba(24,32,58,.6);
-            --shadow: rgba(24,32,58,.10);
+            --overlay: rgba(22,20,18,.6);
+            --shadow: rgba(22,20,18,.10);
+            --hero-bg: #F2EADC;       /* ouverture : sable en clair, noir en sombre */
+            --hero-ink: #161412;
+            --hero-muted: #6B6153;
+            --hero-line: rgba(22,20,18,.4);
 
-            --serif-display: "Libre Caslon Display", "Libre Caslon Text", Georgia, serif;
-            --serif: "Libre Caslon Text", Georgia, serif;
-            --sans: "Instrument Sans", "Segoe UI", system-ui, sans-serif;
+            --serif-display: "Jost", "Segoe UI", system-ui, sans-serif;
+            --serif: "Jost", "Segoe UI", system-ui, sans-serif;
+            --sans: "Jost", "Segoe UI", system-ui, sans-serif;
 
             --r-sm: 3px; --r-md: 6px;
             --wrap: 1240px;
@@ -100,24 +105,29 @@
         /* Mode sombre : suit automatiquement le réglage du téléphone ou de l'ordinateur. */
         @media (prefers-color-scheme: dark) {
             :root {
-                --bg: #10131C;
-                --surface: #181C28;
-                --surface-2: #222838;
-                --line: #2E3547;
-                --ink: #ECE8DF;
-                --muted: #A9A498;
-                --brand: #151B2E;
-                --on-brand: #F3F0E8;
-                --accent: #C29A4E;    /* le fil d'or devient la couleur d'action */
-                --accent-hover: #D4AE64;
-                --on-accent: #14182A;
-                --accent-text: #E2C27F;
-                --accent-soft: rgba(194,154,78,.16);
-                --gold-text: #D8B56E;
+                --bg: #12110F;
+                --surface: #1B1916;
+                --surface-2: #25221E;
+                --line: #3A342C;
+                --ink: #F3EDE2;
+                --muted: #ADA290;
+                --brand: #1B1916;
+                --on-brand: #F3EDE2;
+                --accent: #E0B04F;
+                --accent-hover: #EBC066;
+                --on-accent: #12110F;
+                --accent-text: #E8C06C;
+                --accent-soft: #3A2F1A;
+                --gold: #E0B04F;
+                --gold-text: #E8C06C;
                 --danger: #E58A8A;
                 --danger-bg: #2A1A1D;
                 --overlay: rgba(0,0,0,.72);
                 --shadow: rgba(0,0,0,.45);
+                --hero-bg: #12110F;
+                --hero-ink: #F3EDE2;
+                --hero-muted: #ADA290;
+                --hero-line: rgba(243,237,226,.45);
                 color-scheme: dark;
             }
         }
@@ -151,10 +161,10 @@
         .btn-primary:hover { background: var(--accent-hover); }
         .btn-secondary { background: var(--surface); color: var(--accent-text); border-color: var(--accent-text); }
         .btn-secondary:hover, .btn-secondary[aria-pressed="true"] { background: var(--accent-soft); }
-        .btn-light { background: var(--on-brand); color: var(--brand); }
-        .btn-light:hover { background: #FFFFFF; }
-        .btn-outline-light { color: var(--on-brand); border-color: rgba(251,250,247,.55); }
-        .btn-outline-light:hover { border-color: var(--on-brand); background: rgba(251,250,247,.08); }
+        .btn-light { background: var(--gold); color: var(--on-accent); }
+        .btn-light:hover { background: var(--accent-hover); }
+        .btn-outline-light { color: var(--on-brand); border-color: rgba(250,246,239,.55); }
+        .btn-outline-light:hover { border-color: var(--on-brand); background: rgba(250,246,239,.08); }
         .btn-sm { min-height: 40px; padding: 0 14px; font-size: 0.86rem; }
         .btn-block { width: 100%; }
         .link-btn { font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
@@ -169,15 +179,18 @@
         .site-header { position: sticky; top: 0; z-index: 50; background: var(--brand); color: var(--on-brand); }
         .header-row { height: var(--header-h); display: flex; align-items: center; justify-content: space-between; gap: 16px; }
         .wordmark { text-decoration: none; display: flex; flex-direction: column; line-height: 1; }
-        .wordmark-name { font-family: var(--serif-display); font-size: 1.6rem; letter-spacing: 0.04em; }
-        .wordmark-sub { font-size: 0.72rem; color: rgba(251,250,247,.7); margin-top: 5px; letter-spacing: 0.02em; }
+        .wordmark { flex-direction: row; align-items: center; gap: 10px; }
+        .wordmark-star { width: 26px; height: 26px; fill: var(--gold); flex-shrink: 0; }
+        .wordmark-text { display: flex; flex-direction: column; }
+        .wordmark-name { font-family: var(--serif-display); font-weight: 400; font-size: 1.45rem; letter-spacing: 0.14em; }
+        .wordmark-sub { font-size: 0.72rem; color: rgba(250,246,239,.7); margin-top: 5px; letter-spacing: 0.02em; }
         .header-nav { display: flex; align-items: center; gap: 6px; }
-        .header-link { color: rgba(251,250,247,.85); text-decoration: none; font-size: 0.9rem; font-weight: 500; padding: 10px 12px; border-radius: var(--r-sm); }
-        .header-link:hover { color: var(--on-brand); background: rgba(251,250,247,.08); }
-        .cart-btn { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px; border: 1px solid rgba(251,250,247,.4); border-radius: var(--r-sm); color: var(--on-brand); font-weight: 600; font-size: 0.9rem; }
+        .header-link { color: rgba(250,246,239,.85); text-decoration: none; font-size: 0.9rem; font-weight: 500; padding: 10px 12px; border-radius: var(--r-sm); }
+        .header-link:hover { color: var(--on-brand); background: rgba(250,246,239,.08); }
+        .cart-btn { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px; border: 1px solid rgba(250,246,239,.4); border-radius: var(--r-sm); color: var(--on-brand); font-weight: 600; font-size: 0.9rem; }
         .cart-btn:hover { border-color: var(--on-brand); }
         .cart-btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.6; }
-        .cart-badge { min-width: 22px; height: 22px; padding: 0 6px; border-radius: 11px; background: var(--gold); color: #18203A; font-size: 0.78rem; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; }
+        .cart-badge { min-width: 22px; height: 22px; padding: 0 6px; border-radius: 11px; background: var(--gold); color: #161412; font-size: 0.78rem; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; }
         .header-stitch { transform-origin: left center; }
         @media (prefers-reduced-motion: no-preference) {
             .header-stitch { animation: sew 1.4s cubic-bezier(.6,.1,.3,1) .2s both; }
@@ -185,15 +198,17 @@
         }
 
         /* ---------- Ouverture ---------- */
-        .hero { background: var(--brand); color: var(--on-brand); padding: clamp(40px, 7vw, 88px) 0 clamp(48px, 7vw, 96px); overflow: hidden; }
+        .hero { background: var(--hero-bg); color: var(--hero-ink); padding: clamp(40px, 7vw, 88px) 0 clamp(48px, 7vw, 96px); overflow: hidden; }
         .hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
-        .hero h1 { font-family: var(--serif-display); font-weight: 400; font-size: clamp(2.4rem, 5.2vw, 4.25rem); line-height: 1.04; letter-spacing: -0.01em; max-width: 13ch; }
-        .hero-lede { margin-top: 22px; font-size: clamp(1rem, 1.4vw, 1.12rem); line-height: 1.6; color: rgba(251,250,247,.82); max-width: 46ch; }
+        .hero h1 { font-family: var(--serif-display); font-weight: 300; font-size: clamp(2.4rem, 5.2vw, 4.25rem); line-height: 1.04; letter-spacing: -0.01em; max-width: 13ch; }
+        .hero-lede { margin-top: 22px; font-size: clamp(1rem, 1.4vw, 1.12rem); line-height: 1.6; color: var(--hero-muted); max-width: 46ch; }
         .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
-        .hero-note { margin-top: 22px; font-size: 0.88rem; color: rgba(251,250,247,.65); }
-        .hero-note strong { color: var(--gold); font-weight: 600; }
+        .hero-note { margin-top: 22px; font-size: 0.88rem; color: var(--hero-muted); }
+        .hero-note strong { color: var(--gold-text); font-weight: 600; }
+        .hero .btn-outline-light { color: var(--hero-ink); border-color: var(--hero-line); }
+        .hero .btn-outline-light:hover { border-color: var(--hero-ink); background: var(--accent-soft); }
         .vitrine { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; align-items: start; max-width: 480px; justify-self: end; width: 100%; }
-        .vitrine button { display: block; border-radius: var(--r-sm); overflow: hidden; background: var(--surface-2); box-shadow: 0 18px 40px rgba(0,0,0,.28); transition: transform .25s ease; }
+        .vitrine button { display: block; border-radius: var(--r-sm); overflow: hidden; background: var(--surface-2); box-shadow: 0 18px 40px var(--shadow), 0 2px 6px var(--shadow); transition: transform .25s ease; }
         .vitrine button:nth-child(2) { margin-top: 40px; }
         .vitrine button:nth-child(3) { margin-top: 80px; }
         .vitrine img { width: 100%; aspect-ratio: var(--ratio); object-fit: cover; }
@@ -201,7 +216,7 @@
         /* ---------- Sections ---------- */
         .section { padding: clamp(56px, 8vw, 96px) 0; }
         .section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 28px; }
-        .section-title { font-family: var(--serif-display); font-weight: 400; font-size: clamp(1.9rem, 3.4vw, 2.6rem); line-height: 1.1; }
+        .section-title { font-family: var(--serif-display); font-weight: 300; font-size: clamp(1.9rem, 3.4vw, 2.6rem); line-height: 1.1; }
         .section-intro { color: var(--muted); max-width: 52ch; margin-top: 10px; }
 
         /* Comment commander : vraie séquence, reliée par la couture */
@@ -210,7 +225,7 @@
         .steps::before { content: ""; position: absolute; left: calc(100% / 6); right: calc(100% / 6); top: 21px; height: 2px; background: repeating-linear-gradient(90deg, var(--gold) 0 12px, transparent 12px 20px); }
         .step { position: relative; text-align: center; padding: 0 20px; }
         .step-num { position: relative; z-index: 1; width: 44px; height: 44px; margin: 0 auto 18px; border-radius: 50%; background: var(--surface); border: 1.5px solid var(--accent-text); color: var(--accent-text); font-family: var(--serif); font-size: 1.15rem; display: flex; align-items: center; justify-content: center; }
-        .step h3 { font-family: var(--serif); font-weight: 700; font-size: 1.08rem; margin-bottom: 6px; }
+        .step h3 { font-family: var(--serif); font-weight: 600; font-size: 1.08rem; margin-bottom: 6px; }
         .step p { color: var(--muted); font-size: 0.95rem; max-width: 30ch; margin: 0 auto; }
         .remise { margin-top: 40px; text-align: center; font-size: 0.95rem; color: var(--ink); }
         .remise strong { color: var(--gold-text); }
@@ -247,7 +262,7 @@
         .tag-new { position: absolute; top: 8px; left: 8px; background: var(--accent); color: var(--on-accent); font-size: 0.72rem; font-weight: 600; padding: 3px 8px; border-radius: var(--r-sm); }
         .card-info { padding: 12px 2px 0; flex: 1; }
         .card-ref { font-size: 0.78rem; font-weight: 600; color: var(--gold-text); font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
-        .card-title { font-family: var(--serif); font-weight: 400; font-size: 1.05rem; line-height: 1.3; margin-top: 2px; }
+        .card-title { font-family: var(--serif); font-weight: 500; font-size: 1.05rem; line-height: 1.3; margin-top: 2px; }
         .card-title button { text-align: left; }
         .card-row { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-top: 4px; }
         .card-meta { font-size: 0.84rem; color: var(--muted); }
@@ -257,7 +272,7 @@
         .card-actions .cart-toggle svg { width: 20px; height: 20px; }
 
         .empty { grid-column: 1 / -1; text-align: center; padding: 64px 16px; border: 1px dashed var(--line); border-radius: var(--r-md); }
-        .empty h3 { font-family: var(--serif); font-weight: 400; font-size: 1.4rem; margin-bottom: 8px; }
+        .empty h3 { font-family: var(--serif); font-weight: 500; font-size: 1.4rem; margin-bottom: 8px; }
         .empty p { color: var(--muted); margin-bottom: 18px; }
 
         .pagination { display: flex; justify-content: center; align-items: center; gap: 6px; margin-top: 48px; flex-wrap: wrap; }
@@ -272,24 +287,24 @@
         .custom p { color: var(--muted); margin-top: 10px; max-width: 54ch; }
 
         /* ---------- Pied de page ---------- */
-        .site-footer { background: var(--brand); color: rgba(251,250,247,.8); font-size: 0.93rem; }
+        .site-footer { background: var(--brand); color: rgba(250,246,239,.8); font-size: 0.93rem; }
         .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; padding: 56px 0 40px; }
-        .footer-brand .wordmark-name { color: var(--on-brand); font-size: 1.8rem; }
+        .footer-brand .wordmark-name { color: var(--on-brand); font-size: 1.6rem; }
         .footer-brand p { margin-top: 14px; max-width: 36ch; line-height: 1.6; }
-        .site-footer h2 { font-family: var(--serif); font-weight: 700; font-size: 1rem; color: var(--on-brand); margin-bottom: 14px; }
+        .site-footer h2 { font-family: var(--serif); font-weight: 600; font-size: 1rem; color: var(--on-brand); margin-bottom: 14px; }
         .site-footer ul { list-style: none; display: grid; gap: 8px; }
-        .site-footer a { text-decoration: none; color: rgba(251,250,247,.8); }
+        .site-footer a { text-decoration: none; color: rgba(250,246,239,.8); }
         .site-footer a:hover { color: var(--on-brand); text-decoration: underline; text-underline-offset: 3px; }
         .site-footer details { margin-top: 2px; }
-        .site-footer summary { cursor: pointer; color: rgba(251,250,247,.8); }
+        .site-footer summary { cursor: pointer; color: rgba(250,246,239,.8); }
         .site-footer summary:hover { color: var(--on-brand); }
-        .site-footer details p { margin-top: 8px; font-size: 0.88rem; line-height: 1.6; color: rgba(251,250,247,.65); }
+        .site-footer details p { margin-top: 8px; font-size: 0.88rem; line-height: 1.6; color: rgba(250,246,239,.65); }
         .socials { display: flex; gap: 10px; margin-top: 20px; }
-        .socials a { width: 44px; height: 44px; border: 1px solid rgba(251,250,247,.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+        .socials a { width: 44px; height: 44px; border: 1px solid rgba(250,246,239,.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
         .socials a:hover { border-color: var(--on-brand); }
         .socials svg { width: 18px; height: 18px; fill: var(--on-brand); }
-        .footer-bottom { border-top: 1px solid rgba(251,250,247,.12); padding: 20px 0 28px; font-size: 0.84rem; color: rgba(251,250,247,.55); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-        .footer-bottom button { color: rgba(251,250,247,.8); text-decoration: underline; text-underline-offset: 3px; }
+        .footer-bottom { border-top: 1px solid rgba(250,246,239,.12); padding: 20px 0 28px; font-size: 0.84rem; color: rgba(250,246,239,.55); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+        .footer-bottom button { color: rgba(250,246,239,.8); text-decoration: underline; text-underline-offset: 3px; }
 
         /* ---------- Fenêtres (aperçu, zoom, panier) ---------- */
         dialog { border: 0; padding: 0; color: var(--ink); background: var(--surface); }
@@ -304,7 +319,7 @@
         .quick-media img { height: min(78vh, 720px); width: auto; aspect-ratio: var(--ratio); object-fit: cover; }
         .quick-body { padding: 40px 36px 32px; display: flex; flex-direction: column; min-width: 0; }
         .quick-body .card-ref { font-size: 0.86rem; }
-        .quick-title { font-family: var(--serif-display); font-weight: 400; font-size: 2.1rem; line-height: 1.1; margin-top: 6px; }
+        .quick-title { font-family: var(--serif-display); font-weight: 300; font-size: 2.1rem; line-height: 1.1; margin-top: 6px; }
         .quick-price { font-size: 1.4rem; font-weight: 600; margin-top: 14px; font-variant-numeric: tabular-nums; }
         .specs { margin-top: 24px; border-top: 1px solid var(--line); }
         .specs div { display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 0.94rem; }
@@ -315,15 +330,15 @@
         .quick-links .link-btn { min-height: 32px; }
         .quick-note { margin-top: auto; padding-top: 24px; font-size: 0.85rem; color: var(--muted); }
 
-        .zoom { width: 100%; height: 100%; max-width: none; max-height: none; background: rgba(12,14,22,.97); }
+        .zoom { width: 100%; height: 100%; max-width: none; max-height: none; background: rgba(14,13,11,.97); }
         .zoom-inner { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; padding: 56px 16px 16px; }
         .zoom img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: var(--r-sm); }
-        .zoom .dlg-close { background: rgba(251,250,247,.14); color: #FBFAF7; box-shadow: none; }
+        .zoom .dlg-close { background: rgba(250,246,239,.14); color: #FAF6EF; box-shadow: none; }
 
         .drawer { margin: 0 0 0 auto; width: min(430px, 100%); height: 100%; max-height: none; }
         .drawer-inner { height: 100%; display: flex; flex-direction: column; }
         .drawer-head { padding: 22px 64px 18px 24px; border-bottom: 1px solid var(--line); }
-        .drawer-head h2 { font-family: var(--serif-display); font-weight: 400; font-size: 1.7rem; }
+        .drawer-head h2 { font-family: var(--serif-display); font-weight: 300; font-size: 1.7rem; }
         .drawer-head p { color: var(--muted); font-size: 0.88rem; margin-top: 2px; }
         .drawer-items { flex: 1; overflow-y: auto; padding: 8px 24px; list-style: none; overscroll-behavior: contain; }
         .line-item { display: grid; grid-template-columns: 48px minmax(0, 1fr) auto; gap: 14px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--line); }
@@ -344,7 +359,7 @@
 
         /* Favoris : cœur posé sur l'image de la carte */
         .card-visual { position: relative; }
-        .fav-btn { position: absolute; top: 6px; right: 6px; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,.88); color: #18203A; box-shadow: 0 2px 8px rgba(0,0,0,.15); }
+        .fav-btn { position: absolute; top: 6px; right: 6px; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,.9); color: #161412; box-shadow: 0 2px 8px rgba(0,0,0,.15); }
         .fav-btn svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; }
         .fav-btn[aria-pressed="true"] { color: #B4302F; }
         .fav-btn[aria-pressed="true"] svg { fill: currentColor; }
@@ -355,7 +370,7 @@
 
         /* Abonnement aux nouveautés */
         .news { display: flex; align-items: center; justify-content: space-between; gap: 20px 32px; flex-wrap: wrap; margin-top: 56px; padding: 24px 28px; border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: var(--r-md); background: var(--surface); }
-        .news h2 { font-family: var(--serif); font-weight: 700; font-size: 1.15rem; }
+        .news h2 { font-family: var(--serif); font-weight: 600; font-size: 1.15rem; }
         .news p { color: var(--muted); font-size: 0.94rem; margin-top: 4px; }
 
         /* Questions fréquentes */
@@ -372,7 +387,7 @@
 
         /* Motifs proposés sous la fiche */
         .similar { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
-        .similar h3 { font-family: var(--serif); font-weight: 700; font-size: 0.98rem; margin-bottom: 12px; }
+        .similar h3 { font-family: var(--serif); font-weight: 600; font-size: 0.98rem; margin-bottom: 12px; }
         .similar-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
         .similar-grid button { text-align: left; font-size: 0.8rem; line-height: 1.3; min-width: 0; }
         .similar-grid img { width: 100%; aspect-ratio: var(--ratio); object-fit: cover; border-radius: var(--r-sm); background: var(--surface-2); border: 1px solid var(--line); margin-bottom: 6px; }
@@ -439,7 +454,8 @@
         @media (max-width: 640px) {
             :root { --header-h: 56px; }
             body { font-size: 15.5px; }
-            .wordmark-name { font-size: 1.35rem; }
+            .wordmark-name { font-size: 1.2rem; letter-spacing: 0.12em; }
+            .wordmark-star { width: 22px; height: 22px; }
             .wordmark-sub, .header-link { display: none; }
             .cart-label { display: none; }
             .cart-btn { min-height: 44px; padding: 0 12px; }
@@ -517,7 +533,7 @@
 
         /* ---------- Impression du catalogue ---------- */
         @media print {
-            :root { --bg: #fff; --surface: #fff; --surface-2: #F1ECE2; --line: #E2DCCF; --ink: #1B1D24; --muted: #5E5A52; --gold-text: #876224; }
+            :root { --bg: #fff; --surface: #fff; --surface-2: #F2EADC; --line: #E4D7C2; --ink: #161412; --muted: #6B6153; --gold-text: #8A6416; }
             body { background: #fff; }
             .site-header, .hero, .how, .custom, .site-footer, .toolbar, .tabs, .pagination, .card-actions, .mobile-bar, .toast, .wa-fab, .fav-btn, .news, .faq, dialog { display: none !important; }
             .filters { position: static; box-shadow: none; }
@@ -529,7 +545,7 @@
             .result-line { display: none; }
         }
         .print-head { display: none; font-family: var(--serif); }
-        .print-head strong { font-family: var(--serif-display); font-weight: 400; font-size: 1.6rem; display: block; }
+        .print-head strong { font-family: var(--serif-display); font-weight: 300; font-size: 1.6rem; display: block; }
     </style>
 </head>
 <body>
@@ -537,8 +553,9 @@
     <header class="site-header">
         <div class="wrap header-row">
             <a class="wordmark" href="#top" aria-label="ICONIQUES S, retour en haut de page">
-                <span class="wordmark-name">ICONIQUES S</span>
-                <span class="wordmark-sub">Motifs de broderie numérisés</span>
+                <svg class="wordmark-star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C12.6 7.6 16.4 11.4 24 12 16.4 12.6 12.6 16.4 12 24 11.4 16.4 7.6 12.6 0 12 7.6 11.4 11.4 7.6 12 0Z"/></svg>
+                <span class="wordmark-text"><span class="wordmark-name">ICONIQUES S</span>
+                <span class="wordmark-sub">Motifs de broderie numérisés</span></span>
             </a>
             <nav class="header-nav" aria-label="Navigation principale">
                 <a class="header-link" href="#catalogue">Catalogue</a>
@@ -1083,12 +1100,12 @@
             var date = new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
             var rows = cart.map(function (i) { return '<tr><td>' + esc(i.ref) + '</td><td>' + esc(i.title) + '</td><td class="r">' + money(i.prixNum) + '</td></tr>'; }).join('');
             var html = '<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Récapitulatif ICONIQUES S</title><style>' +
-                'body{font-family:Georgia,serif;color:#1B1D24;max-width:720px;margin:40px auto;padding:0 24px}' +
+                'body{font-family:Jost,"Segoe UI",sans-serif;color:#161412;max-width:720px;margin:40px auto;padding:0 24px}' +
                 'h1{font-weight:400;font-size:30px;letter-spacing:.04em;margin:0}' +
-                '.stitch{height:2px;margin:14px 0 24px;background:repeating-linear-gradient(90deg,#C29A4E 0 12px,transparent 12px 20px)}' +
+                '.stitch{height:2px;margin:14px 0 24px;background:repeating-linear-gradient(90deg,#C9972F 0 12px,transparent 12px 20px)}' +
                 'p{color:#5E5A52;font-size:14px;margin:4px 0}table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}' +
-                'th{text-align:left;border-bottom:1.5px solid #18203A;padding:8px 6px;font-weight:700}td{border-bottom:1px solid #E2DCCF;padding:9px 6px}' +
-                '.r{text-align:right;white-space:nowrap}.tot td{border:0;padding:4px 6px}.grand td{font-size:17px;font-weight:700;border-top:1.5px solid #18203A;padding-top:10px}' +
+                'th{text-align:left;border-bottom:1.5px solid #161412;padding:8px 6px;font-weight:700}td{border-bottom:1px solid #E4D7C2;padding:9px 6px}' +
+                '.r{text-align:right;white-space:nowrap}.tot td{border:0;padding:4px 6px}.grand td{font-size:17px;font-weight:700;border-top:1.5px solid #161412;padding-top:10px}' +
                 'ol{font-size:14px;line-height:1.7;padding-left:20px}footer{margin-top:36px;font-size:12px;color:#5E5A52}</style></head><body>' +
                 '<h1>ICONIQUES S</h1><div class="stitch"></div>' +
                 '<p>Récapitulatif de commande du ' + date + '</p>' +

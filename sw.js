@@ -2,7 +2,7 @@
    Pages et catalogue : toujours la version en ligne si possible, sinon la dernière enregistrée.
    Images et polices : affichées tout de suite depuis l'appareil, puis mises à jour en arrière-plan.
    Changer VERSION pour vider les anciennes copies après une grosse mise à jour. */
-var VERSION = 'iconiques-v1';
+var VERSION = 'iconiques-v2';
 var CORE = ['/', '/catalogue.json', '/manifest.webmanifest', '/icon-192.png', '/icon-512.png', '/favicon.ico'];
 
 self.addEventListener('install', function (e) {

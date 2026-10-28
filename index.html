@@ -26,6 +26,7 @@
 
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <!-- Fiche d'entreprise lisible par Google (recherche locale, Google Maps) -->
@@ -341,6 +342,34 @@
         .hint { margin-top: 12px; font-size: 0.86rem; color: var(--muted); }
         .drawer-actions { display: grid; gap: 10px; margin-top: 16px; }
 
+        /* Favoris : cœur posé sur l'image de la carte */
+        .card-visual { position: relative; }
+        .fav-btn { position: absolute; top: 6px; right: 6px; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,.88); color: #18203A; box-shadow: 0 2px 8px rgba(0,0,0,.15); }
+        .fav-btn svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+        .fav-btn[aria-pressed="true"] { color: #B4302F; }
+        .fav-btn[aria-pressed="true"] svg { fill: currentColor; }
+
+        /* « Voir plus » sur téléphone */
+        .load-more { width: 100%; min-height: 48px; }
+        .load-left { color: var(--muted); font-weight: 500; }
+
+        /* Abonnement aux nouveautés */
+        .news { display: flex; align-items: center; justify-content: space-between; gap: 20px 32px; flex-wrap: wrap; margin-top: 56px; padding: 24px 28px; border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: var(--r-md); background: var(--surface); }
+        .news h2 { font-family: var(--serif); font-weight: 700; font-size: 1.15rem; }
+        .news p { color: var(--muted); font-size: 0.94rem; margin-top: 4px; }
+
+        /* Questions fréquentes */
+        .faq-inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 24px 56px; align-items: start; }
+        .faq-list { border-top: 1px solid var(--line); }
+        .faq details { border-bottom: 1px solid var(--line); }
+        .faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 0; min-height: 48px; font-weight: 600; font-size: 1rem; }
+        .faq summary::-webkit-details-marker { display: none; }
+        .faq summary::after { content: "+"; flex-shrink: 0; font-size: 1.4rem; font-weight: 400; line-height: 1; color: var(--gold-text); }
+        .faq details[open] summary::after { content: "−"; }
+        .faq details p { color: var(--muted); padding: 0 0 18px; max-width: 62ch; }
+
+        .footer-actions { display: flex; gap: 18px; flex-wrap: wrap; }
+
         /* Motifs proposés sous la fiche */
         .similar { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
         .similar h3 { font-family: var(--serif); font-weight: 700; font-size: 0.98rem; margin-bottom: 12px; }
@@ -386,6 +415,7 @@
             .step p { margin: 0; max-width: none; }
             .remise { text-align: left; }
             .custom-inner { grid-template-columns: 1fr; gap: 20px; }
+            .faq-inner { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
             .footer-brand { grid-column: 1 / -1; }
         }
@@ -454,6 +484,9 @@
             .page-btn { min-width: 44px; height: 44px; padding: 0 10px; }
 
             .custom-inner .btn { width: 100%; min-height: 48px; }
+            .news { margin-top: 40px; padding: 20px; }
+            .news .btn { width: 100%; min-height: 48px; }
+            .fav-btn { top: 4px; right: 4px; }
             .footer-grid { grid-template-columns: 1fr; gap: 32px; padding: 44px 0 32px; }
 
             .drawer { width: 100%; }
@@ -486,7 +519,7 @@
         @media print {
             :root { --bg: #fff; --surface: #fff; --surface-2: #F1ECE2; --line: #E2DCCF; --ink: #1B1D24; --muted: #5E5A52; --gold-text: #876224; }
             body { background: #fff; }
-            .site-header, .hero, .how, .custom, .site-footer, .toolbar, .tabs, .pagination, .card-actions, .mobile-bar, .toast, .wa-fab, dialog { display: none !important; }
+            .site-header, .hero, .how, .custom, .site-footer, .toolbar, .tabs, .pagination, .card-actions, .mobile-bar, .toast, .wa-fab, .fav-btn, .news, .faq, dialog { display: none !important; }
             .filters { position: static; box-shadow: none; }
             .section { padding: 0; }
             .print-head { display: block !important; margin-bottom: 16px; }
@@ -511,6 +544,7 @@
                 <a class="header-link" href="#catalogue">Catalogue</a>
                 <a class="header-link" href="#commander">Comment commander</a>
                 <a class="header-link" href="#sur-mesure">Sur mesure</a>
+                <a class="header-link" href="#faq">Questions</a>
                 <button class="cart-btn" id="cartOpen" type="button" aria-label="Ouvrir le panier">
                     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 7Z"/><path d="M9 7V6a3 3 0 0 1 6 0v1"/></svg>
                     <span class="cart-label">Panier</span>
@@ -604,6 +638,17 @@
                 <p class="result-line" id="resultLine" aria-live="polite"></p>
                 <div class="grid" id="grid" aria-busy="true"></div>
                 <nav class="pagination" id="pagination" aria-label="Pages du catalogue"></nav>
+
+                <aside class="news" aria-labelledby="newsTitle">
+                    <div>
+                        <h2 id="newsTitle">De nouveaux motifs chaque semaine</h2>
+                        <p>Recevez-les directement sur WhatsApp, sans revenir sur le site.</p>
+                    </div>
+                    <button class="btn btn-secondary" type="button" data-news>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#waPath"/></svg>
+                        Recevoir les nouveautés
+                    </button>
+                </aside>
             </div>
         </section>
 
@@ -617,6 +662,42 @@
                     <svg viewBox="0 0 24 24" aria-hidden="true"><path id="waPath" d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.2 1.6 6L0 24l6.4-1.7a11.9 11.9 0 0 0 5.7 1.5h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.3-6.1-3.5-8.5ZM12.1 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.3-.4a9.8 9.8 0 1 1 8.5 4.7Zm5.4-7.3c-.3-.2-1.7-.8-2-.9s-.5-.2-.7.2-.8.9-1 1.1-.4.2-.7.1a8 8 0 0 1-2.4-1.5 8.8 8.8 0 0 1-1.6-2c-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6s0-.5-.1-.7l-.9-2.1c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.7.1-1 .5s-1.3 1.2-1.3 2.9 1.3 3.3 1.5 3.6 2.6 4 6.3 5.6c.9.4 1.6.7 2.2.9.9.3 1.8.2 2.4.1.7-.1 1.7-.7 1.9-1.4s.2-1.3.1-1.4-.2-.2-.5-.4Z"/></svg>
                     Envoyer mon modèle
                 </button>
+            </div>
+        </section>
+
+        <section class="section faq" id="faq" aria-labelledby="faqTitle">
+            <div class="wrap faq-inner">
+                <h2 class="section-title" id="faqTitle">Questions fréquentes</h2>
+                <div class="faq-list">
+                    <details>
+                        <summary>Comment commander un motif ?</summary>
+                        <p>Touchez « Commander » sous le motif : WhatsApp s'ouvre avec un message déjà prêt, il suffit de l'envoyer. Pour plusieurs motifs, ajoutez-les au panier puis touchez « Commander sur WhatsApp ».</p>
+                    </details>
+                    <details>
+                        <summary>Comment payer ?</summary>
+                        <p>Par Wave ou Orange Money. Le numéro de paiement vous est indiqué sur WhatsApp, une fois votre commande confirmée.</p>
+                    </details>
+                    <details>
+                        <summary>Quand vais-je recevoir mon fichier ?</summary>
+                        <p>Le fichier vous est envoyé sur WhatsApp dès que le paiement est confirmé. Nous répondons du lundi au samedi, de 8 h à 18 h.</p>
+                    </details>
+                    <details>
+                        <summary>Le fichier fonctionnera-t-il sur ma machine ?</summary>
+                        <p>Avant l'envoi, nous confirmons avec vous le format adapté à votre machine. Indiquez-nous sa marque et son modèle dans votre message.</p>
+                    </details>
+                    <details>
+                        <summary>Combien coûte un motif ? Y a-t-il des remises ?</summary>
+                        <p>Les motifs coûtent de <span id="faqMin">1 000 FCFA</span> à <span id="faqMax">5 000 FCFA</span>. Dans le panier, la remise est automatique : 10 % dès 5 motifs, 15 % dès 10 motifs, 20 % dès 20 motifs.</p>
+                    </details>
+                    <details>
+                        <summary>Pouvez-vous numériser un modèle qui n'est pas dans le catalogue ?</summary>
+                        <p>Oui. Envoyez-nous une photo du modèle sur WhatsApp : nous vous indiquons le prix avant de commencer.</p>
+                    </details>
+                    <details>
+                        <summary>Puis-je commander depuis l'étranger ?</summary>
+                        <p>Oui, les fichiers sont envoyés sur WhatsApp, où que vous soyez. Écrivez-nous pour convenir du moyen de paiement.</p>
+                    </details>
+                </div>
             </div>
         </section>
     </main>
@@ -670,7 +751,10 @@
             </div>
             <div class="footer-bottom">
                 <span>© <span id="year">2026</span> ICONIQUES S. Tous droits réservés.</span>
-                <button type="button" id="printCatalogue">Imprimer le catalogue</button>
+                <span class="footer-actions">
+                    <button type="button" id="installBtn" hidden>Installer l'application</button>
+                    <button type="button" id="printCatalogue">Imprimer le catalogue</button>
+                </span>
             </div>
         </div>
     </footer>
@@ -743,6 +827,7 @@
         var CATEGORIES = [
             { id: 'all', label: 'Tous les motifs' },
             { id: 'nouveau', label: 'Nouveautés' },
+            { id: 'favoris', label: 'Mes favoris' },
             { id: 'tuniques', label: 'Tuniques frappe et poche' },
             { id: 'trois-pieces', label: 'Trois-pièces' },
             { id: 'agbada', label: 'Agbada' },
@@ -751,7 +836,8 @@
         ];
         var DISCOUNTS = [ { min: 20, rate: 0.20 }, { min: 10, rate: 0.15 }, { min: 5, rate: 0.10 } ];
         var WA_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#waPath"/></svg>';
-        var CART_ICONS = '<svg class="ico-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>' +
+        var HEART_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2Z"/></svg>';
+        var CART_ICONS ='<svg class="ico-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>' +
             '<svg class="ico-on" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>';
         var CLOSE_ICON ='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>';
 
@@ -759,6 +845,8 @@
         var motifs = [];
         var state = { cat: 'all', q: '', sort: 'default', page: 1 };
         var cart = loadCart();
+        var favs = loadFavs();
+        var mqMobile = window.matchMedia('(max-width: 640px)');
 
         /* ================= Outils ================= */
         function $(id) { return document.getElementById(id); }
@@ -786,6 +874,8 @@
         function findMotif(ref) { return motifs.find(function (m) { return m.ref === ref; }); }
         function norm(s) { return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]/g, ''); }
         function motifLink(ref) { return location.origin + location.pathname + '?ref=' + encodeURIComponent(ref); }
+        // Lien à partager : la page du motif (m/ICS-00043.html) a sa propre image d'aperçu dans WhatsApp et Facebook.
+        function shareLink(ref) { return location.origin + '/m/' + encodeURIComponent(ref); }
         function openWhatsApp(text) { window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(text), '_blank', 'noopener'); }
 
         // Compte une action (commande, ajout au panier…) dans les statistiques, sans cookie.
@@ -836,6 +926,44 @@
             });
             return out;
         }
+        /* ================= Favoris ================= */
+        // Même clé que l'ancien site : les favoris déjà enregistrés par les clients sont repris.
+        function loadFavs() {
+            var raw = storageGet('iconiques_favorites');
+            return (Array.isArray(raw) ? raw : []).filter(function (r) { return typeof r === 'string'; });
+        }
+        function isFav(ref) { return favs.indexOf(ref) > -1; }
+        function toggleFav(ref) {
+            var m = findMotif(ref);
+            if (!m) return;
+            if (isFav(ref)) {
+                favs = favs.filter(function (r) { return r !== ref; });
+                toast(m.title.trim() + ' retiré des favoris');
+            } else {
+                favs.push(ref);
+                toast(m.title.trim() + ' ajouté aux favoris');
+                track('favori-' + ref);
+            }
+            storageSet('iconiques_favorites', favs);
+            if (state.cat === 'favoris') {
+                if (!favs.length) state.cat = 'all';
+                renderTabs(); render();
+            } else {
+                renderTabs();
+            }
+            syncFavButtons();
+        }
+        function syncFavButtons() {
+            document.querySelectorAll('[data-fav]').forEach(function (b) {
+                var on = isFav(b.dataset.fav);
+                var m = findMotif(b.dataset.fav);
+                var name = m ? m.title.trim() : b.dataset.fav;
+                b.setAttribute('aria-pressed', on ? 'true' : 'false');
+                if (b.classList.contains('fav-btn')) b.setAttribute('aria-label', on ? 'Retirer ' + name + ' des favoris' : 'Ajouter ' + name + ' aux favoris');
+                else b.textContent = on ? '♥ Dans vos favoris' : '♡ Ajouter aux favoris';
+            });
+        }
+
         function inCart(ref) { return cart.some(function (i) { return i.ref === ref; }); }
         function subtotal() { return cart.reduce(function (s, i) { return s + i.prixNum; }, 0); }
         function discountRate() { var d = DISCOUNTS.find(function (x) { return cart.length >= x.min; }); return d ? d.rate : 0; }
@@ -931,13 +1059,13 @@
             if (!m) return;
             track('commander-' + m.ref);
             openWhatsApp('Bonjour ICONIQUES S, je souhaite commander ce motif :\n\n• ' + m.ref + ' « ' + m.title.trim() + ' » : ' + money(m.prixNum) +
-                '\n' + motifLink(m.ref) + '\n\nMerci de me confirmer le format pour ma machine et le paiement.');
+                '\n' + shareLink(m.ref) + '\n\nMerci de me confirmer le format pour ma machine et le paiement.');
         }
 
         function shareMotif(ref) {
             var m = findMotif(ref);
             if (!m) return;
-            var url = motifLink(ref);
+            var url = shareLink(ref);
             var text = m.title.trim() + ' (' + m.ref + '), motif de broderie ICONIQUES S';
             track('partage-' + m.ref);
             if (navigator.share) { navigator.share({ title: text, text: text, url: url }).catch(function () {}); return; }
@@ -982,6 +1110,7 @@
         function filtered() {
             var list = motifs.slice();
             if (state.cat === 'nouveau') list = list.filter(function (m) { return m.nouveau; });
+            else if (state.cat === 'favoris') list = list.filter(function (m) { return isFav(m.ref); });
             else if (state.cat !== 'all') list = list.filter(function (m) { return m.cat === state.cat; });
             var q = norm(state.q);
             if (q) list = list.filter(function (m) { return norm(m.ref).indexOf(q) > -1 || norm(m.title).indexOf(q) > -1; });
@@ -996,6 +1125,7 @@
             var html = CATEGORIES.map(function (c) {
                 var count = c.id === 'all' ? motifs.length
                     : c.id === 'nouveau' ? motifs.filter(function (m) { return m.nouveau; }).length
+                    : c.id === 'favoris' ? favs.length
                     : motifs.filter(function (m) { return m.cat === c.id; }).length;
                 if (!count) return ''; // une catégorie vide n'est pas affichée
                 return '<button class="tab" type="button" data-cat="' + c.id + '" aria-pressed="' + (state.cat === c.id) + '">' +
@@ -1008,10 +1138,13 @@
             var t = esc(m.title.trim());
             var colors = m.couleurs ? plural(Number(m.couleurs) || m.couleurs, 'couleur') : catLabel(m.cat);
             return '<article class="card">' +
-                '<button class="card-media" type="button" data-open="' + esc(m.ref) + '" aria-label="Voir ' + t + ' en détail">' +
-                    thumbTag(m.img, '', ' width="400" height="711"') +
-                    (m.nouveau ? '<span class="tag-new">Nouveau</span>' : '') +
-                '</button>' +
+                '<div class="card-visual">' +
+                    '<button class="card-media" type="button" data-open="' + esc(m.ref) + '" aria-label="Voir ' + t + ' en détail">' +
+                        thumbTag(m.img, '', ' width="400" height="711"') +
+                        (m.nouveau ? '<span class="tag-new">Nouveau</span>' : '') +
+                    '</button>' +
+                    '<button class="fav-btn" type="button" data-fav="' + esc(m.ref) + '" aria-pressed="false">' + HEART_ICON + '</button>' +
+                '</div>' +
                 '<div class="card-info">' +
                     '<p class="card-ref">' + esc(m.ref) + '</p>' +
                     '<h3 class="card-title"><button type="button" data-open="' + esc(m.ref) + '">' + t + '</button></h3>' +
@@ -1029,7 +1162,11 @@
             var list = filtered();
             var pages = Math.max(1, Math.ceil(list.length / PER_PAGE));
             if (state.page > pages) state.page = pages;
-            var slice = opts.all ? list : list.slice((state.page - 1) * PER_PAGE, state.page * PER_PAGE);
+            // Sur téléphone, les pages s'empilent avec « Voir plus » au lieu des numéros de page.
+            var more = !opts.all && mqMobile.matches;
+            var slice = opts.all ? list
+                : more ? list.slice(0, state.page * PER_PAGE)
+                : list.slice((state.page - 1) * PER_PAGE, state.page * PER_PAGE);
 
             var line = plural(list.length, 'motif');
             if (state.q.trim()) line += ' pour « ' + state.q.trim() + ' »';
@@ -1046,7 +1183,15 @@
                 grid.innerHTML = slice.map(cardHTML).join('');
             }
             syncCartButtons();
-            renderPagination(opts.all ? 1 : pages);
+            syncFavButtons();
+            if (more) renderMore(list.length - slice.length);
+            else renderPagination(opts.all ? 1 : pages);
+        }
+
+        function renderMore(left) {
+            $('pagination').innerHTML = left > 0
+                ? '<button class="btn btn-secondary load-more" type="button" data-more>Voir plus de motifs <span class="load-left">(' + left + ' restants)</span></button>'
+                : '';
         }
 
         function renderPagination(pages) {
@@ -1130,6 +1275,7 @@
                         '<button class="btn btn-secondary btn-block" type="button" data-cart="' + esc(m.ref) + '" aria-pressed="false">Ajouter au panier</button>' +
                     '</div>' +
                     '<div class="quick-links">' +
+                        '<button class="link-btn" type="button" data-fav="' + esc(m.ref) + '" aria-pressed="false">♡ Ajouter aux favoris</button>' +
                         '<button class="link-btn" type="button" data-share="' + esc(m.ref) + '">Partager ce motif</button>' +
                         '<button class="link-btn" type="button" data-zoom="' + esc(m.ref) + '">Agrandir l\'image</button>' +
                     '</div>' +
@@ -1139,6 +1285,7 @@
             dialogs.quick.scrollTop = 0;
             track('vue-' + m.ref);
             syncCartButtons();
+            syncFavButtons();
             if (!dialogs.quick.open) dialogs.quick.showModal();
             updateLock();
             if (push !== false) history.pushState({ ov: 'quick', ref: m.ref }, '', motifLink(m.ref));
@@ -1172,6 +1319,13 @@
             var el;
             if ((el = e.target.closest('[data-order]'))) { orderOne(el.dataset.order); return; }
             if ((el = e.target.closest('[data-cart]'))) { toggleCart(el.dataset.cart); return; }
+            if ((el = e.target.closest('[data-fav]'))) { toggleFav(el.dataset.fav); return; }
+            if (e.target.closest('[data-more]')) { state.page++; render(); return; }
+            if ((el = e.target.closest('[data-news]'))) {
+                track('abonnement-nouveautes');
+                openWhatsApp('Bonjour ICONIQUES S, je souhaite recevoir vos nouveaux motifs de broderie sur WhatsApp.');
+                return;
+            }
             if ((el = e.target.closest('[data-share]'))) { shareMotif(el.dataset.share); return; }
             if ((el = e.target.closest('[data-zoom]'))) { showZoom(el.dataset.zoom); return; }
             if ((el = e.target.closest('[data-open]'))) { if (motifs.length) showQuick(el.dataset.open); return; }
@@ -1262,6 +1416,16 @@
                         return { ref: m.ref, title: m.title.trim(), prixNum: m.prixNum, img: m.img };
                     });
                     storageSet('iconiques_cart', cart);
+                    // Favoris de l'ancien site : références retrouvées par leur numéro (ICS-000111 devient ICS-00111).
+                    favs = favs.map(function (r) {
+                        var n = parseInt(r.replace(/\D/g, ''), 10);
+                        var m = findMotif(r) || motifs.find(function (x) { return parseInt(x.ref.replace(/\D/g, ''), 10) === n; });
+                        return m ? m.ref : null;
+                    }).filter(function (r, i, a) { return r && a.indexOf(r) === i; });
+                    storageSet('iconiques_favorites', favs);
+                    var prices = motifs.map(function (m) { return m.prixNum; });
+                    $('faqMin').textContent = money(Math.min.apply(null, prices));
+                    $('faqMax').textContent = money(Math.max.apply(null, prices));
                     $('heroCount').textContent = motifs.length + ' motifs';
                     renderTabs();
                     render();
@@ -1276,6 +1440,29 @@
                     $('retryBtn').addEventListener('click', init);
                 });
         }
+
+        // Passage téléphone / ordinateur (rotation, fenêtre redimensionnée) : numéros de page ou « Voir plus ».
+        var onMq = function () { state.page = 1; if (motifs.length) render(); };
+        if (mqMobile.addEventListener) mqMobile.addEventListener('change', onMq); else mqMobile.addListener(onMq);
+
+        /* ================= Application installable ================= */
+        // Le site peut s'installer sur l'écran d'accueil et reste consultable avec une connexion faible (sw.js).
+        if ('serviceWorker' in navigator && location.protocol === 'https:') {
+            window.addEventListener('load', function () { navigator.serviceWorker.register('/sw.js').catch(function () {}); });
+        }
+        var installPrompt = null;
+        window.addEventListener('beforeinstallprompt', function (e) {
+            e.preventDefault();
+            installPrompt = e;
+            $('installBtn').hidden = false;
+        });
+        $('installBtn').addEventListener('click', function () {
+            if (!installPrompt) return;
+            installPrompt.prompt();
+            installPrompt.userChoice.then(function (c) { if (c.outcome === 'accepted') track('installation-application'); });
+            installPrompt = null;
+            $('installBtn').hidden = true;
+        });
 
         renderCart();
         init();

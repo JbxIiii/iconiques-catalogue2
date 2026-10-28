@@ -1,0 +1,67 @@
+/* Pages individuelles des motifs (créées par generer-pages.ps1). Mêmes couleurs que la page d'accueil. */
+:root {
+    --bg: #FBFAF7; --surface: #FFFFFF; --surface-2: #F1ECE2; --line: #E2DCCF;
+    --ink: #1B1D24; --muted: #5E5A52; --brand: #18203A; --on-brand: #FBFAF7;
+    --accent: #18203A; --accent-hover: #2D3B63; --on-accent: #FBFAF7; --accent-text: #18203A; --accent-soft: #E6E8EF;
+    --gold: #C29A4E; --gold-text: #876224;
+    --serif-display: "Libre Caslon Display", "Libre Caslon Text", Georgia, serif;
+    --serif: "Libre Caslon Text", Georgia, serif;
+    --sans: "Instrument Sans", "Segoe UI", system-ui, sans-serif;
+    color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #10131C; --surface: #181C28; --surface-2: #222838; --line: #2E3547;
+        --ink: #ECE8DF; --muted: #A9A498; --brand: #151B2E; --on-brand: #F3F0E8;
+        --accent: #C29A4E; --accent-hover: #D4AE64; --on-accent: #14182A; --accent-text: #E2C27F; --accent-soft: rgba(194,154,78,.16);
+        --gold-text: #D8B56E;
+        color-scheme: dark;
+    }
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
+.stitch { height: 2px; background: repeating-linear-gradient(90deg, var(--gold) 0 12px, transparent 12px 20px); }
+
+.top { background: var(--brand); color: var(--on-brand); }
+.top .wrap { height: 58px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { font-family: var(--serif-display); font-size: 1.45rem; letter-spacing: .04em; text-decoration: none; }
+.back { font-size: .9rem; font-weight: 600; text-decoration: none; padding: 10px 0; color: rgba(251,250,247,.85); }
+.back:hover { color: var(--on-brand); text-decoration: underline; text-underline-offset: 3px; }
+
+.motif { display: grid; grid-template-columns: minmax(0, 380px) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); padding-top: clamp(24px, 5vw, 56px); padding-bottom: 56px; align-items: start; }
+.media { display: block; background: var(--surface-2); border: 1px solid var(--line); border-radius: 3px; overflow: hidden; }
+.media img { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; }
+.ref { font-size: .88rem; font-weight: 600; color: var(--gold-text); letter-spacing: .02em; }
+h1 { font-family: var(--serif-display); font-weight: 400; font-size: clamp(2rem, 5vw, 2.8rem); line-height: 1.1; margin-top: 4px; }
+.price { font-size: 1.45rem; font-weight: 600; margin-top: 12px; font-variant-numeric: tabular-nums; }
+.specs { margin-top: 22px; border-top: 1px solid var(--line); }
+.specs div { display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: .95rem; }
+.specs dt { color: var(--muted); }
+.specs dd { font-weight: 500; text-align: right; }
+.actions { display: grid; gap: 10px; margin-top: 26px; max-width: 420px; }
+.btn { display: flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 20px; border-radius: 3px; font-weight: 600; font-size: .95rem; text-decoration: none; border: 1px solid transparent; }
+.primary { background: var(--accent); color: var(--on-accent); }
+.primary:hover { background: var(--accent-hover); }
+.secondary { background: var(--surface); color: var(--accent-text); border-color: var(--accent-text); }
+.secondary:hover { background: var(--accent-soft); }
+.note { margin-top: 18px; font-size: .88rem; color: var(--muted); max-width: 52ch; }
+
+.similar { margin-top: 36px; padding-top: 22px; border-top: 1px solid var(--line); }
+.similar h2 { font-family: var(--serif); font-size: 1rem; margin-bottom: 12px; }
+.similar .grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.similar a { text-decoration: none; font-size: .82rem; line-height: 1.3; min-width: 0; }
+.similar img { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 3px; border: 1px solid var(--line); background: var(--surface-2); margin-bottom: 6px; }
+.similar span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.similar .p { color: var(--muted); }
+
+.foot { border-top: 1px solid var(--line); padding: 22px 0 32px; font-size: .86rem; color: var(--muted); }
+
+@media (max-width: 700px) {
+    .motif { grid-template-columns: 1fr; gap: 22px; padding-top: 16px; }
+    .media { max-width: 320px; margin: 0 auto; width: 100%; }
+    .actions { max-width: none; }
+}

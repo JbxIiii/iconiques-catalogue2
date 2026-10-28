@@ -162,9 +162,7 @@ function Page($m, $similaires) {
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.webmanifest">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
     <script type="application/ld+json">$ld</script>
     <link rel="stylesheet" href="/m/motif.css">
 </head>

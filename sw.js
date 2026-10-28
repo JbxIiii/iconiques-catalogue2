@@ -2,8 +2,8 @@
    Pages et catalogue : toujours la version en ligne si possible, sinon la dernière enregistrée.
    Images et polices : affichées tout de suite depuis l'appareil, puis mises à jour en arrière-plan.
    Changer VERSION pour vider les anciennes copies après une grosse mise à jour. */
-var VERSION = 'iconiques-v2';
-var CORE = ['/', '/catalogue.json', '/manifest.webmanifest', '/icon-192.png', '/icon-512.png', '/favicon.ico'];
+var VERSION = 'iconiques-v3';
+var CORE = ['/', '/catalogue.json', '/manifest.webmanifest', '/icon-192.png', '/icon-512.png', '/favicon.ico', '/fonts/jost-latin.woff2'];
 
 self.addEventListener('install', function (e) {
     e.waitUntil(caches.open(VERSION).then(function (c) { return c.addAll(CORE); }).then(function () { return self.skipWaiting(); }));
@@ -46,7 +46,7 @@ self.addEventListener('fetch', function (e) {
     if (url.origin !== self.location.origin && !fonts) return; // statistiques, WhatsApp… : jamais mis en cache
     if (req.mode === 'navigate' || /\.(html|json|webmanifest)$/.test(url.pathname) || url.pathname === '/') {
         e.respondWith(networkFirst(req));
-    } else if (fonts || /\.(jpe?g|png|webp|ico|css|js)$/.test(url.pathname)) {
+    } else if (fonts || /\.(jpe?g|png|webp|ico|css|js|woff2)$/.test(url.pathname)) {
         e.respondWith(staleWhileRevalidate(req));
     }
 });

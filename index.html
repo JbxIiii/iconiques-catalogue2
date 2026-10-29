@@ -52,7 +52,7 @@
             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
             "opens": "08:00", "closes": "18:00"
         }],
-        "sameAs": ["https://www.facebook.com/share/p/18gvsvjyQ1/", "https://www.instagram.com/saddabe13"]
+        "sameAs": ["https://www.facebook.com/share/p/18gvsvjyQ1/", "https://www.instagram.com/saddabe13", "https://whatsapp.com/channel/0029Vb9DLJiBfxoBMqhTDJ2G"]
     }
     </script>
 
@@ -387,6 +387,34 @@
 
         .footer-actions { display: flex; gap: 18px; flex-wrap: wrap; }
 
+        /* Choix de la langue (en-tête) */
+        .lang-btn { min-width: 44px; min-height: 40px; padding: 0 10px; border: 1px solid rgba(250,246,239,.4); border-radius: var(--r-sm); color: var(--on-brand); font-weight: 600; font-size: 0.82rem; letter-spacing: 0.08em; }
+        .lang-btn:hover { border-color: var(--on-brand); }
+
+        /* Packs de motifs */
+        .packs { background: var(--surface-2); }
+        .packs-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+        .pack { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; }
+        .pack-visual { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; background: var(--line); }
+        .pack-visual img { width: 100%; aspect-ratio: var(--ratio); object-fit: cover; background: var(--surface-2); }
+        .pack-count { position: absolute; left: 10px; bottom: 10px; background: var(--brand); color: var(--on-brand); font-size: 0.78rem; font-weight: 600; padding: 4px 10px; border-radius: var(--r-sm); }
+        .pack-body { padding: 16px 18px 18px; display: flex; flex-direction: column; flex: 1; }
+        .pack-title { font-family: var(--serif); font-weight: 500; font-size: 1.15rem; line-height: 1.3; margin-top: 2px; }
+        .pack-price { margin-top: 8px; font-variant-numeric: tabular-nums; }
+        .pack-price strong { font-size: 1.25rem; font-weight: 600; }
+        .pack-price s { color: var(--muted); font-size: 0.92rem; margin-left: 6px; }
+        .pack-save { color: var(--gold-text); font-weight: 600; font-size: 0.9rem; margin-top: 2px; }
+        .pack .card-actions { margin-top: auto; padding-top: 14px; }
+        .pack-link { align-self: flex-start; margin-top: 12px; font-size: 0.9rem; min-height: 32px; }
+        .result-line .link-btn { font-size: inherit; color: var(--accent-text); }
+        @media (hover: hover) { .pack-visual:hover img { opacity: .92; } }
+        @media (max-width: 1000px) { .packs-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media (max-width: 640px) {
+            .packs-grid { grid-template-columns: 1fr; gap: 18px; }
+            .lang-btn { min-height: 44px; }
+            .pack .card-actions .btn { min-height: 44px; }
+        }
+
         /* Installer l'application (Android : APK ; iPhone : écran d'accueil) */
         .app-card { position: relative; display: flex; align-items: center; gap: 16px 20px; flex-wrap: wrap; margin-top: 16px; padding: 20px 56px 20px 20px; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface); }
         .app-card img { width: 56px; height: 56px; border-radius: 13px; flex-shrink: 0; }
@@ -548,7 +576,7 @@
         @media print {
             :root { --bg: #fff; --surface: #fff; --surface-2: #F2EADC; --line: #E4D7C2; --ink: #161412; --muted: #6B6153; --gold-text: #8A6416; }
             body { background: #fff; }
-            .site-header, .hero, .how, .custom, .site-footer, .toolbar, .tabs, .pagination, .card-actions, .mobile-bar, .toast, .wa-fab, .fav-btn, .news, .faq, dialog { display: none !important; }
+            .site-header, .hero, .how, .custom, .site-footer, .toolbar, .tabs, .pagination, .card-actions, .mobile-bar, .toast, .wa-fab, .fav-btn, .news, .faq, .packs, .app-card, dialog { display: none !important; }
             .filters { position: static; box-shadow: none; }
             .section { padding: 0; }
             .print-head { display: block !important; margin-bottom: 16px; }
@@ -572,9 +600,11 @@
             </a>
             <nav class="header-nav" aria-label="Navigation principale">
                 <a class="header-link" href="#catalogue">Catalogue</a>
+                <a class="header-link" href="#packs" id="packsLink" hidden>Packs</a>
                 <a class="header-link" href="#commander">Comment commander</a>
                 <a class="header-link" href="#sur-mesure">Sur mesure</a>
                 <a class="header-link" href="#faq">Questions</a>
+                <button class="lang-btn" id="langBtn" type="button" lang="en" aria-label="English version">EN</button>
                 <button class="cart-btn" id="cartOpen" type="button" aria-label="Ouvrir le panier">
                     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 7Z"/><path d="M9 7V6a3 3 0 0 1 6 0v1"/></svg>
                     <span class="cart-label">Panier</span>
@@ -634,6 +664,18 @@
             </div>
         </section>
 
+        <section class="section packs" id="packs" aria-labelledby="packsTitle" hidden>
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <h2 class="section-title" id="packsTitle">Packs de motifs</h2>
+                        <p class="section-intro">Plusieurs motifs d'une même catégorie, à prix réduit. Un seul message WhatsApp pour tout commander.</p>
+                    </div>
+                </div>
+                <div class="packs-grid" id="packsGrid"></div>
+            </div>
+        </section>
+
         <section class="section" id="catalogue" aria-labelledby="catalogueTitle">
             <div class="wrap">
                 <div class="print-head"><strong>ICONIQUES S</strong>Catalogue des motifs de broderie numérisés, iconiquess.com, WhatsApp +226 77 95 67 81</div>
@@ -672,12 +714,12 @@
                 <aside class="news" aria-labelledby="newsTitle">
                     <div>
                         <h2 id="newsTitle">De nouveaux motifs chaque semaine</h2>
-                        <p>Recevez-les directement sur WhatsApp, sans revenir sur le site.</p>
+                        <p>Suivez notre chaîne WhatsApp pour voir les nouveautés de la semaine, sans revenir sur le site.</p>
                     </div>
-                    <button class="btn btn-secondary" type="button" data-news>
+                    <a class="btn btn-secondary" href="https://whatsapp.com/channel/0029Vb9DLJiBfxoBMqhTDJ2G" target="_blank" rel="noopener noreferrer" data-news>
                         <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#waPath"/></svg>
-                        Recevoir les nouveautés
-                    </button>
+                        Suivre la chaîne WhatsApp
+                    </a>
                 </aside>
 
                 <!-- Affichée seulement sur téléphone Android ou iPhone, tant que l'application n'est pas installée. -->
@@ -729,7 +771,7 @@
                     </details>
                     <details>
                         <summary>Combien coûte un motif ? Y a-t-il des remises ?</summary>
-                        <p>Les motifs coûtent de <span id="faqMin">1 000 FCFA</span> à <span id="faqMax">5 000 FCFA</span>. Dans le panier, la remise est automatique : 10 % dès 5 motifs, 15 % dès 10 motifs, 20 % dès 20 motifs.</p>
+                        <p>Les motifs coûtent de <span id="faqMin">1 000 FCFA</span> à <span id="faqMax">5 000 FCFA</span>. Dans le panier, la remise est automatique : 10 % dès 5 motifs, 15 % dès 10 motifs, 20 % dès 20 motifs. Les packs sont proposés à un prix encore plus bas.</p>
                     </details>
                     <details>
                         <summary>Pouvez-vous numériser un modèle qui n'est pas dans le catalogue ?</summary>
@@ -767,6 +809,7 @@
                     <h2>Contact</h2>
                     <ul>
                         <li><a href="https://wa.me/22677956781" target="_blank" rel="noopener noreferrer">WhatsApp : +226 77 95 67 81</a></li>
+                        <li><a href="https://whatsapp.com/channel/0029Vb9DLJiBfxoBMqhTDJ2G" target="_blank" rel="noopener noreferrer" data-news>Chaîne WhatsApp : les nouveautés</a></li>
                         <li><a href="mailto:iconiques.s@gmail.com">iconiques.s@gmail.com</a></li>
                         <li>Du lundi au samedi, de 8 h à 18 h</li>
                         <li>Ouagadougou, Burkina Faso</li>
@@ -867,15 +910,26 @@
         var GOATCOUNTER = 'sarabi';
         var PER_PAGE = 30; // se répartit sans trou sur 5, 3 et 2 colonnes
         var NEW_DAYS = 30; // un motif reste « Nouveau » pendant ce nombre de jours après sa date d'ajout
+        /* ================= Langue ================= */
+        // Français par défaut ; anglais si le téléphone est réglé en anglais, ou au choix du visiteur (bouton EN / FR).
+        var LANG = (function () {
+            var p = new URLSearchParams(location.search).get('lang'), s = null;
+            if (p === 'en' || p === 'fr') { try { localStorage.setItem('iconiques_lang', p); } catch (e) {} return p; }
+            try { s = localStorage.getItem('iconiques_lang'); } catch (e) {}
+            if (s === 'en' || s === 'fr') return s;
+            return /^en/i.test(navigator.language || '') ? 'en' : 'fr';
+        })();
+        function L(fr, en) { return LANG === 'en' ? en : fr; }
+
         var CATEGORIES = [
-            { id: 'all', label: 'Tous les motifs' },
-            { id: 'nouveau', label: 'Nouveautés' },
-            { id: 'favoris', label: 'Mes favoris' },
-            { id: 'tuniques', label: 'Tuniques frappe et poche' },
-            { id: 'trois-pieces', label: 'Trois-pièces' },
-            { id: 'agbada', label: 'Agbada' },
-            { id: 'modeles-dames', label: 'Modèles dames' },
-            { id: 'motifs-divers', label: 'Motifs divers' }
+            { id: 'all', label: 'Tous les motifs', en: 'All designs' },
+            { id: 'nouveau', label: 'Nouveautés', en: 'New' },
+            { id: 'favoris', label: 'Mes favoris', en: 'My favourites' },
+            { id: 'tuniques', label: 'Tuniques frappe et poche', en: 'Tunics (frappe and pocket)' },
+            { id: 'trois-pieces', label: 'Trois-pièces', en: 'Three-piece suits' },
+            { id: 'agbada', label: 'Agbada', en: 'Agbada' },
+            { id: 'modeles-dames', label: 'Modèles dames', en: "Women's designs" },
+            { id: 'motifs-divers', label: 'Motifs divers', en: 'Other designs' }
         ];
         var DISCOUNTS = [ { min: 20, rate: 0.20 }, { min: 10, rate: 0.15 }, { min: 5, rate: 0.10 } ];
         var WA_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#waPath"/></svg>';
@@ -886,6 +940,7 @@
 
         /* ================= État ================= */
         var motifs = [];
+        var packs = [];
         var state = { cat: 'all', q: '', sort: 'default', page: 1 };
         var cart = loadCart();
         var favs = loadFavs();
@@ -898,7 +953,7 @@
                 return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
             });
         }
-        function money(n) { return Math.round(n).toLocaleString('fr-FR') + ' FCFA'; }
+        function money(n) { return Math.round(n).toLocaleString(L('fr-FR', 'en-US')) + ' FCFA'; }
         function imgSrc(path) { return encodeURI(path || ''); }
         // Images recadrées par generer-vignettes.ps1 : images/mini/NOM.jpg pour les listes,
         // images/hd/NOM.jpg pour l'aperçu et le zoom. L'original sert de secours si elles manquent.
@@ -912,8 +967,10 @@
             var t = Date.parse(m.ajout);
             return isFinite(t) && Date.now() - t < NEW_DAYS * 864e5;
         }
-        function catLabel(id) { var c = CATEGORIES.find(function (x) { return x.id === id; }); return c ? c.label : ''; }
-        function plural(n, word) { return n + ' ' + word + (n > 1 ? 's' : ''); }
+        function catLabel(id) { var c = CATEGORIES.find(function (x) { return x.id === id; }); return c ? L(c.label, c.en) : ''; }
+        // plural(3, 'motif', 'design') : « 3 motifs » ou « 3 designs » selon la langue.
+        function plural(n, word, en) { return n + ' ' + L(word, en || word) + (n > 1 ? 's' : ''); }
+        function motifsN(n) { return plural(n, 'motif', 'design'); }
         function findMotif(ref) { return motifs.find(function (m) { return m.ref === ref; }); }
         function norm(s) { return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]/g, ''); }
         function motifLink(ref) { return location.origin + location.pathname + '?ref=' + encodeURIComponent(ref); }
@@ -959,13 +1016,14 @@
 
         /* ================= Panier ================= */
         // Un fichier numérique s'achète une seule fois : chaque motif apparaît une fois au maximum.
+        // Un pack est une seule ligne du panier (ref « PACK-id »), à son prix fixe, hors remise.
         function loadCart() {
             var raw = storageGet('iconiques_cart');
             var out = [];
             (Array.isArray(raw) ? raw : []).forEach(function (i) {
                 if (!i || typeof i.ref !== 'string' || !isFinite(Number(i.prixNum))) return;
                 if (out.some(function (o) { return o.ref === i.ref; })) return;
-                out.push({ ref: i.ref, title: String(i.title || i.ref), prixNum: Number(i.prixNum), img: String(i.img || '') });
+                out.push({ ref: i.ref, title: String(i.title || i.ref), prixNum: Number(i.prixNum), img: String(i.img || ''), pack: i.pack === true });
             });
             return out;
         }
@@ -981,10 +1039,10 @@
             if (!m) return;
             if (isFav(ref)) {
                 favs = favs.filter(function (r) { return r !== ref; });
-                toast(m.title.trim() + ' retiré des favoris');
+                toast(m.title.trim() + L(' retiré des favoris', ' removed from favourites'));
             } else {
                 favs.push(ref);
-                toast(m.title.trim() + ' ajouté aux favoris');
+                toast(m.title.trim() + L(' ajouté aux favoris', ' added to favourites'));
                 track('favori-' + ref);
             }
             storageSet('iconiques_favorites', favs);
@@ -1002,29 +1060,115 @@
                 var m = findMotif(b.dataset.fav);
                 var name = m ? m.title.trim() : b.dataset.fav;
                 b.setAttribute('aria-pressed', on ? 'true' : 'false');
-                if (b.classList.contains('fav-btn')) b.setAttribute('aria-label', on ? 'Retirer ' + name + ' des favoris' : 'Ajouter ' + name + ' aux favoris');
-                else b.textContent = on ? '♥ Dans vos favoris' : '♡ Ajouter aux favoris';
+                if (b.classList.contains('fav-btn')) b.setAttribute('aria-label', on ? L('Retirer ' + name + ' des favoris', 'Remove ' + name + ' from favourites') : L('Ajouter ' + name + ' aux favoris', 'Add ' + name + ' to favourites'));
+                else b.textContent = on ? L('♥ Dans vos favoris', '♥ In your favourites') : L('♡ Ajouter aux favoris', '♡ Add to favourites');
             });
         }
 
-        function inCart(ref) { return cart.some(function (i) { return i.ref === ref; }); }
-        function subtotal() { return cart.reduce(function (s, i) { return s + i.prixNum; }, 0); }
-        function discountRate() { var d = DISCOUNTS.find(function (x) { return cart.length >= x.min; }); return d ? d.rate : 0; }
-        function total() { return subtotal() * (1 - discountRate()); }
-        function nextDiscount() {
-            var tiers = DISCOUNTS.slice().reverse();
-            return tiers.find(function (x) { return cart.length < x.min; }) || null;
+        /* ================= Packs ================= */
+        // Les packs sont décrits dans packs.json : nom, motifs inclus, prix du pack.
+        function findPack(id) { return packs.find(function (p) { return p.id === id; }); }
+        function packName(p) { return L(p.nom, p.nom_en || p.nom); }
+        function packValue(p) { return p.motifs.reduce(function (s, m) { return s + m.prixNum; }, 0); }
+        function packOfRef(ref) {
+            return cart.filter(function (i) { return i.pack; }).map(function (i) { return findPack(i.ref.slice(5)); })
+                .find(function (p) { return p && p.refs.indexOf(ref) > -1; });
         }
+        function prepPacks(data) {
+            packs = (Array.isArray(data) ? data : []).map(function (p) {
+                if (!p || !p.id || !Array.isArray(p.refs) || !isFinite(Number(p.prix))) return null;
+                var list = p.refs.map(findMotif).filter(Boolean);
+                return list.length > 1 ? { id: String(p.id), nom: String(p.nom || p.id), nom_en: p.nom_en, refs: list.map(function (m) { return m.ref; }), motifs: list, prix: Number(p.prix) } : null;
+            }).filter(Boolean);
+        }
+        function cartPackItem(p) { return { ref: 'PACK-' + p.id, title: packName(p), prixNum: p.prix, img: p.motifs[0].img, pack: true }; }
+
+        function toggleCartPack(id) {
+            var p = findPack(id);
+            if (!p) return;
+            var key = 'PACK-' + id;
+            if (cart.some(function (i) { return i.ref === key; })) {
+                cart = cart.filter(function (i) { return i.ref !== key; });
+                toast(packName(p) + L(' retiré du panier', ' removed from cart'));
+            } else {
+                var before = cart.length;
+                // Les motifs du pack déjà dans le panier sont remplacés par le pack.
+                cart = cart.filter(function (i) { return i.pack || p.refs.indexOf(i.ref) < 0; });
+                cart.push(cartPackItem(p));
+                toast(packName(p) + L(' ajouté au panier', ' added to cart') +
+                    (cart.length <= before ? L(' (les motifs du pack déjà choisis ont été remplacés)', ' (designs already in your cart were replaced by the pack)') : ''));
+                track('pack-panier-' + id);
+            }
+            storageSet('iconiques_cart', cart);
+            renderCart();
+            syncCartButtons();
+        }
+
+        function orderPack(id) {
+            var p = findPack(id);
+            if (!p) return;
+            track('pack-commande-' + id);
+            var lines = p.motifs.map(function (m) { return '• ' + m.ref + ' « ' + m.title.trim() + ' »'; }).join('\n');
+            openWhatsApp(L(
+                'Bonjour ICONIQUES S, je souhaite commander le ' + p.nom + ' (' + motifsN(p.motifs.length) + ') : ' + money(p.prix) + ' au lieu de ' + money(packValue(p)) + '.\n\n' + lines + '\n\nMerci de me confirmer le format pour ma machine et le paiement.',
+                'Hello ICONIQUES S, I would like to order the ' + packName(p) + ' (' + motifsN(p.motifs.length) + '): ' + money(p.prix) + ' instead of ' + money(packValue(p)) + '.\n\n' + lines + '\n\nPlease confirm the file format for my machine and how to pay.'));
+        }
+
+        function packHTML(p) {
+            var value = packValue(p), save = value - p.prix;
+            var cats = p.motifs.map(function (m) { return m.cat; }).filter(function (c, i, a) { return a.indexOf(c) === i; });
+            return '<article class="pack">' +
+                '<button class="pack-visual" type="button" data-pack-view="' + esc(p.id) + '" aria-label="' + esc(L('Voir les motifs du ', 'See the designs in the ') + packName(p)) + '">' +
+                    p.motifs.slice(0, 3).map(function (m) { return thumbTag(m.img, '', ' width="400" height="711"'); }).join('') +
+                    '<span class="pack-count">' + esc(motifsN(p.motifs.length)) + '</span>' +
+                '</button>' +
+                '<div class="pack-body">' +
+                    '<p class="card-ref">' + esc(cats.length === 1 ? catLabel(cats[0]) : L('Pack', 'Pack')) + '</p>' +
+                    '<h3 class="pack-title">' + esc(packName(p)) + '</h3>' +
+                    '<p class="pack-price"><strong>' + money(p.prix) + '</strong> <s>' + money(value) + '</s></p>' +
+                    (save > 0 ? '<p class="pack-save">' + L('Vous économisez ', 'You save ') + money(save) + ' (' + Math.round(save / value * 100) + L(' %', '%') + ')</p>' : '') +
+                    '<div class="card-actions">' +
+                        '<button class="btn btn-primary btn-sm" type="button" data-pack-order="' + esc(p.id) + '">' + WA_ICON + '<span>' + L('Commander le pack', 'Order this pack') + '</span></button>' +
+                        '<button class="btn btn-secondary btn-sm cart-toggle" type="button" data-pack-cart="' + esc(p.id) + '" aria-pressed="false">' + CART_ICONS + '</button>' +
+                    '</div>' +
+                    '<button class="link-btn pack-link" type="button" data-pack-view="' + esc(p.id) + '">' + L('Voir les motifs du pack', 'See the designs') + '</button>' +
+                '</div>' +
+            '</article>';
+        }
+        function renderPacks() {
+            $('packs').hidden = $('packsLink').hidden = !packs.length;
+            $('packsGrid').innerHTML = packs.map(packHTML).join('');
+        }
+
+        function inCart(ref) { return cart.some(function (i) { return i.ref === ref; }) || !!packOfRef(ref); }
+        function singles() { return cart.filter(function (i) { return !i.pack; }); }
+        function motifCount() { return cart.reduce(function (s, i) { var p = i.pack && findPack(i.ref.slice(5)); return s + (p ? p.refs.length : 1); }, 0); }
+        function subtotal() { return cart.reduce(function (s, i) { return s + i.prixNum; }, 0); }
+        // La remise du panier porte sur les motifs choisis un par un ; les packs ont déjà leur prix réduit.
+        function discountRate() { var n = singles().length; var d = DISCOUNTS.find(function (x) { return n >= x.min; }); return d ? d.rate : 0; }
+        function discountAmount() { return singles().reduce(function (s, i) { return s + i.prixNum; }, 0) * discountRate(); }
+        function total() { return subtotal() - discountAmount(); }
+        function nextDiscount() {
+            var n = singles().length;
+            var tiers = DISCOUNTS.slice().reverse();
+            return tiers.find(function (x) { return n < x.min; }) || null;
+        }
+        function pct(rate) { return Math.round(rate * 100) + L(' %', '%'); }
 
         function toggleCart(ref) {
             var m = findMotif(ref);
             if (!m) return;
+            var inPack = packOfRef(ref);
+            if (inPack && !cart.some(function (i) { return i.ref === ref; })) {
+                toast(L(m.title.trim() + ' est déjà inclus dans le ' + inPack.nom, m.title.trim() + ' is already included in the ' + packName(inPack)));
+                return;
+            }
             if (inCart(ref)) {
                 cart = cart.filter(function (i) { return i.ref !== ref; });
-                toast(m.title.trim() + ' retiré du panier');
+                toast(m.title.trim() + L(' retiré du panier', ' removed from cart'));
             } else {
                 cart.push({ ref: m.ref, title: m.title.trim(), prixNum: m.prixNum, img: m.img });
-                toast(m.title.trim() + ' ajouté au panier');
+                toast(m.title.trim() + L(' ajouté au panier', ' added to cart'));
                 track('panier-' + m.ref);
             }
             storageSet('iconiques_cart', cart);
@@ -1033,67 +1177,78 @@
         }
 
         function syncCartButtons() {
-            document.querySelectorAll('[data-cart]').forEach(function (b) {
+            document.querySelectorAll('[data-cart], [data-pack-cart]').forEach(function (b) {
                 if (b.hasAttribute('data-keep')) return;
-                var on = inCart(b.dataset.cart);
+                var isPack = b.hasAttribute('data-pack-cart');
+                var p = isPack && findPack(b.dataset.packCart);
+                var on = isPack ? cart.some(function (i) { return i.ref === 'PACK-' + b.dataset.packCart; }) : inCart(b.dataset.cart);
                 b.setAttribute('aria-pressed', on ? 'true' : 'false');
                 if (b.classList.contains('cart-toggle')) {
                     // Bouton icône des cartes : seul le libellé lu par les lecteurs d'écran change.
-                    var m = findMotif(b.dataset.cart);
-                    var name = m ? m.title.trim() : b.dataset.cart;
-                    b.setAttribute('aria-label', on ? name + ' est dans le panier, retirer' : 'Ajouter ' + name + ' au panier');
-                    b.title = on ? 'Dans le panier' : 'Ajouter au panier';
+                    var m = !isPack && findMotif(b.dataset.cart);
+                    var name = p ? packName(p) : m ? m.title.trim() : b.dataset.cart;
+                    b.setAttribute('aria-label', on ? L(name + ' est dans le panier, retirer', name + ' is in your cart, remove') : L('Ajouter ' + name + ' au panier', 'Add ' + name + ' to cart'));
+                    b.title = on ? L('Dans le panier', 'In your cart') : L('Ajouter au panier', 'Add to cart');
                     return;
                 }
-                b.textContent = on ? 'Dans le panier' : 'Ajouter au panier';
+                b.textContent = on ? L('Dans le panier', 'In your cart') : L('Ajouter au panier', 'Add to cart');
             });
         }
 
         function renderCart() {
-            var n = cart.length;
+            var n = motifCount();
             $('cartCount').textContent = n;
-            $('cartOpen').setAttribute('aria-label', 'Ouvrir le panier, ' + plural(n, 'motif'));
-            $('cartSub').textContent = n ? plural(n, 'motif') + ' sélectionné' + (n > 1 ? 's' : '') : 'Aucun motif sélectionné';
+            $('cartOpen').setAttribute('aria-label', L('Ouvrir le panier, ', 'Open cart, ') + motifsN(n));
+            $('cartSub').textContent = n ? L(motifsN(n) + ' sélectionné' + (n > 1 ? 's' : ''), motifsN(n) + ' selected') : L('Aucun motif sélectionné', 'No design selected');
             document.body.classList.toggle('has-cart', n > 0);
-            $('mobileCount').textContent = plural(n, 'motif');
+            $('mobileCount').textContent = motifsN(n);
             $('mobileTotal').textContent = money(total());
 
             var list = $('cartItems');
-            if (!n) {
-                list.innerHTML = '<li class="drawer-empty"><p>Votre panier est vide. Ajoutez les motifs qui vous intéressent pour les commander en une fois.</p><button class="btn btn-secondary" type="button" data-close-go="#catalogue">Parcourir le catalogue</button></li>';
+            if (!cart.length) {
+                list.innerHTML = '<li class="drawer-empty"><p>' + L('Votre panier est vide. Ajoutez les motifs qui vous intéressent pour les commander en une fois.', 'Your cart is empty. Add the designs you like to order them all at once.') +
+                    '</p><button class="btn btn-secondary" type="button" data-close-go="#catalogue">' + L('Parcourir le catalogue', 'Browse the catalogue') + '</button></li>';
                 $('cartFoot').hidden = true;
                 return;
             }
             list.innerHTML = cart.map(function (i) {
+                var p = i.pack && findPack(i.ref.slice(5));
+                var remove = p ? 'data-pack-cart="' + esc(p.id) + '"' : 'data-cart="' + esc(i.ref) + '"';
                 return '<li class="line-item">' +
                     (i.img ? thumbTag(i.img, '') : '<span class="ph"></span>') +
-                    '<div><p class="card-ref">' + esc(i.ref) + '</p><p class="card-title">' + esc(i.title) + '</p><p class="line-price">' + money(i.prixNum) + '</p></div>' +
-                    '<button class="line-remove" type="button" data-cart="' + esc(i.ref) + '" data-keep aria-label="Retirer ' + esc(i.title) + ' du panier">Retirer</button>' +
+                    '<div><p class="card-ref">' + esc(p ? L('Pack · ', 'Pack · ') + motifsN(p.refs.length) : i.ref) + '</p><p class="card-title">' + esc(p ? packName(p) : i.title) + '</p><p class="line-price">' + money(i.prixNum) + '</p></div>' +
+                    '<button class="line-remove" type="button" ' + remove + ' data-keep aria-label="' + esc(L('Retirer ' + i.title + ' du panier', 'Remove ' + i.title + ' from cart')) + '">' + L('Retirer', 'Remove') + '</button>' +
                 '</li>';
             }).join('');
             $('cartFoot').hidden = false;
             $('subtotal').textContent = money(subtotal());
             var rate = discountRate();
             $('discountRow').hidden = rate === 0;
-            $('discountLabel').textContent = 'Remise ' + Math.round(rate * 100) + ' %';
-            $('discountAmount').textContent = '− ' + money(subtotal() * rate);
+            $('discountLabel').textContent = L('Remise ', 'Discount ') + pct(rate);
+            $('discountAmount').textContent = '− ' + money(discountAmount());
             $('total').textContent = money(total());
             var next = nextDiscount();
+            var packNote = cart.length > singles().length ? L(' (hors packs)', ' (packs not included)') : '';
             $('discountHint').textContent = next
-                ? 'Ajoutez ' + plural(next.min - n, 'motif') + ' pour obtenir ' + Math.round(next.rate * 100) + ' % de remise.'
-                : 'Vous bénéficiez de la remise maximale.';
+                ? L('Ajoutez ' + motifsN(next.min - singles().length) + ' pour obtenir ' + pct(next.rate) + ' de remise' + packNote + '.',
+                    'Add ' + motifsN(next.min - singles().length) + ' to get ' + pct(next.rate) + ' off' + packNote + '.')
+                : L('Vous bénéficiez de la remise maximale.', 'You get the maximum discount.');
         }
 
         function checkout() {
             if (!cart.length) return;
-            var lines = cart.map(function (i) { return '• ' + i.ref + ' « ' + i.title + ' » : ' + money(i.prixNum); });
+            var lines = cart.map(function (i) {
+                var p = i.pack && findPack(i.ref.slice(5));
+                if (p) return '• ' + packName(p) + ' (' + motifsN(p.refs.length) + ' : ' + p.refs.join(', ') + ') : ' + money(i.prixNum);
+                return '• ' + i.ref + ' « ' + i.title + ' » : ' + money(i.prixNum);
+            });
             var rate = discountRate();
-            var msg = 'Bonjour ICONIQUES S, je souhaite commander ces motifs :\n\n' + lines.join('\n') + '\n\n' +
-                'Sous-total : ' + money(subtotal()) + '\n' +
-                (rate ? 'Remise ' + Math.round(rate * 100) + ' % : − ' + money(subtotal() * rate) + '\n' : '') +
-                'Total : ' + money(total()) + '\n\n' +
-                'Merci de me confirmer le format pour ma machine et le paiement.';
-            track('commande-panier-' + cart.length + '-motifs');
+            var msg = L('Bonjour ICONIQUES S, je souhaite commander ces motifs :', 'Hello ICONIQUES S, I would like to order these designs:') + '\n\n' + lines.join('\n') + '\n\n' +
+                L('Sous-total : ', 'Subtotal: ') + money(subtotal()) + '\n' +
+                (rate ? L('Remise ', 'Discount ') + pct(rate) + ' : − ' + money(discountAmount()) + '\n' : '') +
+                L('Total : ', 'Total: ') + money(total()) + '\n\n' +
+                L('Merci de me confirmer le format pour ma machine et le paiement.', 'Please confirm the file format for my machine and how to pay.');
+            track('commande-panier-' + motifCount() + '-motifs');
             openWhatsApp(msg);
         }
 
@@ -1101,31 +1256,35 @@
             var m = findMotif(ref);
             if (!m) return;
             track('commander-' + m.ref);
-            openWhatsApp('Bonjour ICONIQUES S, je souhaite commander ce motif :\n\n• ' + m.ref + ' « ' + m.title.trim() + ' » : ' + money(m.prixNum) +
-                '\n' + shareLink(m.ref) + '\n\nMerci de me confirmer le format pour ma machine et le paiement.');
+            openWhatsApp(L('Bonjour ICONIQUES S, je souhaite commander ce motif :', 'Hello ICONIQUES S, I would like to order this design:') +
+                '\n\n• ' + m.ref + ' « ' + m.title.trim() + ' » : ' + money(m.prixNum) +
+                '\n' + shareLink(m.ref) + '\n\n' + L('Merci de me confirmer le format pour ma machine et le paiement.', 'Please confirm the file format for my machine and how to pay.'));
         }
 
         function shareMotif(ref) {
             var m = findMotif(ref);
             if (!m) return;
             var url = shareLink(ref);
-            var text = m.title.trim() + ' (' + m.ref + '), motif de broderie ICONIQUES S';
+            var text = m.title.trim() + ' (' + m.ref + L('), motif de broderie ICONIQUES S', '), ICONIQUES S embroidery design');
             track('partage-' + m.ref);
             if (navigator.share) { navigator.share({ title: text, text: text, url: url }).catch(function () {}); return; }
             if (navigator.clipboard && window.isSecureContext) {
-                navigator.clipboard.writeText(url).then(function () { toast('Lien copié. Collez-le dans WhatsApp ou Facebook.'); },
-                    function () { window.prompt('Copiez ce lien :', url); });
+                navigator.clipboard.writeText(url).then(function () { toast(L('Lien copié. Collez-le dans WhatsApp ou Facebook.', 'Link copied. Paste it into WhatsApp or Facebook.')); },
+                    function () { window.prompt(L('Copiez ce lien :', 'Copy this link:'), url); });
             } else {
-                window.prompt('Copiez ce lien :', url);
+                window.prompt(L('Copiez ce lien :', 'Copy this link:'), url);
             }
         }
 
         function printRecap() {
             if (!cart.length) return;
             var rate = discountRate();
-            var date = new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
-            var rows = cart.map(function (i) { return '<tr><td>' + esc(i.ref) + '</td><td>' + esc(i.title) + '</td><td class="r">' + money(i.prixNum) + '</td></tr>'; }).join('');
-            var html = '<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Récapitulatif ICONIQUES S</title><style>' +
+            var date = new Date().toLocaleDateString(L('fr-FR', 'en-GB'), { day: 'numeric', month: 'long', year: 'numeric' });
+            var rows = cart.map(function (i) {
+                var p = i.pack && findPack(i.ref.slice(5));
+                return '<tr><td>' + esc(p ? 'Pack' : i.ref) + '</td><td>' + esc(p ? packName(p) + ' (' + p.refs.join(', ') + ')' : i.title) + '</td><td class="r">' + money(i.prixNum) + '</td></tr>';
+            }).join('');
+            var html = '<!doctype html><html lang="' + LANG + '"><head><meta charset="utf-8"><title>' + L('Récapitulatif', 'Order summary') + ' ICONIQUES S</title><style>' +
                 'body{font-family:Jost,"Segoe UI",sans-serif;color:#161412;max-width:720px;margin:40px auto;padding:0 24px}' +
                 'h1{font-weight:400;font-size:30px;letter-spacing:.04em;margin:0}' +
                 '.stitch{height:2px;margin:14px 0 24px;background:repeating-linear-gradient(90deg,#C9972F 0 12px,transparent 12px 20px)}' +
@@ -1134,15 +1293,16 @@
                 '.r{text-align:right;white-space:nowrap}.tot td{border:0;padding:4px 6px}.grand td{font-size:17px;font-weight:700;border-top:1.5px solid #161412;padding-top:10px}' +
                 'ol{font-size:14px;line-height:1.7;padding-left:20px}footer{margin-top:36px;font-size:12px;color:#5E5A52}</style></head><body>' +
                 '<h1>ICONIQUES S</h1><div class="stitch"></div>' +
-                '<p>Récapitulatif de commande du ' + date + '</p>' +
-                '<table><thead><tr><th>Référence</th><th>Motif</th><th class="r">Prix</th></tr></thead><tbody>' + rows + '</tbody>' +
-                '<tbody><tr class="tot"><td></td><td>Sous-total (' + plural(cart.length, 'motif') + ')</td><td class="r">' + money(subtotal()) + '</td></tr>' +
-                (rate ? '<tr class="tot"><td></td><td>Remise ' + Math.round(rate * 100) + ' %</td><td class="r">− ' + money(subtotal() * rate) + '</td></tr>' : '') +
+                '<p>' + L('Récapitulatif de commande du ', 'Order summary, ') + date + '</p>' +
+                '<table><thead><tr><th>' + L('Référence', 'Reference') + '</th><th>' + L('Motif', 'Design') + '</th><th class="r">' + L('Prix', 'Price') + '</th></tr></thead><tbody>' + rows + '</tbody>' +
+                '<tbody><tr class="tot"><td></td><td>' + L('Sous-total', 'Subtotal') + ' (' + motifsN(motifCount()) + ')</td><td class="r">' + money(subtotal()) + '</td></tr>' +
+                (rate ? '<tr class="tot"><td></td><td>' + L('Remise ', 'Discount ') + pct(rate) + '</td><td class="r">− ' + money(discountAmount()) + '</td></tr>' : '') +
                 '<tr class="tot grand"><td></td><td>Total</td><td class="r">' + money(total()) + '</td></tr></tbody></table>' +
-                '<ol><li>Envoyez ce récapitulatif sur WhatsApp au +226 77 95 67 81.</li><li>Payez par Wave ou Orange Money au numéro que nous vous indiquons.</li><li>Recevez vos fichiers directement sur WhatsApp.</li></ol>' +
+                L('<ol><li>Envoyez ce récapitulatif sur WhatsApp au +226 77 95 67 81.</li><li>Payez par Wave ou Orange Money au numéro que nous vous indiquons.</li><li>Recevez vos fichiers directement sur WhatsApp.</li></ol>',
+                  '<ol><li>Send this summary on WhatsApp to +226 77 95 67 81.</li><li>Pay using the payment method we agree on with you.</li><li>Receive your files directly on WhatsApp.</li></ol>') +
                 '<footer>ICONIQUES S, Ouagadougou, Burkina Faso. iconiquess.com, iconiques.s@gmail.com</footer></body></html>';
             var w = window.open('', '_blank', 'width=820,height=900');
-            if (!w) { toast('Autorisez les fenêtres pop-up pour imprimer le récapitulatif.'); return; }
+            if (!w) { toast(L('Autorisez les fenêtres pop-up pour imprimer le récapitulatif.', 'Allow pop-up windows to print the summary.')); return; }
             w.document.write(html);
             w.document.close();
             w.focus();
@@ -1154,6 +1314,7 @@
             var list = motifs.slice();
             if (state.cat === 'nouveau') list = list.filter(function (m) { return m.nouveau; });
             else if (state.cat === 'favoris') list = list.filter(function (m) { return isFav(m.ref); });
+            else if (state.cat.indexOf('pack:') === 0) { var pk = findPack(state.cat.slice(5)); list = pk ? pk.motifs.slice() : []; }
             else if (state.cat !== 'all') list = list.filter(function (m) { return m.cat === state.cat; });
             var q = norm(state.q);
             if (q) list = list.filter(function (m) { return norm(m.ref).indexOf(q) > -1 || norm(m.title).indexOf(q) > -1; });
@@ -1172,19 +1333,19 @@
                     : motifs.filter(function (m) { return m.cat === c.id; }).length;
                 if (!count) return ''; // une catégorie vide n'est pas affichée
                 return '<button class="tab" type="button" data-cat="' + c.id + '" aria-pressed="' + (state.cat === c.id) + '">' +
-                    esc(c.label) + '<span class="tab-count">' + count + '</span></button>';
+                    esc(L(c.label, c.en)) + '<span class="tab-count">' + count + '</span></button>';
             }).join('');
             $('tabs').innerHTML = html;
         }
 
         function cardHTML(m) {
             var t = esc(m.title.trim());
-            var colors = m.couleurs ? plural(Number(m.couleurs) || m.couleurs, 'couleur') : catLabel(m.cat);
+            var colors = m.couleurs ? plural(Number(m.couleurs) || m.couleurs, 'couleur', 'colour') : catLabel(m.cat);
             return '<article class="card">' +
                 '<div class="card-visual">' +
-                    '<button class="card-media" type="button" data-open="' + esc(m.ref) + '" aria-label="Voir ' + t + ' en détail">' +
+                    '<button class="card-media" type="button" data-open="' + esc(m.ref) + '" aria-label="' + L('Voir ' + t + ' en détail', 'View ' + t + ' in detail') + '">' +
                         thumbTag(m.img, '', ' width="400" height="711"') +
-                        (m.nouveau ? '<span class="tag-new">Nouveau</span>' : '') +
+                        (m.nouveau ? '<span class="tag-new">' + L('Nouveau', 'New') + '</span>' : '') +
                     '</button>' +
                     '<button class="fav-btn" type="button" data-fav="' + esc(m.ref) + '" aria-pressed="false">' + HEART_ICON + '</button>' +
                 '</div>' +
@@ -1194,7 +1355,7 @@
                     '<div class="card-row"><span class="card-meta">' + esc(colors) + '</span><span class="card-price">' + money(m.prixNum) + '</span></div>' +
                 '</div>' +
                 '<div class="card-actions">' +
-                    '<button class="btn btn-primary btn-sm" type="button" data-order="' + esc(m.ref) + '" aria-label="Commander ' + t + ' sur WhatsApp">' + WA_ICON + '<span>Commander</span></button>' +
+                    '<button class="btn btn-primary btn-sm" type="button" data-order="' + esc(m.ref) + '" aria-label="' + L('Commander ' + t + ' sur WhatsApp', 'Order ' + t + ' on WhatsApp') + '">' + WA_ICON + '<span>' + L('Commander', 'Order') + '</span></button>' +
                     '<button class="btn btn-secondary btn-sm cart-toggle" type="button" data-cart="' + esc(m.ref) + '" aria-pressed="false">' + CART_ICONS + '</button>' +
                 '</div>' +
             '</article>';
@@ -1211,17 +1372,19 @@
                 : more ? list.slice(0, state.page * PER_PAGE)
                 : list.slice((state.page - 1) * PER_PAGE, state.page * PER_PAGE);
 
-            var line = plural(list.length, 'motif');
-            if (state.q.trim()) line += ' pour « ' + state.q.trim() + ' »';
-            if (state.cat !== 'all') line += ' dans ' + catLabel(state.cat);
-            $('resultLine').textContent = line;
+            var line = motifsN(list.length);
+            if (state.q.trim()) line += L(' pour « ' + state.q.trim() + ' »', ' for “' + state.q.trim() + '”');
+            var viewPack = state.cat.indexOf('pack:') === 0 && findPack(state.cat.slice(5));
+            if (viewPack) line += L(' du ', ' in the ') + packName(viewPack);
+            else if (state.cat !== 'all') line += L(' dans ', ' in ') + catLabel(state.cat);
+            $('resultLine').innerHTML = esc(line) + (viewPack ? ' · <button class="link-btn" type="button" data-reset>' + L('Voir tous les motifs', 'See all designs') + '</button>' : '');
 
             var grid = $('grid');
             grid.setAttribute('aria-busy', 'false');
             if (!list.length) {
-                grid.innerHTML = '<div class="empty"><h3>Aucun motif ne correspond</h3>' +
-                    '<p>Vérifiez la référence, essayez un autre nom, ou demandez-nous ce motif sur mesure.</p>' +
-                    '<button class="btn btn-secondary" type="button" data-reset>Voir tous les motifs</button></div>';
+                grid.innerHTML = '<div class="empty"><h3>' + L('Aucun motif ne correspond', 'No matching design') + '</h3>' +
+                    '<p>' + L('Vérifiez la référence, essayez un autre nom, ou demandez-nous ce motif sur mesure.', 'Check the reference, try another name, or ask us to digitize this design for you.') + '</p>' +
+                    '<button class="btn btn-secondary" type="button" data-reset>' + L('Voir tous les motifs', 'See all designs') + '</button></div>';
             } else {
                 grid.innerHTML = slice.map(cardHTML).join('');
             }
@@ -1233,7 +1396,7 @@
 
         function renderMore(left) {
             $('pagination').innerHTML = left > 0
-                ? '<button class="btn btn-secondary load-more" type="button" data-more>Voir plus de motifs <span class="load-left">(' + left + ' restants)</span></button>'
+                ? '<button class="btn btn-secondary load-more" type="button" data-more>' + L('Voir plus de motifs', 'Show more designs') + ' <span class="load-left">(' + left + L(' restants', ' left') + ')</span></button>'
                 : '';
         }
 
@@ -1241,12 +1404,12 @@
             var nav = $('pagination');
             if (pages <= 1) { nav.innerHTML = ''; return; }
             var p = state.page, html = '';
-            html += '<button class="page-btn" type="button" data-page="' + (p - 1) + '"' + (p === 1 ? ' disabled' : '') + ' aria-label="Page précédente">Précédent</button>';
+            html += '<button class="page-btn" type="button" data-page="' + (p - 1) + '"' + (p === 1 ? ' disabled' : '') + ' aria-label="' + L('Page précédente', 'Previous page') + '">' + L('Précédent', 'Previous') + '</button>';
             var start = Math.max(1, Math.min(p - 2, pages - 4)), end = Math.min(pages, start + 4);
             for (var i = start; i <= end; i++) {
                 html += '<button class="page-btn" type="button" data-page="' + i + '"' + (i === p ? ' aria-current="page"' : '') + '>' + i + '</button>';
             }
-            html += '<button class="page-btn" type="button" data-page="' + (p + 1) + '"' + (p === pages ? ' disabled' : '') + ' aria-label="Page suivante">Suivant</button>';
+            html += '<button class="page-btn" type="button" data-page="' + (p + 1) + '"' + (p === pages ? ' disabled' : '') + ' aria-label="' + L('Page suivante', 'Next page') + '">' + L('Suivant', 'Next') + '</button>';
             nav.innerHTML = html;
         }
 
@@ -1301,28 +1464,28 @@
             if (!m) return;
             var t = esc(m.title.trim());
             $('quickInner').innerHTML =
-                '<button class="dlg-close" type="button" data-close aria-label="Fermer">' + CLOSE_ICON + '</button>' +
-                '<button class="quick-media" type="button" data-zoom="' + esc(m.ref) + '" aria-label="Agrandir l\'image">' +
-                    '<img src="' + esc(hdSrc(m.img)) + '" data-full="' + esc(imgSrc(m.img)) + '" alt="Motif ' + t + '" width="810" height="1440">' +
+                '<button class="dlg-close" type="button" data-close aria-label="' + L('Fermer', 'Close') + '">' + CLOSE_ICON + '</button>' +
+                '<button class="quick-media" type="button" data-zoom="' + esc(m.ref) + '" aria-label="' + L('Agrandir l\'image', 'Enlarge image') + '">' +
+                    '<img src="' + esc(hdSrc(m.img)) + '" data-full="' + esc(imgSrc(m.img)) + '" alt="' + L('Motif ', 'Design ') + t + '" width="810" height="1440">' +
                 '</button>' +
                 '<div class="quick-body">' +
                     '<p class="card-ref">' + esc(m.ref) + '</p>' +
                     '<h2 class="quick-title" id="quickTitle">' + t + '</h2>' +
                     '<p class="quick-price">' + money(m.prixNum) + '</p>' +
                     '<dl class="specs">' +
-                        '<div><dt>Catégorie</dt><dd>' + esc(catLabel(m.cat) || '—') + '</dd></div>' +
-                        '<div><dt>Couleurs de fil</dt><dd>' + esc(m.couleurs || '—') + '</dd></div>' +
+                        '<div><dt>' + L('Catégorie', 'Category') + '</dt><dd>' + esc(catLabel(m.cat) || '—') + '</dd></div>' +
+                        '<div><dt>' + L('Couleurs de fil', 'Thread colours') + '</dt><dd>' + esc(m.couleurs || '—') + '</dd></div>' +
                     '</dl>' +
                     '<div class="quick-actions">' +
-                        '<button class="btn btn-primary btn-block" type="button" data-order="' + esc(m.ref) + '">' + WA_ICON + 'Commander</button>' +
-                        '<button class="btn btn-secondary btn-block" type="button" data-cart="' + esc(m.ref) + '" aria-pressed="false">Ajouter au panier</button>' +
+                        '<button class="btn btn-primary btn-block" type="button" data-order="' + esc(m.ref) + '">' + WA_ICON + L('Commander', 'Order') + '</button>' +
+                        '<button class="btn btn-secondary btn-block" type="button" data-cart="' + esc(m.ref) + '" aria-pressed="false">' + L('Ajouter au panier', 'Add to cart') + '</button>' +
                     '</div>' +
                     '<div class="quick-links">' +
-                        '<button class="link-btn" type="button" data-fav="' + esc(m.ref) + '" aria-pressed="false">♡ Ajouter aux favoris</button>' +
-                        '<button class="link-btn" type="button" data-share="' + esc(m.ref) + '">Partager ce motif</button>' +
-                        '<button class="link-btn" type="button" data-zoom="' + esc(m.ref) + '">Agrandir l\'image</button>' +
+                        '<button class="link-btn" type="button" data-fav="' + esc(m.ref) + '" aria-pressed="false">' + L('♡ Ajouter aux favoris', '♡ Add to favourites') + '</button>' +
+                        '<button class="link-btn" type="button" data-share="' + esc(m.ref) + '">' + L('Partager ce motif', 'Share this design') + '</button>' +
+                        '<button class="link-btn" type="button" data-zoom="' + esc(m.ref) + '">' + L('Agrandir l\'image', 'Enlarge image') + '</button>' +
                     '</div>' +
-                    '<p class="quick-note">Le fichier est envoyé sur WhatsApp après confirmation du paiement.</p>' +
+                    '<p class="quick-note">' + L('Le fichier est envoyé sur WhatsApp après confirmation du paiement.', 'The file is sent on WhatsApp once your payment is confirmed.') + '</p>' +
                     similarHTML(m) +
                 '</div>';
             dialogs.quick.scrollTop = 0;
@@ -1337,11 +1500,12 @@
         function similarHTML(m) {
             var list = similar(m, 4);
             if (!list.length) return '';
-            return '<section class="similar" aria-label="Dans la même catégorie">' +
-                '<h3>Dans la même catégorie</h3><div class="similar-grid">' +
+            var h = L('Dans la même catégorie', 'In the same category');
+            return '<section class="similar" aria-label="' + h + '">' +
+                '<h3>' + h + '</h3><div class="similar-grid">' +
                 list.map(function (x) {
                     var t = esc(x.title.trim());
-                    return '<button type="button" data-open="' + esc(x.ref) + '" aria-label="Voir ' + t + '">' +
+                    return '<button type="button" data-open="' + esc(x.ref) + '" aria-label="' + L('Voir ', 'View ') + t + '">' +
                         thumbTag(x.img, '', ' width="400" height="711"') +
                         '<span>' + t + '</span><span class="similar-price">' + money(x.prixNum) + '</span></button>';
                 }).join('') +
@@ -1353,7 +1517,7 @@
             if (!m) return;
             $('zoomImg').setAttribute('data-full', imgSrc(m.img));
             $('zoomImg').src = hdSrc(m.img);
-            $('zoomImg').alt = 'Motif ' + m.title.trim() + ', image agrandie';
+            $('zoomImg').alt = L('Motif ' + m.title.trim() + ', image agrandie', 'Design ' + m.title.trim() + ', enlarged image');
             openDialog('zoom', location.pathname + location.search, { ref: ref });
         }
 
@@ -1362,13 +1526,26 @@
             var el;
             if ((el = e.target.closest('[data-order]'))) { orderOne(el.dataset.order); return; }
             if ((el = e.target.closest('[data-cart]'))) { toggleCart(el.dataset.cart); return; }
-            if ((el = e.target.closest('[data-fav]'))) { toggleFav(el.dataset.fav); return; }
-            if (e.target.closest('[data-more]')) { state.page++; render(); return; }
-            if ((el = e.target.closest('[data-news]'))) {
-                track('abonnement-nouveautes');
-                openWhatsApp('Bonjour ICONIQUES S, je souhaite recevoir vos nouveaux motifs de broderie sur WhatsApp.');
+            if ((el = e.target.closest('[data-pack-order]'))) { orderPack(el.dataset.packOrder); return; }
+            if ((el = e.target.closest('[data-pack-cart]'))) { toggleCartPack(el.dataset.packCart); return; }
+            if ((el = e.target.closest('[data-pack-view]'))) {
+                track('pack-vue-' + el.dataset.packView);
+                state.cat = 'pack:' + el.dataset.packView; state.q = ''; state.page = 1;
+                $('searchInput').value = '';
+                renderTabs(); render(); goToCatalogue();
                 return;
             }
+            if (e.target.closest('#langBtn')) {
+                var next = L('en', 'fr');
+                try { localStorage.setItem('iconiques_lang', next); } catch (err) {}
+                track('langue-' + next);
+                location.href = location.pathname + '?lang=' + next + location.hash;
+                return;
+            }
+            if ((el = e.target.closest('[data-fav]'))) { toggleFav(el.dataset.fav); return; }
+            if (e.target.closest('[data-more]')) { state.page++; render(); return; }
+            // Lien vers la chaîne WhatsApp : il s'ouvre normalement, on compte seulement le clic.
+            if (e.target.closest('[data-news]')) { track('chaine-whatsapp'); return; }
             if ((el = e.target.closest('[data-share]'))) { shareMotif(el.dataset.share); return; }
             if ((el = e.target.closest('[data-zoom]'))) { showZoom(el.dataset.zoom); return; }
             if ((el = e.target.closest('[data-open]'))) { if (motifs.length) showQuick(el.dataset.open); return; }
@@ -1402,12 +1579,13 @@
         $('printCartBtn').addEventListener('click', printRecap);
         $('customBtn').addEventListener('click', function () {
             track('sur-mesure');
-            openWhatsApp('Bonjour ICONIQUES S, je cherche un motif que je n\'ai pas trouvé dans votre catalogue. Je vous envoie une photo du modèle.');
+            openWhatsApp(L('Bonjour ICONIQUES S, je cherche un motif que je n\'ai pas trouvé dans votre catalogue. Je vous envoie une photo du modèle.',
+                'Hello ICONIQUES S, I am looking for a design that is not in your catalogue. I am sending you a photo of it.'));
         });
         function askQuestion(e, from) {
             e.preventDefault();
             track('question-whatsapp-' + from);
-            openWhatsApp('Bonjour ICONIQUES S, j\'ai une question sur vos motifs de broderie.');
+            openWhatsApp(L('Bonjour ICONIQUES S, j\'ai une question sur vos motifs de broderie.', 'Hello ICONIQUES S, I have a question about your embroidery designs.'));
         }
         $('heroWhatsapp').addEventListener('click', function (e) { askQuestion(e, 'accueil'); });
         $('waFab').addEventListener('click', function (e) { askQuestion(e, 'bouton-flottant'); });
@@ -1440,24 +1618,33 @@
             var m = motifs.find(function (x) { return norm(x.ref) === norm(ref); }) ||
                 (isFinite(num) ? motifs.find(function (x) { return parseInt(x.ref.replace(/\D/g, ''), 10) === num; }) : null);
             if (m) showQuick(m.ref);
-            else toast('La référence ' + ref + ' n\'existe pas dans le catalogue.');
+            else toast(L('La référence ' + ref + ' n\'existe pas dans le catalogue.', 'Reference ' + ref + ' is not in the catalogue.'));
+        }
+
+        function getJSON(url, optional) {
+            return fetch(url, { cache: 'no-cache' })
+                .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+                .catch(function (err) { if (optional) return []; throw err; });
         }
 
         function init() {
             $('grid').innerHTML = '';
             $('grid').setAttribute('aria-busy', 'true');
-            $('resultLine').textContent = 'Chargement du catalogue…';
-            fetch('catalogue.json', { cache: 'no-cache' })
-                .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-                .then(function (data) {
+            $('resultLine').textContent = L('Chargement du catalogue…', 'Loading the catalogue…');
+            // packs.json est facultatif : sans lui, le site fonctionne sans la section Packs.
+            Promise.all([getJSON('catalogue.json'), getJSON('packs.json', true)])
+                .then(function (res) {
+                    var data = res[0];
                     motifs = (Array.isArray(data) ? data : []).filter(function (m) {
                         return m && m.ref && m.title && !m.draft && isFinite(Number(m.prixNum));
                     }).map(function (m) { m.prixNum = Number(m.prixNum); m.nouveau = isNew(m); return m; });
-                    // Le panier reprend les prix et noms à jour du catalogue.
-                    cart = cart.filter(function (i) { return findMotif(i.ref); }).map(function (i) {
+                    prepPacks(res[1]);
+                    // Le panier reprend les prix et noms à jour du catalogue et des packs.
+                    cart = cart.map(function (i) {
+                        if (i.pack) { var p = findPack(i.ref.slice(5)); return p ? cartPackItem(p) : null; }
                         var m = findMotif(i.ref);
-                        return { ref: m.ref, title: m.title.trim(), prixNum: m.prixNum, img: m.img };
-                    });
+                        return m ? { ref: m.ref, title: m.title.trim(), prixNum: m.prixNum, img: m.img } : null;
+                    }).filter(Boolean);
                     storageSet('iconiques_cart', cart);
                     // Favoris de l'ancien site : références retrouvées par leur numéro (ICS-000111 devient ICS-00111).
                     favs = favs.map(function (r) {
@@ -1469,7 +1656,8 @@
                     var prices = motifs.map(function (m) { return m.prixNum; });
                     $('faqMin').textContent = money(Math.min.apply(null, prices));
                     $('faqMax').textContent = money(Math.max.apply(null, prices));
-                    $('heroCount').textContent = motifs.length + ' motifs';
+                    $('heroCount').textContent = motifsN(motifs.length);
+                    renderPacks();
                     renderTabs();
                     render();
                     renderCart();
@@ -1477,9 +1665,9 @@
                 })
                 .catch(function (err) {
                     $('resultLine').textContent = '';
-                    $('grid').innerHTML = '<div class="load-error"><h3>Le catalogue ne s\'est pas chargé</h3>' +
-                        '<p>Vérifiez votre connexion internet, puis réessayez. (' + esc(err.message) + ')</p>' +
-                        '<button class="btn btn-primary" type="button" id="retryBtn">Réessayer</button></div>';
+                    $('grid').innerHTML = '<div class="load-error"><h3>' + L('Le catalogue ne s\'est pas chargé', 'The catalogue did not load') + '</h3>' +
+                        '<p>' + L('Vérifiez votre connexion internet, puis réessayez.', 'Check your internet connection, then try again.') + ' (' + esc(err.message) + ')</p>' +
+                        '<button class="btn btn-primary" type="button" id="retryBtn">' + L('Réessayer', 'Try again') + '</button></div>';
                     $('retryBtn').addEventListener('click', init);
                 });
         }
@@ -1514,7 +1702,7 @@
             try { localStorage.setItem('iconiques_app_card', 'masquee'); } catch (e) {}
         });
         [$('apkBtn'), $('apkLink')].forEach(function (a) {
-            a.addEventListener('click', function () { track('telechargement-application-android'); toast('Téléchargement lancé. Ouvrez le fichier pour installer l\'application.'); });
+            a.addEventListener('click', function () { track('telechargement-application-android'); toast(L('Téléchargement lancé. Ouvrez le fichier pour installer l\'application.', 'Download started. Open the file to install the app.')); });
         });
 
         var installPrompt = null;
@@ -1532,6 +1720,127 @@
             $('installBtn').hidden = true;
         });
 
+        /* ================= Version anglaise ================= */
+        // Textes fixes de la page : le français est écrit dans le HTML, l'anglais est ici.
+        // Les textes créés par le script (cartes, panier, messages WhatsApp) passent par L().
+        var EN = {
+            'Motifs de broderie numérisés': 'Digitized embroidery designs',
+            'Comment commander': 'How to order',
+            'Sur mesure': 'Custom designs',
+            'Questions': 'FAQ',
+            'Panier': 'Cart',
+            'ICONIQUES S, retour en haut de page': 'ICONIQUES S, back to top',
+            'Navigation principale': 'Main navigation',
+            'Motifs de broderie numérisés, prêts pour votre machine': 'Digitized embroidery designs, ready for your machine',
+            'Des fichiers pour tuniques, trois-pièces et agbada, numérisés à Ouagadougou sur Wilcom Embroidery Studio. Choisissez votre motif ici, commandez sur WhatsApp et recevez le fichier sur WhatsApp.':
+                'Files for tunics, three-piece suits and agbada, digitized in Ouagadougou with Wilcom Embroidery Studio. Choose your design here, order on WhatsApp and receive the file on WhatsApp.',
+            'Voir le catalogue': 'See the catalogue',
+            'Écrire sur WhatsApp': 'Message us on WhatsApp',
+            'Plus de 120 motifs': 'Over 120 designs',
+            'disponibles, avec des nouveautés chaque semaine.': 'available, with new ones every week.',
+            'Quelques motifs du catalogue': 'A few designs from the catalogue',
+            'Le paiement et l\'envoi des fichiers se font sur WhatsApp, avec une personne qui vous répond.': 'Payment and file delivery happen on WhatsApp, with a real person answering you.',
+            'Choisissez votre motif': 'Choose your design',
+            'Touchez « Commander » sur un motif, ou rassemblez-en plusieurs dans le panier.': 'Tap “Order” on a design, or gather several in the cart.',
+            'Payez par Wave ou Orange Money': 'Pay by mobile money or another agreed method',
+            'Sur WhatsApp, nous confirmons le format de votre machine et le numéro de paiement.': 'On WhatsApp, we confirm your machine’s file format and how to pay: Wave or Orange Money in West Africa, another method agreed with you elsewhere.',
+            'Recevez votre fichier': 'Receive your file',
+            'Le fichier vous est envoyé sur WhatsApp dès la confirmation du paiement.': 'The file is sent to you on WhatsApp as soon as the payment is confirmed.',
+            'Remise automatique dans le panier :': 'Automatic discount in the cart:',
+            '10 %': '10%', '15 %': '15%', '20 %': '20%',
+            'dès 5 motifs,': 'from 5 designs,', 'dès 10 motifs,': 'from 10 designs,', 'dès 20 motifs.': 'from 20 designs.',
+            'Packs de motifs': 'Design packs',
+            'Plusieurs motifs d\'une même catégorie, à prix réduit. Un seul message WhatsApp pour tout commander.': 'Several designs from the same category at a reduced price. One WhatsApp message to order them all.',
+            'Touchez un motif pour le voir en grand, le partager ou le commander.': 'Tap a design to see it full size, share it or order it.',
+            'Rechercher un motif': 'Search for a design',
+            'Référence ou nom': 'Reference or name',
+            'Trier par': 'Sort by',
+            'Par défaut': 'Default', 'Nouveautés d\'abord': 'Newest first', 'Prix croissant': 'Price: low to high', 'Prix décroissant': 'Price: high to low', 'Référence': 'Reference',
+            'Catégories': 'Categories',
+            'Pages du catalogue': 'Catalogue pages',
+            'De nouveaux motifs chaque semaine': 'New designs every week',
+            'Suivez notre chaîne WhatsApp pour voir les nouveautés de la semaine, sans revenir sur le site.': 'Follow our WhatsApp channel to see this week’s new designs, without coming back to the site.',
+            'Suivre la chaîne WhatsApp': 'Follow our WhatsApp channel',
+            'L\'application ICONIQUES S': 'The ICONIQUES S app',
+            'Le catalogue sur votre écran d\'accueil, même avec une connexion faible. Android vous demandera d\'autoriser l\'installation : touchez « Paramètres », puis « Autoriser ».':
+                'The catalogue on your home screen, even with a weak connection. Android will ask you to allow the installation: tap “Settings”, then “Allow”.',
+            'Dans Safari, touchez': 'In Safari, tap',
+            'en bas de l\'écran, puis « Sur l\'écran d\'accueil ». L\'icône ICONIQUES S apparaît avec vos applications.': 'at the bottom of the screen, then “Add to Home Screen”. The ICONIQUES S icon appears with your apps.',
+            'Partager': 'Share',
+            'Télécharger pour Android': 'Download for Android',
+            'Masquer': 'Hide',
+            'Vous ne trouvez pas votre motif ?': 'Can’t find your design?',
+            'Envoyez-nous une photo du modèle sur WhatsApp. Nous le numérisons pour votre machine et vous indiquons le prix avant de commencer.': 'Send us a photo of the design on WhatsApp. We digitize it for your machine and tell you the price before we start.',
+            'Envoyer mon modèle': 'Send my design',
+            'Questions fréquentes': 'Frequently asked questions',
+            'Comment commander un motif ?': 'How do I order a design?',
+            'Touchez « Commander » sous le motif : WhatsApp s\'ouvre avec un message déjà prêt, il suffit de l\'envoyer. Pour plusieurs motifs, ajoutez-les au panier puis touchez « Commander sur WhatsApp ».':
+                'Tap “Order” under the design: WhatsApp opens with a ready-made message, just send it. For several designs, add them to the cart, then tap “Order on WhatsApp”.',
+            'Comment payer ?': 'How do I pay?',
+            'Par Wave ou Orange Money. Le numéro de paiement vous est indiqué sur WhatsApp, une fois votre commande confirmée.': 'By Wave or Orange Money in West Africa; from other countries, we agree on a payment method with you. Payment details are sent on WhatsApp once your order is confirmed.',
+            'Quand vais-je recevoir mon fichier ?': 'When will I receive my file?',
+            'Le fichier vous est envoyé sur WhatsApp dès que le paiement est confirmé. Nous répondons du lundi au samedi, de 8 h à 18 h.': 'The file is sent to you on WhatsApp as soon as payment is confirmed. We reply Monday to Saturday, 8 am to 6 pm (GMT).',
+            'Le fichier fonctionnera-t-il sur ma machine ?': 'Will the file work on my machine?',
+            'Avant l\'envoi, nous confirmons avec vous le format adapté à votre machine. Indiquez-nous sa marque et son modèle dans votre message.': 'Before sending, we confirm the right format for your machine with you. Tell us its brand and model in your message.',
+            'Combien coûte un motif ? Y a-t-il des remises ?': 'How much does a design cost? Are there discounts?',
+            'Les motifs coûtent de': 'Designs cost from', 'à': 'to',
+            '. Dans le panier, la remise est automatique : 10 % dès 5 motifs, 15 % dès 10 motifs, 20 % dès 20 motifs. Les packs sont proposés à un prix encore plus bas.':'. In the cart, the discount is automatic: 10% from 5 designs, 15% from 10 designs, 20% from 20 designs. Packs come at an even lower price.',
+            'Pouvez-vous numériser un modèle qui n\'est pas dans le catalogue ?': 'Can you digitize a design that is not in the catalogue?',
+            'Oui. Envoyez-nous une photo du modèle sur WhatsApp : nous vous indiquons le prix avant de commencer.': 'Yes. Send us a photo of the design on WhatsApp: we tell you the price before we start.',
+            'Puis-je commander depuis l\'étranger ?': 'Can I order from abroad?',
+            'Oui, les fichiers sont envoyés sur WhatsApp, où que vous soyez. Écrivez-nous pour convenir du moyen de paiement.': 'Yes, files are sent on WhatsApp wherever you are. Write to us to agree on a payment method.',
+            'Numérisation professionnelle de motifs de broderie avec Wilcom Embroidery Studio, à Ouagadougou, Burkina Faso. Fichiers envoyés sur WhatsApp, où que vous soyez.': 'Professional embroidery digitizing with Wilcom Embroidery Studio, in Ouagadougou, Burkina Faso. Files sent on WhatsApp, wherever you are.',
+            'ICONIQUES S sur Facebook': 'ICONIQUES S on Facebook', 'ICONIQUES S sur Instagram': 'ICONIQUES S on Instagram', 'ICONIQUES S sur WhatsApp': 'ICONIQUES S on WhatsApp',
+            'WhatsApp : +226 77 95 67 81': 'WhatsApp: +226 77 95 67 81',
+            'Chaîne WhatsApp : les nouveautés': 'WhatsApp channel: new designs',
+            'Du lundi au samedi, de 8 h à 18 h': 'Monday to Saturday, 8 am to 6 pm (GMT)',
+            'Informations': 'Information',
+            'Conditions de vente': 'Terms of sale',
+            'Les motifs sont vendus sous forme de fichiers numériques. Le format adapté à votre machine, le prix et le paiement sont confirmés avec vous sur WhatsApp avant l\'envoi. Les remises du panier s\'appliquent automatiquement selon le nombre de motifs différents.':
+                'Designs are sold as digital files. The format for your machine, the price and the payment are confirmed with you on WhatsApp before sending. Cart discounts apply automatically based on the number of different designs.',
+            'Confidentialité': 'Privacy',
+            'Votre panier est enregistré uniquement dans votre navigateur. Votre numéro WhatsApp sert seulement à traiter votre commande.': 'Your cart is saved only in your browser. Your WhatsApp number is only used to process your order.',
+            'ICONIQUES S. Tous droits réservés.': 'ICONIQUES S. All rights reserved.',
+            'Installer l\'application': 'Install the app',
+            'Application Android': 'Android app',
+            'Imprimer le catalogue': 'Print the catalogue',
+            'Image agrandie': 'Enlarged image',
+            'Fermer l\'image': 'Close image',
+            'Fermer le panier': 'Close cart',
+            'Votre panier': 'Your cart',
+            'Sous-total': 'Subtotal',
+            'Commander sur WhatsApp': 'Order on WhatsApp',
+            'Imprimer le récapitulatif': 'Print the summary',
+            'Accès au panier': 'Cart access',
+            'Voir le panier': 'View cart',
+            'Poser une question sur WhatsApp': 'Ask a question on WhatsApp'
+        };
+        function translatePage() {
+            var langBtn = $('langBtn');
+            langBtn.textContent = L('EN', 'FR');
+            langBtn.setAttribute('lang', L('en', 'fr'));
+            langBtn.setAttribute('aria-label', L('English version', 'Version française'));
+            if (LANG !== 'en') return;
+            document.documentElement.lang = 'en';
+            document.title = 'ICONIQUES S — Digitized embroidery designs from Ouagadougou';
+            var skip = ['SCRIPT', 'STYLE'];
+            var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+            var node, nodes = [];
+            while ((node = walker.nextNode())) nodes.push(node);
+            nodes.forEach(function (n) {
+                if (skip.indexOf(n.parentNode.nodeName) > -1) return;
+                var key = n.nodeValue.replace(/\s+/g, ' ').trim();
+                if (key && EN.hasOwnProperty(key)) n.nodeValue = n.nodeValue.replace(/\S[\s\S]*\S|\S/, EN[key]);
+            });
+            document.querySelectorAll('[aria-label], [placeholder], [title]').forEach(function (el) {
+                ['aria-label', 'placeholder', 'title'].forEach(function (a) {
+                    var v = el.getAttribute(a);
+                    if (v && EN.hasOwnProperty(v)) el.setAttribute(a, EN[v]);
+                });
+            });
+        }
+
+        translatePage();
         renderCart();
         init();
         loadStats();

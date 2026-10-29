@@ -1,0 +1,23 @@
+[
+  {
+    "id": "agbada",
+    "nom": "Pack Agbada complet",
+    "nom_en": "Complete Agbada pack",
+    "refs": ["ICS-00043", "ICS-00128", "ICS-00044", "ICS-00045", "ICS-00046", "ICS-00047", "ICS-00048", "ICS-00049", "ICS-00050"],
+    "prix": 31000
+  },
+  {
+    "id": "trois-pieces",
+    "nom": "Pack Trois-pièces nouveautés",
+    "nom_en": "New three-piece pack",
+    "refs": ["ICS-00014", "ICS-00023", "ICS-00024", "ICS-00026", "ICS-00028", "ICS-00031", "ICS-00035"],
+    "prix": 13500
+  },
+  {
+    "id": "tuniques",
+    "nom": "Pack Tuniques nouveautés",
+    "nom_en": "New tunic pack",
+    "refs": ["ICS-00001", "ICS-00005", "ICS-00027", "ICS-00030", "ICS-00032", "ICS-00037", "ICS-00052", "ICS-00056", "ICS-00057", "ICS-00058"],
+    "prix": 19000
+  }
+]

@@ -614,6 +614,31 @@
             .news p { font-size: 0.88rem; }
             .footer-grid { gap: 24px; padding: 32px 0 24px; }
             .footer-brand p { font-size: 0.88rem; }
+
+            /* Encore plus léger : seul l'essentiel reste visible. */
+            .hero { padding: 18px 0 16px; }
+            .hero-actions { display: none; }        /* le catalogue est juste dessous, WhatsApp reste dans le bouton vert */
+            .hero-note { margin-top: 8px; }
+            .packs { padding-top: 18px; }
+            .pack { flex-basis: 70%; }
+            .pack-visual img { aspect-ratio: 1 / 1; }
+            .pack-save { display: none; }           /* le prix barré suffit */
+            .pack-body { padding: 10px 12px 12px; }
+            .pack .card-actions .btn { min-height: 40px; }
+            #catalogue { padding-top: 22px; }
+            #catalogue .section-title { font-size: 1.45rem; }
+            .result-line:not(.keep) { display: none; } /* le nombre de motifs est déjà sur les onglets ; gardé pour un pack ou une recherche */
+            .grid { margin-top: 14px; gap: 18px 12px; }
+            .grid .card-ref { display: none; }      /* le nom ICONIC 001 reprend déjà le numéro */
+            .card-info { padding-top: 8px; }
+            .how .step p { display: none; }         /* les trois titres suffisent */
+            .how .steps { gap: 14px; }
+            .how .step h3 { margin: 10px 0 0; }
+            .remise { margin-top: 18px; font-size: 0.88rem; }
+            .news { margin-top: 20px; }
+            .custom p { font-size: 0.9rem; }
+            .footer-brand p { display: none; }
+            .footer-grid { padding: 24px 0 16px; gap: 18px; }
         }
         @media (max-width: 360px) {
             .grid { gap: 22px 10px; }
@@ -1430,6 +1455,7 @@
             if (viewPack) line += L(' du ', ' in the ') + packName(viewPack);
             else if (state.cat !== 'all') line += L(' dans ', ' in ') + catLabel(state.cat);
             $('resultLine').innerHTML = esc(line) + (viewPack ? ' · <button class="link-btn" type="button" data-reset>' + L('Voir tous les motifs', 'See all designs') + '</button>' : '');
+            $('resultLine').classList.toggle('keep', !!viewPack || !!state.q.trim());
 
             var grid = $('grid');
             grid.setAttribute('aria-busy', 'false');

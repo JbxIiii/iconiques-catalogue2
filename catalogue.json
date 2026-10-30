@@ -8,7 +8,7 @@
     "prixNum": 3500,
     "img": "images/ics-00001.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },
   {
     "ref": "ICS-00002",
@@ -52,7 +52,7 @@
     "prixNum": 3000,
     "img": "images/AFRI OUAT 1.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },
   {
     "ref": "ICS-00006",
@@ -63,7 +63,7 @@
     "prixNum": 3000,
     "img": "images/AFRICAIN ART MAP.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },
   {
     "ref": "ICS-00007",
@@ -151,7 +151,7 @@
     "prixNum": 3000,
     "img": "images/EMPT SAMOIU GFV.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },
   {
     "ref": "ICS-00015",
@@ -250,7 +250,7 @@
     "prixNum": 3000,
     "img": "images/ICONIC K4K.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },
   {
     "ref": "ICS-00024",
@@ -261,7 +261,7 @@
     "prixNum": 2500,
     "img": "images/ICONIC KIK 1.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },
   {
     "ref": "ICS-00025",
@@ -283,7 +283,7 @@
     "prixNum": 3000,
     "img": "images/ICONIC KK44.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },
   {
     "ref": "ICS-00027",
@@ -294,7 +294,7 @@
     "prixNum": 3000,
     "img": "images/ICONIC KLIK PLO.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },
   {
     "ref": "ICS-00028",
@@ -305,7 +305,7 @@
     "prixNum": 3000,
     "img": "images/ICONIC KLIKJ KKDK.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },
   {
     "ref": "ICS-00029",
@@ -327,7 +327,7 @@
     "prixNum": 2500,
     "img": "images/ICONIC KLOZI.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },
   {
     "ref": "ICS-00031",
@@ -338,7 +338,7 @@
     "prixNum": 2500,
     "img": "images/ICONIC LODP.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },
   {
     "ref": "ICS-00032",
@@ -349,7 +349,7 @@
     "prixNum": 3000,
     "img": "images/ICONIC LOI KS 1.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },
   {
     "ref": "ICS-00033",
@@ -382,7 +382,7 @@
     "prixNum": 2500,
     "img": "images/ICONIC NHJH.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },
   {
     "ref": "ICS-00036",
@@ -404,7 +404,7 @@
     "prixNum": 2500,
     "img": "images/ICONIC NN1.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },
   {
     "ref": "ICS-00038",
@@ -470,7 +470,7 @@
     "prixNum": 5000,
     "img": "images/AGBADA A1.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },{
     "ref": "ICS-00128",
     "title": "ICONIC 128",
@@ -480,7 +480,7 @@
     "prixNum": 5000,
     "img": "images/AGBADA A2.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },{
     "ref": "ICS-00044",
     "title": "ICONIC 044",
@@ -489,7 +489,7 @@
     "prixNum": 5000,
     "img": "images/AGBADA A3.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },{
     "ref": "ICS-00045",
     "title": "ICONIC 045",
@@ -498,7 +498,7 @@
     "prixNum": 5000,
     "img": "images/AGBADA A4.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },{
     "ref": "ICS-00046",
     "title": "ICONIC 046",
@@ -507,7 +507,7 @@
     "prixNum": 5000,
     "img": "images/AGBADA A5.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },{
     "ref": "ICS-00047",
     "title": "ICONIC 047",
@@ -516,7 +516,7 @@
     "prixNum": 5000,
     "img": "images/AGBADA A6.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },{
     "ref": "ICS-00048",
     "title": "ICONIC 048",
@@ -525,7 +525,7 @@
     "prixNum": 5000,
     "img": "images/AGBADA A7.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },{
     "ref": "ICS-00049",
     "title": "ICONIC 049",
@@ -534,7 +534,7 @@
     "prixNum": 5000,
     "img": "images/AGBADA A8.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },{
     "ref": "ICS-00050",
     "title": "ICONIC 050",
@@ -543,7 +543,7 @@
     "prixNum": 5000,
     "img": "images/AGBADA A9.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },{
     "ref": "ICS-00051",
     "title": "ICONIC 051",
@@ -552,7 +552,7 @@
     "prixNum": 2500,
     "img": "images/ICONIC DIVERS A1.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },{
     "ref": "ICS-00052",
     "title": "ICONIC 052",
@@ -561,7 +561,7 @@
     "prixNum": 2500,
     "img": "images/ICONIC DIVERS A2.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },{
     "ref": "ICS-00053",
     "title": "ICONIC 053",
@@ -588,7 +588,7 @@
     "prixNum": 2500,
     "img": "images/ICONIC DIVERS A5.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },{
     "ref": "ICS-00056",
     "title": "ICONIC 056",
@@ -597,7 +597,7 @@
     "prixNum": 2500,
     "img": "images/ICONIC N1.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },{
     "ref": "ICS-00057",
     "title": "ICONIC 057",
@@ -606,7 +606,7 @@
     "prixNum": 2500,
     "img": "images/ICONIC N2.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },{
     "ref": "ICS-00058",
     "title": "ICONIC 058",
@@ -615,7 +615,7 @@
     "prixNum": 2500,
     "img": "images/ICONIC N3.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },{
     "ref": "ICS-00059",
     "title": "ICONIC 059",
@@ -669,7 +669,7 @@
     "prixNum": 3000,
     "img": "images/ICONIC N9.webp",
     "draft": false,
-    "ajout": "2026-10-28"
+    "ajout": "2026-09-07"
   },{
     "ref": "ICS-00064",
     "title": "ICONIC 064",

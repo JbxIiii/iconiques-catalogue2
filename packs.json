@@ -8,15 +8,15 @@
   },
   {
     "id": "trois-pieces",
-    "nom": "Pack Trois-pièces nouveautés",
-    "nom_en": "New three-piece pack",
+    "nom": "Pack Trois-pièces",
+    "nom_en": "Three-piece pack",
     "refs": ["ICS-00014", "ICS-00023", "ICS-00024", "ICS-00026", "ICS-00028", "ICS-00031", "ICS-00035"],
     "prix": 13500
   },
   {
     "id": "tuniques",
-    "nom": "Pack Tuniques nouveautés",
-    "nom_en": "New tunic pack",
+    "nom": "Pack Tuniques",
+    "nom_en": "Tunic pack",
     "refs": ["ICS-00001", "ICS-00005", "ICS-00027", "ICS-00030", "ICS-00032", "ICS-00037", "ICS-00052", "ICS-00056", "ICS-00057", "ICS-00058"],
     "prix": 19000
   }

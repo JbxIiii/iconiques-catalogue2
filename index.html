@@ -564,6 +564,57 @@
             .similar-grid { gap: 8px; }
             body.has-cart .toast { bottom: calc(84px + env(safe-area-inset-bottom)); }
         }
+        /* Téléphone : le catalogue arrive tout de suite après l'ouverture.
+           Ordre : ouverture, packs (en bandeau), catalogue, comment commander, sur mesure, questions. */
+        @media (max-width: 640px) {
+            main { display: flex; flex-direction: column; }
+            .hero { order: 1; }
+            .packs { order: 2; }
+            #catalogue { order: 3; }
+            .how { order: 4; border-top: 1px solid var(--line); }
+            .custom { order: 5; }
+            .faq { order: 6; }
+
+            /* Ouverture compacte : titre, deux boutons côte à côte, pas de vitrine (les motifs sont juste en dessous). */
+            .hero { padding: 22px 0 24px; }
+            .hero h1 { font-size: 1.75rem; line-height: 1.12; }
+            .hero-lede, .vitrine { display: none; }
+            .hero-actions { display: grid; grid-template-columns: 1fr 1fr; margin-top: 18px; gap: 8px; }
+            .hero-actions .btn { flex: none; min-height: 46px; padding: 0 8px; font-size: 0.88rem; }
+            .hero-note { margin-top: 12px; font-size: 0.84rem; }
+
+            /* Packs : un bandeau qui défile de côté au lieu de trois grandes cartes empilées. */
+            .packs { padding: 24px 0 8px; }
+            .packs .section-head { margin-bottom: 12px; }
+            .packs .section-title { font-size: 1.35rem; }
+            .packs .section-intro, .pack-link, .pack .card-ref { display: none; }
+            .packs-grid { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+                margin: 0 calc(var(--gutter) * -1); padding: 0 var(--gutter) 16px; scroll-padding: 0 var(--gutter); -webkit-overflow-scrolling: touch; }
+            .packs-grid::-webkit-scrollbar { display: none; }
+            .pack { flex: 0 0 78%; scroll-snap-align: start; }
+            .pack-visual img { aspect-ratio: 4 / 5; }
+            .pack-body { padding: 12px 14px 14px; }
+            .pack-title { font-size: 1rem; }
+            .pack-price strong { font-size: 1.1rem; }
+            .pack-save { font-size: 0.82rem; }
+            .pack .card-actions { padding-top: 10px; }
+
+            /* Catalogue */
+            #catalogue { padding-top: 28px; }
+            #catalogue .section-head { margin-bottom: 12px; }
+            #catalogue .section-intro { display: none; }
+            .card-actions { margin-top: 8px; }
+            .card-actions .btn { min-height: 42px; }
+
+            /* Sections du bas plus serrées */
+            .how, .custom, .faq { padding: 32px 0; }
+            .how .section-intro { display: none; }
+            .step p { font-size: 0.9rem; }
+            .news { margin-top: 28px; padding: 16px; }
+            .news p { font-size: 0.88rem; }
+            .footer-grid { gap: 24px; padding: 32px 0 24px; }
+            .footer-brand p { font-size: 0.88rem; }
+        }
         @media (max-width: 360px) {
             .grid { gap: 22px 10px; }
             .card-actions .btn-primary span { display: none; }
@@ -909,6 +960,7 @@
         // Statistiques de visite : code du compte GoatCounter (https://CODE.goatcounter.com). Vide = désactivé.
         var GOATCOUNTER = 'sarabi';
         var PER_PAGE = 30; // se répartit sans trou sur 5, 3 et 2 colonnes
+        var PER_PAGE_MOBILE = 12; // sur téléphone : moins de motifs d'un coup, « Voir plus » pour la suite
         var NEW_DAYS = 30; // un motif reste « Nouveau » pendant ce nombre de jours après sa date d'ajout
         /* ================= Langue ================= */
         // Français par défaut ; anglais si le téléphone est réglé en anglais, ou au choix du visiteur (bouton EN / FR).
@@ -1365,11 +1417,11 @@
             opts = opts || {};
             var list = filtered();
             var pages = Math.max(1, Math.ceil(list.length / PER_PAGE));
-            if (state.page > pages) state.page = pages;
+            if (state.page > pages && !mqMobile.matches) state.page = pages;
             // Sur téléphone, les pages s'empilent avec « Voir plus » au lieu des numéros de page.
             var more = !opts.all && mqMobile.matches;
             var slice = opts.all ? list
-                : more ? list.slice(0, state.page * PER_PAGE)
+                : more ? list.slice(0, state.page * PER_PAGE_MOBILE)
                 : list.slice((state.page - 1) * PER_PAGE, state.page * PER_PAGE);
 
             var line = motifsN(list.length);

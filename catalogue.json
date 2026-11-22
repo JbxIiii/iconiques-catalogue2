@@ -1544,5 +1544,16 @@
     "img": "images/ics-00153.webp",
     "draft": false,
     "ajout": "2026-11-22"
+  },
+  {
+    "ref": "ICS-00154",
+    "title": "ICONIC 154",
+    "cat": "motifs-divers",
+    "dims": "",
+    "couleurs": "3",
+    "prixNum": 3000,
+    "img": "images/ics-00154.webp",
+    "draft": false,
+    "ajout": "2026-11-22"
   }
 ]

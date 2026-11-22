@@ -1280,19 +1280,16 @@
     "img": "images/ICONIC DIVERS A10.webp",
     "draft": false,
     "ajout": "2026-09-07"
+  },
+  {
+    "ref": "ICS-00130",
+    "title": "ICONIC 130",
+    "cat": "tuniques",
+    "dims": "",
+    "couleurs": "1",
+    "prixNum": 2500,
+    "img": "images/ics-00130.webp",
+    "draft": false,
+    "ajout": "2026-11-22"
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ]

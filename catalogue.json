@@ -1313,5 +1313,16 @@
     "img": "images/ics-00132.webp",
     "draft": false,
     "ajout": "2026-11-22"
+  },
+  {
+    "ref": "ICS-00133",
+    "title": "ICONIC 133",
+    "cat": "tuniques",
+    "dims": "",
+    "couleurs": "1",
+    "prixNum": 2000,
+    "img": "images/ics-00133.webp",
+    "draft": false,
+    "ajout": "2026-11-22"
   }
 ]

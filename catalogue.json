@@ -1390,5 +1390,16 @@
     "img": "images/ics-00139.webp",
     "draft": false,
     "ajout": "2026-11-22"
+  },
+  {
+    "ref": "ICS-00140",
+    "title": "ICONIC 140",
+    "cat": "motifs-divers",
+    "dims": "",
+    "couleurs": "2",
+    "prixNum": 2000,
+    "img": "images/ics-00140.webp",
+    "draft": false,
+    "ajout": "2026-11-22"
   }
 ]

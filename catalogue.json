@@ -1500,5 +1500,16 @@
     "img": "images/ics-00149.webp",
     "draft": false,
     "ajout": "2026-11-22"
+  },
+  {
+    "ref": "ICS-00150",
+    "title": "ICONIC 150",
+    "cat": "tuniques",
+    "dims": "",
+    "couleurs": "2",
+    "prixNum": 2500,
+    "img": "images/ics-00150.webp",
+    "draft": false,
+    "ajout": "2026-11-22"
   }
 ]

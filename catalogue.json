@@ -1577,5 +1577,16 @@
     "img": "images/ics-00156.webp",
     "draft": false,
     "ajout": "2026-11-22"
+  },
+  {
+    "ref": "ICS-00157",
+    "title": "ICONIC 157",
+    "cat": "agbada",
+    "dims": "",
+    "couleurs": "1",
+    "prixNum": 5000,
+    "img": "images/ics-00157.webp",
+    "draft": false,
+    "ajout": "2026-11-22"
   }
 ]

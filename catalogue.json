@@ -1467,5 +1467,16 @@
     "img": "images/ics-00146.webp",
     "draft": false,
     "ajout": "2026-11-22"
+  },
+  {
+    "ref": "ICS-00147",
+    "title": "ICONIC 147",
+    "cat": "tuniques",
+    "dims": "",
+    "couleurs": "3",
+    "prixNum": 3000,
+    "img": "images/ics-00147.webp",
+    "draft": false,
+    "ajout": "2026-11-22"
   }
 ]

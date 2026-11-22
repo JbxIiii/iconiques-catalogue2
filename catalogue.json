@@ -1445,5 +1445,16 @@
     "img": "images/ics-00144.webp",
     "draft": false,
     "ajout": "2026-11-22"
+  },
+  {
+    "ref": "ICS-00145",
+    "title": "ICONIC 145",
+    "cat": "trois-pieces",
+    "dims": "",
+    "couleurs": "1",
+    "prixNum": 3000,
+    "img": "images/ics-00145.webp",
+    "draft": false,
+    "ajout": "2026-11-22"
   }
 ]
